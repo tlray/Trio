@@ -1,0 +1,14 @@
+--- a/trio-oref/lib/determine-basal/determine-basal.js
++++ b/trio-oref/lib/determine-basal/determine-basal.js
+@@ -1567,8 +1567,9 @@
+                 durationReq = round(durationReq/30)*30;
+                 durationReq = Math.min(60,Math.max(0,durationReq));
+             } else {
+-                // if SMB durationReq is less than 30m, set a nonzero low temp
+-                smbLowTempReq = round( basal * durationReq/30 ,2);
++                // if SMB durationReq is less than 30m, set a nonzero low temp for 30m that
++                // withholds the same amount of insulin: durationReq minutes worth of basal
++                smbLowTempReq = round( basal * (1 - durationReq/30) ,2);
+                 durationReq = 30;
+             }
+             rT.reason += " insulinReq " + insulinReq;

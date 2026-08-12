@@ -1,0 +1,29 @@
+--- a/trio-oref/lib/determine-basal/determine-basal.js
++++ b/trio-oref/lib/determine-basal/determine-basal.js
+@@ -1273,7 +1273,7 @@
+         rT.insulinForManualBolus =  round((eventualBG - target_bg) / sens, 2);
+ 
+         worstCaseInsulinReq = bgUndershoot / sens;
+-        durationReq = round(60*worstCaseInsulinReq / profile.current_basal*overrideFactor);
++        durationReq = round(60*worstCaseInsulinReq / (profile.current_basal*overrideFactor));
+         durationReq = round(durationReq/30)*30;
+         // always set a 30-120m zero temp (oref0-pump-loop will let any longer SMB zero temp run)
+         durationReq = Math.min(120,Math.max(30,durationReq));
+@@ -1356,7 +1356,7 @@
+             if ( rate <=0 ) {
+                 bgUndershoot = target_bg - naive_eventualBG;
+                 worstCaseInsulinReq = bgUndershoot / sens;
+-                durationReq = round(60*worstCaseInsulinReq / profile.current_basal * overrideFactor);
++                durationReq = round(60*worstCaseInsulinReq / (profile.current_basal * overrideFactor));
+                 if (durationReq < 0) {
+                     durationReq = 0;
+                 // don't set a temp longer than 120 minutes
+@@ -1552,7 +1552,7 @@
+             // calculate a long enough zero temp to eventually correct back up to target
+             var smbTarget = target_bg;
+             worstCaseInsulinReq = (smbTarget - (naive_eventualBG + minIOBPredBG)/2 ) / sens;
+-            durationReq = round(60*worstCaseInsulinReq / profile.current_basal * overrideFactor);
++            durationReq = round(60*worstCaseInsulinReq / (profile.current_basal * overrideFactor));
+ 
+             // if insulinReq > 0 but not enough for a microBolus, don't set an SMB zero temp
+             if (insulinReq > 0 && microBolus < bolusIncrement) {

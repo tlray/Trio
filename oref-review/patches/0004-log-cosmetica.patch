@@ -1,0 +1,36 @@
+--- a/trio-oref/lib/determine-basal/determine-basal.js
++++ b/trio-oref/lib/determine-basal/determine-basal.js
+@@ -583,7 +583,7 @@
+             if (target_bg === new_target_bg) {
+                 process.stderr.write("target_bg unchanged: " + convert_bg(new_target_bg, profile) + "; ");
+             } else {
+-                process.stderr.write("target_bg from "+ convert_bg(new_target_bg, profile) + " to " + convert_bg(new_target_bg, profile) + "; ");
++                process.stderr.write("target_bg from "+ convert_bg(target_bg, profile) + " to " + convert_bg(new_target_bg, profile) + "; ");
+             }
+             target_bg = new_target_bg;
+         }
+@@ -611,7 +611,7 @@
+         adjustedMinBG = round(Math.min(200, min_bg * noisyCGMTargetMultiplier ));
+         adjustedTargetBG = round(Math.min(200, target_bg * noisyCGMTargetMultiplier ));
+         adjustedMaxBG = round(Math.min(200, max_bg * noisyCGMTargetMultiplier ));
+-        process.stderr.write("Raising target_bg for noisy / raw CGM data, from " + convert_bg(new_target_bg, profile) + " to " + convert_bg(adjustedTargetBG, profile) + "; ");
++        process.stderr.write("Raising target_bg for noisy / raw CGM data, from " + convert_bg(target_bg, profile) + " to " + convert_bg(adjustedTargetBG, profile) + "; ");
+         min_bg = adjustedMinBG;
+         target_bg = adjustedTargetBG;
+         max_bg = adjustedMaxBG;
+@@ -1464,13 +1464,13 @@
+         insulinForManualBolus = round((eventualBG - target_bg) / sens, 2);
+         // if that would put us over max_iob, then reduce accordingly
+         if (insulinReq > max_iob-iob_data.iob) {
+-            console.error("SMB limited by maxIOB: " + max_iob-iob_data.iob + " (. insulinReq: " + insulinReq + " U)");
++            console.error("SMB limited by maxIOB: " + (max_iob-iob_data.iob) + " (insulinReq: " + insulinReq + " U)");
+             rT.reason += "max_iob " + max_iob + ", ";
+             insulinReq = max_iob-iob_data.iob;
+         } else { console.error("SMB not limited by maxIOB ( insulinReq: " + insulinReq + " U).");}
+ 
+         if (insulinForManualBolus > max_iob-iob_data.iob) {
+-            console.error("Ev. Bolus limited by maxIOB: " + max_iob-iob_data.iob + " (. insulinForManualBolus: " + insulinForManualBolus + " U)");
++            console.error("Ev. Bolus limited by maxIOB: " + (max_iob-iob_data.iob) + " (insulinForManualBolus: " + insulinForManualBolus + " U)");
+             rT.reason += "max_iob " + max_iob + ", ";
+         } else { console.error("Ev. Bolus would not be limited by maxIOB ( insulinForManualBolus: " + insulinForManualBolus + " U).");}
+ 

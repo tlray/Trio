@@ -1,0 +1,11 @@
+--- a/trio-oref/lib/determine-basal/determine-basal.js
++++ b/trio-oref/lib/determine-basal/determine-basal.js
+@@ -50,7 +50,7 @@
+          * SMBs will be disabled from [start, end), such that if an SMB is scheduled to be disabled from 10 AM to 2 PM,
+          * an SMB will not be allowed from 10:00:00 until 1:59:59.
+          */
+-        let currentHour = new Date(time.getHours());
++        let currentHour = time.getHours();
+         let startTime = trio_custom_variables.start;
+         let endTime = trio_custom_variables.end;
+ 
