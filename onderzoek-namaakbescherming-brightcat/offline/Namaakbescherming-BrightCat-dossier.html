@@ -1,0 +1,1109 @@
+<!DOCTYPE html>
+<html lang="nl"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Namaakbescherming BrightCat — onderzoeksdossier</title>
+<style>
+@page {
+  size: A4; margin: 22mm 20mm 20mm 20mm;
+  @bottom-center { content: counter(page); font-family: "Liberation Sans", sans-serif;
+                   font-size: 8.5pt; color: #8a8175; }
+  @top-right { content: string(chaptertitle); font-family: "Liberation Sans", sans-serif;
+               font-size: 8pt; color: #a29889; letter-spacing: .04em; }
+}
+@page cover { margin: 0; @bottom-center { content: none } @top-right { content: none } }
+@page :first { @top-right { content: none } }
+
+html { font-family: "Bitstream Charter", "DejaVu Serif", Georgia, serif;
+       font-size: 10.6pt; line-height: 1.52; color: #23201c; }
+body { margin: 0; hyphens: auto; }
+
+/* ---------- omslag ---------- */
+.cover { page: cover; height: 297mm; box-sizing: border-box; padding: 42mm 26mm 24mm;
+         background: #1d2b34; color: #f4f0e8; break-after: page; }
+.cover .kicker { font-family: "Liberation Sans", sans-serif; font-size: 9.5pt;
+                 letter-spacing: .22em; text-transform: uppercase; color: #9dc0bc; }
+.cover h1 { font-size: 33pt; line-height: 1.12; margin: 12mm 0 0; font-weight: 600;
+            color: #fff; letter-spacing: -.01em; bookmark-label: "Omslag"; }
+.cover .sub { font-size: 13pt; line-height: 1.45; margin-top: 8mm; color: #cdd8d6;
+              max-width: 118mm; }
+.cover .rule { width: 26mm; height: 2.5pt; background: #d8a657; margin: 11mm 0; }
+.cover .meta { position: absolute; bottom: 24mm; font-family: "Liberation Sans", sans-serif;
+               font-size: 9.5pt; line-height: 1.75; color: #a8bcb9; }
+.cover .meta strong { color: #f4f0e8; font-weight: 600; }
+
+/* ---------- inhoudsopgave ---------- */
+.toc { break-after: page; }
+.toc h2 { font-size: 15pt; margin: 0 0 7mm; }
+.toc ol { list-style: none; margin: 0; padding: 0; }
+.toc li { margin: 0; }
+.toc a { text-decoration: none; color: #23201c; display: block;
+         border-bottom: .4pt dotted #cdc4b6; padding: 1.7mm 0; }
+.toc a::after { content: target-counter(attr(href), page);
+                float: right; font-family: "Liberation Sans", sans-serif;
+                font-size: 9pt; color: #8a8175; }
+.toc .l1 > a { font-family: "Liberation Sans", sans-serif; font-weight: 600;
+               font-size: 10.5pt; margin-top: 3.5mm; border-bottom-color: #a89c88; }
+.toc .l2 > a { padding-left: 7mm; font-size: 9.6pt; color: #55504a; border-bottom: none;
+               padding-top: .9mm; padding-bottom: .9mm; }
+
+/* ---------- hoofdstukken ---------- */
+.chapter { break-before: page; }
+.chapter-head { margin-bottom: 9mm; padding-bottom: 5mm; border-bottom: 1.6pt solid #1d2b34; }
+.chapter-head .num { font-family: "Liberation Sans", sans-serif; font-size: 9pt;
+                     letter-spacing: .2em; text-transform: uppercase; color: #b08d3f; }
+.chapter-head h1 { string-set: chaptertitle content(); font-size: 21pt; line-height: 1.18;
+                   margin: 3mm 0 0; font-weight: 600; letter-spacing: -.01em; }
+.chapter-head .sub { font-family: "Liberation Sans", sans-serif; font-size: 9.8pt;
+                     color: #6b6459; margin-top: 3mm; }
+
+h2 { font-family: "Liberation Sans", sans-serif; font-size: 13pt; font-weight: 600;
+     margin: 8mm 0 3mm; break-after: avoid; color: #1d2b34; }
+h3 { font-family: "Liberation Sans", sans-serif; font-size: 10.8pt; font-weight: 600;
+     margin: 6mm 0 2mm; break-after: avoid; color: #33414a; }
+h4 { font-family: "Liberation Sans", sans-serif; font-size: 10pt; margin: 5mm 0 1.5mm;
+     break-after: avoid; }
+p { margin: 0 0 2.6mm; orphans: 2; widows: 2; }
+ul, ol { margin: 0 0 3mm; padding-left: 6.5mm; }
+li { margin-bottom: 1.4mm; }
+strong { font-weight: 600; }
+em { font-style: italic; }
+a { color: #1d5c6e; text-decoration: none; }
+code { font-family: "DejaVu Sans Mono", monospace; font-size: .86em;
+       background: #f2efe8; padding: .4mm 1mm; border-radius: 1.5pt; }
+
+/* clausuletekst */
+blockquote { margin: 4mm 0; padding: 3.5mm 5mm; background: #f7f4ec;
+             border-left: 2.5pt solid #d8a657; }
+blockquote p { margin: 0 0 2mm; break-inside: avoid; }
+blockquote p:last-child { margin-bottom: 0; }
+
+table { width: 100%; border-collapse: collapse; margin: 4mm 0 5mm;
+        font-family: "Liberation Sans", sans-serif; font-size: 8.6pt; line-height: 1.4; }
+thead { display: table-header-group; }
+th { text-align: left; background: #1d2b34; color: #f4f0e8; font-weight: 600;
+     padding: 2mm 2.4mm; border: none; }
+td { padding: 1.9mm 2.4mm; border-bottom: .4pt solid #ddd6c8; vertical-align: top; }
+tr { break-inside: avoid; }
+tbody tr:nth-child(even) { background: #faf8f3; }
+
+hr { border: none; border-top: .5pt solid #ddd6c8; margin: 6mm 0; }
+
+/* ---------- schermweergave (telefoon/laptop, offline in de browser) ---------- */
+@media screen {
+  html { font-size: 17px; line-height: 1.65; background: #f0ece4; }
+  body { max-width: 46rem; margin: 0 auto; padding: 0 1.1rem 5rem;
+         background: #fffdf9; box-shadow: 0 0 30px rgba(0,0,0,.07); }
+  .cover { height: auto; padding: 3.2rem 1.4rem; margin: 0 -1.1rem 2rem;
+           border-radius: 0 0 4px 4px; }
+  .cover h1 { font-size: 2.1rem; }
+  .cover .sub { font-size: 1rem; max-width: none; }
+  .cover .meta { position: static; margin-top: 2.6rem; font-size: .85rem; }
+  .toc { padding-top: .5rem; }
+  .toc a::after { content: none; }
+  .chapter { border-top: 1px solid #e6dfd2; padding-top: 2.2rem; margin-top: 2.4rem; }
+  .chapter-head h1 { font-size: 1.55rem; }
+  h2 { font-size: 1.2rem; margin: 2rem 0 .6rem; }
+  h3 { font-size: 1.03rem; margin: 1.5rem 0 .4rem; }
+  p { margin: 0 0 .85rem; }
+  blockquote { margin: 1.1rem 0; padding: .9rem 1.1rem; border-radius: 3px; }
+  table { font-size: .8rem; display: block; overflow-x: auto; white-space: normal; }
+  a { color: #14606f; }
+}
+</style></head><body>
+<div class="cover">
+  <div class="kicker">Brightmotive Services bv · vertrouwelijk</div>
+  <h1>Namaak&shy;bescherming<br>BrightCat</h1>
+  <div class="rule"></div>
+  <div class="sub">Onafhankelijk juridisch onderzoek naar de sterkst houdbare bescherming
+  tegen het namaken van BrightCat door (ex-)klanten — met tekstvoorstel, maatregelen en draaiboek.</div>
+  <div class="meta">
+    <strong>Onderzoeksdossier · 18 augustus 2026</strong><br>
+    Zeven parallelle onderzoekssporen met bronverificatie<br>
+    Zes documenten · offline leesversie
+  </div>
+</div>
+<div class="toc"><h2>Inhoud</h2><ol><li class="l1"><a href="#leeswijzer">Leeswijzer</a></li><li class="l2"><a href="#lw-hoe-je-dit-dossier-leest">Hoe je dit dossier leest</a></li><li class="l1"><a href="#h1">1. Memo — beschermingsstrategie</a></li><li class="l2"><a href="#1-1-de-kern-in-het-kort">1. De kern in het kort</a></li><li class="l2"><a href="#1-2-waarom-brightmotive-bij-het-incident-weinig-kon">2. Waarom Brightmotive bij het incident weinig kon</a></li><li class="l2"><a href="#1-3-de-twee-zienswijzen-gewogen-onderzoeksvraag-1">3. De twee zienswijzen gewogen (onderzoeksvraag 1)</a></li><li class="l2"><a href="#1-4-de-vier-pijlers-met-grondslag-en-houdbaarheid">4. De vier pijlers, met grondslag en houdbaarheid</a></li><li class="l2"><a href="#1-5-de-grenzen-die-je-niet-mag-oprekken-onderzoeksvraag-7">5. De grenzen die je niet mag oprekken (onderzoeksvraag 7)</a></li><li class="l2"><a href="#1-6-restrisicos-en-aannames">6. Restrisico&#x27;s en aannames</a></li><li class="l2"><a href="#1-7-vervolgstappen-samengevat-detail-in-deliverables-24">7. Vervolgstappen (samengevat; detail in deliverables 2–4)</a></li><li class="l1"><a href="#h2">2. Tekstvoorstel artikel 3 + boete</a></li><li class="l2"><a href="#2-artikel-3-intellectueel-eigendom-vertrouwelijkheid-en-data">Artikel 3 — Intellectueel eigendom, vertrouwelijkheid en data</a></li><li class="l2"><a href="#2-toelichting-per-lid-met-grondslag">Toelichting per lid (met grondslag)</a></li><li class="l2"><a href="#2-bijlage-aanbevolen-buiten-de-directe-opdracht-maar-nodig-o">Bijlage — Aanbevolen (buiten de directe opdracht, maar nodig om artikel 3 overeind te houden)</a></li><li class="l1"><a href="#h3">3. Concept Voorwaarden v3.11</a></li><li class="l2"><a href="#3-voorwaarden">Voorwaarden</a></li><li class="l2"><a href="#3-overzicht-van-de-wijzigingen-tov-v310">Overzicht van de wijzigingen t.o.v. v3.10</a></li><li class="l1"><a href="#h4">4. Maatregelen buiten het contract</a></li><li class="l2"><a href="#4-prioriteit-1-deze-maand-onmisbaar">Prioriteit 1 — Deze maand (onmisbaar)</a></li><li class="l2"><a href="#4-prioriteit-2-komend-kwartaal">Prioriteit 2 — Komend kwartaal</a></li><li class="l2"><a href="#4-prioriteit-3-doorlopend-sterk-aanbevolen">Prioriteit 3 — Doorlopend / sterk aanbevolen</a></li><li class="l1"><a href="#h5">5. Draaiboek volgend incident</a></li><li class="l2"><a href="#5-fase-0-dag-03-stil-veiligstellen-géén-contact-met-de-weder">Fase 0 — Dag 0–3: stil veiligstellen (géén contact met de wederpartij)</a></li><li class="l2"><a href="#5-fase-1-dag-310-analyse-en-beslag">Fase 1 — Dag 3–10: analyse en beslag</a></li><li class="l2"><a href="#5-fase-2-dag-1020-sommatie-en-inzage-pas-ná-het-beslag">Fase 2 — Dag 10–20: sommatie en inzage (pas ná het beslag)</a></li><li class="l2"><a href="#5-fase-3-dag-2030-routekeuze">Fase 3 — Dag 20–30: routekeuze</a></li><li class="l2"><a href="#5-veelgemaakte-fouten-samengevat">Veelgemaakte fouten (samengevat)</a></li><li class="l2"><a href="#5-vooraf-klaarzetten-eenmalig-zie-ook-maatregelenlijst-17">Vooraf klaarzetten (eenmalig, zie ook maatregelenlijst #17)</a></li><li class="l1"><a href="#h6">6. Bronnen en verificatie</a></li><li class="l2"><a href="#6-verificatiemethode-en-één-belangrijk-voorbehoud">Verificatiemethode en één belangrijk voorbehoud</a></li><li class="l2"><a href="#6-correcties-op-de-handover-het-eerdere-advies">Correcties op de handover / het eerdere advies</a></li><li class="l2"><a href="#6-kernbronnen-per-onderwerp-met-verificatiestatus">Kernbronnen per onderwerp (met verificatiestatus)</a></li><li class="l2"><a href="#6-prioriteitenlijstje-voor-de-primaire-eindcheck-door-de-adv">Prioriteitenlijstje voor de primaire eindcheck door de advocaat</a></li></ol></div>
+<section class="chapter" id="leeswijzer"><header class="chapter-head"><div class="num">Leeswijzer</div><h1>Leeswijzer</h1><div class="sub">Hoe je dit dossier leest en welke keuzes openstaan</div></header><h2 id="lw-hoe-je-dit-dossier-leest">Hoe je dit dossier leest</h2>
+<p>Dit is het volledige onderzoek in één bestand, bedoeld om offline in één zitting door te nemen.
+Alles staat er in leesvolgorde in: eerst het waarom, dan de tekst, dan de uitvoering.</p>
+<p><strong>Als je maar één ding leest:</strong> hoofdstuk 1, paragraaf 1 ("De kern in het kort") en daarna
+hoofdstuk 2 (de clausuletekst zelf). Samen zijn dat ongeveer tien minuten.</p>
+<p><strong>De rode draad.</strong> Het auteursrecht laat het nabouwen van functionaliteit grotendeels vrij, dus
+het contract moet het werk doen — en dat mag, want buiten de bescherming van het IE-recht geldt
+gewoon contractsvrijheid. Het nieuwe artikel 3 zet dat om in zeven losse, elk op zichzelf
+houdbare verboden, met een boete die meeschaalt met de omvang van de klant. Daarnaast maken de
+bedrijfsgeheimen-maatregelen en de canary-records een volgende zaak bewijsbaar, óók tegen de
+externe bouwer die geen klant is.</p>
+<h3 id="lw-beslispunten-voor-jou">Beslispunten voor jou</h3>
+<p>Dit zijn de plekken waar het onderzoek een keuze openlaat die jij moet maken — handig om
+onderweg over na te denken:</p>
+<ol>
+<li><strong>Boetehoogte.</strong> Het voorstel is twee keer de jaarvergoeding per overtreding, met een minimum
+   van € 25.000 en een plafond van vier keer de jaarvergoeding. Meeschalend is juridisch het
+   sterkst, maar je moet het wel aan een grote inkooporganisatie kunnen uitleggen. Er ligt een
+   alternatief met vaste bedragen klaar (hoofdstuk 2, invoeringsnotitie 3).</li>
+<li><strong>Lengte van artikel 6.</strong> De overstapregeling is nu drie leden in de voorwaarden zelf. Dat is
+   Data Act-conform maar maakt artikel 6 langer dan de Fineprint-stijl gewend is. Alternatief:
+   een compact 6.4 dat naar een aparte annex "Overstapregeling" verwijst.</li>
+<li><strong>Wanneer je klanten migreert.</strong> Aankondiging kan via artikel 7.1 (twee maanden), maar bij
+   grote klanten is het sterker om het nieuwe artikel 3 bij de eerstvolgende verlenging expliciet
+   te laten aantekenen. Het incident is daarbij je commerciële verhaal.</li>
+<li><strong>Volgorde van de maatregelen.</strong> Hoofdstuk 4 zet zes dingen op "deze maand". Realistisch
+   gezien is het bedrijfsgeheimenregister het meeste werk en de canary-records het meeste
+   rendement per uur.</li>
+<li><strong>De freelancer-inventarisatie.</strong> Dit is het enige punt dat een bestaand risico blootlegt in
+   plaats van een toekomstig: zonder overdrachtsakten mist Brightmotive vorderingsbevoegdheid op
+   onderdelen van de eigen software.</li>
+</ol>
+<h3 id="lw-eén-voorbehoud-vooraf">Eén voorbehoud, vooraf</h3>
+<p>De onderzoeksomgeving kon de primaire bronnen (rechtspraak.nl, wetten.overheid.nl, EUR-Lex) niet
+rechtstreeks bereiken. De Data Act is integraal aan de authentieke verordeningstekst geverifieerd;
+al het andere via meerdere onafhankelijke bronnen die elkaar bevestigen. In hoofdstuk 6 staat per
+bron wat de status is, plus een lijst van vijf punten die een advocaat éénmaal moet naslaan
+voordat dit in een sommatie of processtuk wordt gebruikt.</p></section><section class="chapter" id="h1"><header class="chapter-head"><div class="num">Hoofdstuk 1</div><h1>Memo — beschermingsstrategie</h1><div class="sub">Het advies: vier pijlers, weging van de twee zienswijzen, grenzen en restrisico&#x27;s</div></header><p><strong>Aan:</strong> Ray (Brightmotive Services bv)
+<strong>Datum:</strong> 18 augustus 2026
+<strong>Status:</strong> Onafhankelijk onderzoek, uitgevoerd in zeven parallelle sporen met bronverificatie. Zie <code>05-bronnen-en-verificatie.md</code> voor de verificatiestatus per bron en één belangrijk voorbehoud over de verificatiemethode.</p>
+<hr />
+<h2 id="1-1-de-kern-in-het-kort">1. De kern in het kort</h2>
+<ol>
+<li><strong>Wat het incident pijnlijk blootlegde, klopt juridisch:</strong> het auteursrecht beschermt de broncode van BrightCat, maar níet de functionaliteit, de werkwijze, de algoritme-ideeën of de bestandsformaten. Wie BrightCat nabouwt op basis van wat hij ziet — zelfde schermen, net andere icoontjes, zelfde werkwijze — pleegt in beginsel géén auteursrechtinbreuk. Dat is Europese vaste rechtspraak (SAS Institute) en in Nederland bevestigd (Diplomatic Card/Forax). <strong>Daarom is het contract niet een extraatje, maar het hoofdinstrument.</strong></li>
+<li><strong>Het goede nieuws:</strong> wat het IE-recht vrijlaat, mag je jegens je eigen klant vrijwel volledig contractueel dichtzetten (Ryanair/PR Aviation), zolang je een paar dwingende grenzen respecteert. Grote B2B-SaaS-partijen (Salesforce, AWS) doen dit standaard met "competitive use"-clausules.</li>
+<li><strong>De twee juristen hadden allebei half gelijk</strong> over het oude beding ("op enigerlei wijze kopiëren of namaken"). Zie §3. De les: niet procederen op vage woorden, maar expliciet opschrijven wat je bedoelt — dan is er niets uit te leggen.</li>
+<li><strong>De strategie rust op vier pijlers</strong> die elkaar overlappen, zodat er geen enkel "single point of failure" is: (i) een gelaagd contractueel verbod met <strong>boete</strong>, (ii) het <strong>bedrijfsgeheimenspoor</strong> (Wbb) dat óók de externe bouwer raakt, (iii) <strong>IE-versterking</strong> waar die echt werkt (databankrecht op verrijkte data, modeldepots op nieuwe schermen, i-DEPOT als bewijs), en (iv) een <strong>vooraf ingerichte bewijspositie</strong> (canary-records, logging, watermerken) plus een draaiboek.</li>
+<li><strong>De boete is het antwoord op het schadebewijsprobleem</strong> uit het incident: een goed ontworpen boete is direct opeisbaar zonder dat je schade hoeft te bewijzen, en is matigingsbestendig te maken door hem te laten meeschalen met de omvang van de klant.</li>
+<li><strong>Eén waarschuwing die verder gaat dan de vraag:</strong> de Data Act (Verordening (EU) 2023/2854) geldt sinds 12 september 2025 ook voor BrightCat. Het huidige art. 6.4 voldoet daar zelf niet aan, en een té breed namaakverbod (dat de klant verbiedt ooit een eigen vervangend systeem te bouwen) kan een verboden "overstapbelemmering" zijn. De voorgestelde tekst lost dit op met een expliciete uitzondering.</li>
+</ol>
+<hr />
+<h2 id="1-2-waarom-brightmotive-bij-het-incident-weinig-kon">2. Waarom Brightmotive bij het incident weinig kon</h2>
+<p>Drie factoren vielen samen:</p>
+<ul>
+<li><strong>Het beding van v3.01 was te dun.</strong> "Kopiëren of namaken op enigerlei wijze" zonder definitie, zonder kennisgebruiksverbod, zonder derdenregeling en zonder boete.</li>
+<li><strong>Het IE-recht liet de kern vrij.</strong> De nagebouwde functionaliteit, algoritmes en werkwijze zijn geen auteursrechtelijk beschermde "uitdrukkingswijze". De UI-route (look &amp; feel als "gewoon" werk) bestaat in theorie, maar Nederlandse rechters wijzen die bij branchegebruikelijke catalogus-/webshop-UI's vrijwel altijd af (Betsoft; Vendic/Meubelplaats). Winbaar waren hooguit letterlijk overgenomen teksten, iconen en assets — en de <strong>datakant</strong> (zie §4.3).</li>
+<li><strong>De schade was niet hard te maken.</strong> Winstafdracht en licentie-analogie bestaan (art. 27a Aw, art. 6:97 BW), maar vergen cijfers uit het kamp van de wederpartij en een lange procedure.</li>
+</ul>
+<p>De strategie hieronder repareert alle drie.</p>
+<hr />
+<h2 id="1-3-de-twee-zienswijzen-gewogen-onderzoeksvraag-1">3. De twee zienswijzen gewogen (onderzoeksvraag 1)</h2>
+<p><strong>Zienswijze 1 (breed):</strong> "op enigerlei wijze" kan breed worden uitgelegd. <strong>Zienswijze 2 (eng):</strong> het beding staat in een IE-artikel en moet binnen het IE-recht eng worden gelezen.</p>
+<p>Weging naar Nederlands uitlegrecht: algemene voorwaarden zijn niet uitonderhandeld en bestemd voor veel klanten; ze worden dan overwegend <strong>objectief</strong> uitgelegd (glijdende schaal DSM/Fox, ECLI:NL:HR:2004:AO1427; Lundiform/Mexx, ECLI:NL:HR:2013:BY8101 — let op: in de handover stond een onjuist ECLI, zie bronnendocument). Objectief-taalkundig heeft "namaken" zelfstandige betekenis naast "kopiëren" (anders is het woord zinledig) en signaleert "op enigerlei wijze" een ruime bedoeling. Daar staat tegenover dat de IE-context het beding inkleurt, en dat onduidelijkheid in niet-onderhandelde voorwaarden in de weging ten nadele van de opsteller werkt.</p>
+<p><strong>Ons oordeel: geen van beiden wint volledig.</strong> Een rechter brengt het vrijwel één-op-één nabouwen van BrightCat (zelfde schermopbouw, werkwijze en dataverwerking met cosmetische verschillen) waarschijnlijk wél onder "namaken" — dat is gewoon Nederlands. Maar zuiver functionele inspiratie of eigen herbouw van vrije ideeën valt er zonder explicietere tekst niet onder, en de klant heeft met de SAS-lijn een serieus verweer op het functionele deel (procesrisico geschat op 40–50%). <strong>Conclusie:</strong> het oude beding is bruikbaar als terugval-anker voor het reeds gebeurde incident, maar voor de toekomst te dun. De oplossing is geen keuze tussen "streng-breed" (v3.05) en "middelen-gericht" (het review-voorstel), maar een <strong>derde route</strong>: expliciet, doelgebonden en gelaagd — zie §4.1 en het tekstvoorstel in <code>02-tekst-artikel-3-en-boetebeding.md</code>.</p>
+<p>Over het eerdere review-voorstel (kritisch getoetst, zoals gevraagd): de richting was juist (dwingend softwarerecht respecteren, 1 jaar postcontractueel, knowhow onbeperkt), maar het bevatte drie zwaktes die wij hebben gerepareerd: (1) "de kennis die u door het gebruik opdoet" was niet beperkt tot <strong>niet-openbare</strong> informatie — daardoor werkt het als verkapt concurrentieverbod dat nooit onder de groepsvrijstelling kan vallen en bij nietigheid niet wordt "afgeknipt op het toelaatbare" (conversieverbod, HR BP/Benschop, ECLI:NL:HR:2013:2123); (2) er ontbrak een uitzondering voor onafhankelijke eigen ontwikkeling en voor de Data Act-overstap; (3) er was geen boete, terwijl het schadebewijsprobleem juist hét praktische probleem was.</p>
+<hr />
+<h2 id="1-4-de-vier-pijlers-met-grondslag-en-houdbaarheid">4. De vier pijlers, met grondslag en houdbaarheid</h2>
+<h3 id="1-41-pijler-1-het-contract-gelaagd-verbod-boete-houdbaarheid">4.1 Pijler 1 — Het contract: gelaagd verbod + boete (houdbaarheid: hoog, mits gelaagd)</h3>
+<p>Het nieuwe artikel 3 (volledige tekst in deliverable 2) bestaat uit <strong>zelfstandige, opgeknipte leden</strong>. Dat is geen stilistische keuze: als één laag ooit (deels) nietig blijkt, blijven de andere staan (partiële nietigheid, art. 3:41 BW), en de rechter mag een te ruim mededingingsbeding niet zelf terugsnoeien naar het toelaatbare (HR BP/Benschop) — dus moet elk deelverbod op zichzelf al houdbaar zijn.</p>
+<table>
+<thead>
+<tr>
+<th>Laag</th>
+<th>Wat het regelt</th>
+<th>Grondslag houdbaarheid</th>
+<th>Inschatting</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Namaakverbod met definitie</td>
+<td>Verbiedt ook nabouwen "op hoofdlijnen" met andere vormgeving</td>
+<td>Contractsvrijheid buiten IE-beschermingsomvang (Ryanair, C-30/14); raakt geen dwingend gebruikersrecht</td>
+<td>Hoog</td>
+</tr>
+<tr>
+<td>Vertrouwelijkheid/bedrijfsgeheim</td>
+<td>Alles achter de inlog + documentatie = geheim, ook ná de overeenkomst zolang niet openbaar</td>
+<td>Wbb; VBER art. 5 lid 3 slotzin staat een tijds-onbeperkt knowhow-verbod expliciet toe</td>
+<td>Hoog</td>
+</tr>
+<tr>
+<td>Doelgebonden kennisgebruiksverbod</td>
+<td>Dienst/documentatie/data niet gebruiken om een concurrent van BrightCat te (laten) bouwen; looptijd + 1 jaar; vertrouwelijke info onbeperkt</td>
+<td>Verbiedt niet het concurreren als zodanig maar het concurreren mét onze middelen (nevenrestrictie-leer, Pronuptia); binnen VBER-kaders; benchmark: Salesforce/AWS doen hetzelfde</td>
+<td>Hoog, mits doelgebonden</td>
+</tr>
+<tr>
+<td>Derdenregeling</td>
+<td>Bouwers alleen na toestemming + eigen geheimhouding rechtstreeks jegens Brightmotive; overtredingen van de derde gelden als die van de klant</td>
+<td>Contractsvrijheid; dicht het gat waardoor de bouwer bij het incident buiten schot bleef; activeert bovendien de derdenwerking van de Wbb (wetenschap)</td>
+<td>Hoog</td>
+</tr>
+<tr>
+<td>Data-extractieverbod (tweetraps)</td>
+<td>Geen geautomatiseerd/stelselmatig opvragen of hergebruiken, "ongeacht of de databank wettelijk beschermd is"</td>
+<td>Beschermde databank: databankrecht zelf; onbeschermde databank: volledige contractsvrijheid (Ryanair) — beide scenario's gedekt</td>
+<td>Hoog</td>
+</tr>
+<tr>
+<td>Carve-outs</td>
+<td>Dwingend recht (art. 45j–45m Aw, databankgebruikersrechten, Data Act) + onafhankelijke ontwikkeling blijft toegestaan</td>
+<td>Voorkomt precies de nietigheden die het oude beding bedreigden; sterkste troef tegen herkwalificatie als concurrentie- of overstapbelemmering</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Boete</td>
+<td>2× jaarvergoeding per overtreding (min. € 25.000) + € 1.000/dag, plafond 4× jaarvergoeding, naast staking en aanvullende schadevergoeding</td>
+<td>Art. 6:91–94 BW; ontwerp volgt de matigingsrechtspraak (zie hieronder)</td>
+<td>Hoog</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Waarom dit boete-ontwerp.</strong> Matiging kan nooit worden uitgesloten (art. 6:94 lid 3 BW is dwingend), maar de rechter matigt alleen bij een "buitensporig en daarom onaanvaardbaar resultaat" (HR Intrahof/Bart Smit, ECLI:NL:HR:2007:AZ6638). De bewezen ontwerpfouten uit de rechtspraak zijn: één eenheidsboete op alle mogelijke overtredingen (HR Turan/Easystaff, ECLI:NL:HR:2018:207: € 1,23 mln gevorderd, € 21.150 overgehouden), onbegrensde dagboetes die stil oplopen, en bedragen zonder relatie tot de contractswaarde (Rb. Midden-Nederland 2026: € 2 mln gevorderd, nul toegewezen). Ons ontwerp vermijdt alle drie: de boete hangt <strong>alleen</strong> aan het namaak-cluster, <strong>schaalt mee</strong> met de jaarvergoeding (die al een promillage van de klantomzet is — automatische proportionaliteit, van zzp-grossier tot inkooporganisatie), heeft een <strong>plafond</strong>, en benoemt zijn eigen strekking (schade bij namaak is naar haar aard niet te bewijzen). Belangrijk: "onverminderd schadevergoeding voor zover de schade hoger is" moet er expliciet in, anders vervangt de boete de schadevergoeding (art. 6:92 lid 2 BW). En: neem de boete ook zichtbaar in de offerte op — dat ondergraaft elk "verstopt beding"-verweer en is commercieel uitlegbaar met verwijzing naar het incident.</p>
+<p><strong>Mededingingsrechtelijke houdbaarheid (getoetst):</strong> het kennisgebruiksverbod is primair prestatie-/knowhowbescherming en valt buiten het kartelverbod (nevenrestricties; Pronuptia). Zelfs bij herkwalificatie als niet-concurrentiebeding: tijdens de looptijd groepsvrijgesteld tot 5 jaar (VBER 2022/720, marktaandelen ≤30%); postcontractueel is een écht exploitatieverbod voor SaaS nooit vrijgesteld (de "ruimten en terreinen"-eis van art. 5 lid 3 is online onvervulbaar), maar een gebruiksverbod van <strong>niet-openbare</strong> knowhow mag onbeperkt — precies zo is de tekst opgebouwd. En wie zich als klant op nietigheid wil beroepen, draagt een zware stelplicht inclusief marktafbakening (HR ANVR/IATA, ECLI:NL:HR:2012:BX0345).</p>
+<p><strong>Wat je bewust níet moet opschrijven</strong> (nietig of riskant): een verbod op observeren/bestuderen/testen van de software tijdens normaal gebruik (art. 45l Aw jo. art. 8 Softwarerichtlijn; SAS), een absoluut decompilatie-/foutverbeteringsverbod (art. 45m Aw; Top System, C-13/20), een verbod op reservekopieën (art. 45k Aw), een onbegrensd "geen ideeën of concepten gebruiken", en een algeheel concurrentieverbod. In een pure SaaS-situatie is de klant naar heersende leer overigens geen "rechtmatige verkrijger van een exemplaar", zodat die dwingende rechten waarschijnlijk niet eens van toepassing zijn — maar dat is niet uitgeprocedeerd, en de carve-out kost niets en voorkomt de hele discussie.</p>
+<h3 id="1-42-pijler-2-bedrijfsgeheimen-wbb-het-spoor-dat-óók-de-bouw">4.2 Pijler 2 — Bedrijfsgeheimen (Wbb): het spoor dat óók de bouwer raakt (houdbaarheid: hoog, mits maatregelen op orde)</h3>
+<p>De Wet bescherming bedrijfsgeheimen beschermt informatie die (a) geheim is, (b) daardoor handelswaarde heeft en (c) met <strong>redelijke maatregelen</strong> geheim wordt gehouden (art. 1 Wbb). Voor BrightCat kwalificeren: broncode, algoritmes en matching-/verrijkingslogica, datamodellen, koppelspecificaties, interne documentatie en prijsmodellen. Níet: wat elke gebruiker in de gewone front-end ziet. Wel weer: het <strong>samenstel</strong> van architectuur, datamodel en werkwijze zoals dat alleen uit documentatie en admin-laag samen kenbaar is (samenstel-leer, o.a. Hof Arnhem-Leeuwarden 2025).</p>
+<p>Waarom dit spoor zo waardevol is:</p>
+<ul>
+<li><strong>Derdenwerking:</strong> de externe bouwer die wist of had moeten weten dat hij met onrechtmatig gedeelde informatie werkte, handelt zélf onrechtmatig (art. 2 lid 3 Wbb). Een professionele softwarebouwer die documentatie en specificaties van andermans platform krijgt om dat platform na te bouwen, kan zich moeilijk op onwetendheid beroepen — en een sommatiebrief fixeert zijn wetenschap vanaf ontvangst. Dit dicht het "derden-gat" (onderzoeksvraag 6) beter dan welk contract ook.</li>
+<li><strong>De kloon zelf is een "inbreukmakend goed"</strong> (art. 2 lid 4 Wbb): je kunt terugroeping en <strong>vernietiging van de codebase</strong> vorderen (art. 6 Wbb).</li>
+<li><strong>Procederen zonder je geheimen prijs te geven</strong> kan via de speciale procesregels (art. 1019ib/1019ic Rv); volledige proceskosten zijn mogelijk bij kwade trouw (art. 1019ie Rv; HR Heraeus/Biomet, ECLI:NL:HR:2020:830 — discretionair).</li>
+<li><strong>De bestaande NDA-clickwrap op de documentatie is goud waard.</strong> Gebruik van die informatie voor een kloon is onrechtmatig gebruik, delen met de bouwer onrechtmatig openbaar maken (art. 2 lid 2 Wbb). Maar: bewaar het bewijs van wie wanneer heeft geklikt — zonder dat bewijs bestaat de "redelijke maatregel" juridisch niet.</li>
+</ul>
+<p>De valkuil is het maatregelenvereiste: de rechtspraak wijst claims vooral af wegens inconsequente geheimhouding (één keer documentatie zonder NDA delen kan fataal zijn — Wärtsilä/Aegir) of een te vage afbakening van wát het geheim is (Corrosion, 2025). Het winnende patroon is: NDA + expliciete communicatie + compartimentering + logging (Future Crops/Certhon). Daarom staat het <strong>bedrijfsgeheimenregister</strong> bovenaan de maatregelenlijst (deliverable 3). Let op: de maatregelentoets kijkt naar het moment van de inbreuk — nieuwe maatregelen helpen de toekomst, niet met terugwerkende kracht.</p>
+<p><strong>Reverse engineering:</strong> de Wbb staat toe dat je onderzoek aan de dienst contractueel beperkt (art. 3 lid 1 sub b: "tenzij anders overeengekomen"), en bij SaaS heeft de klant het product niet eens "in bezit". Alleen het observeren van het <em>computerprogramma</em> tijdens rechtmatig gebruik is dwingendrechtelijk vrij — vandaar dat het verbod als doelbeperking is geformuleerd (geen nabouw, geen scraping, geen derden), niet als kaal kijkverbod.</p>
+<h3 id="1-43-pijler-3-ie-versterking-inzetten-waar-het-werkt-houdbaa">4.3 Pijler 3 — IE-versterking: inzetten waar het werkt (houdbaarheid: gemengd, zie per onderdeel)</h3>
+<ul>
+<li><strong>Databankenrecht op de verrijkte data — de sterkste buitencontractuele kaart (hoog).</strong> Naast de TecDoc-licentie kan Brightmotive een <strong>eigen</strong> databankrecht hebben op haar verrijkte en gecombineerde catalogusdatabank, mits de substantiële investering in het <em>verkrijgen, controleren en presenteren</em> van de data wordt gedocumenteerd (niet: het creëren — British Horseracing, C-203/02; leg de investering dus administratief vast in die termen: uren, licentiekosten, tooling). Een kloon die de verrijkte data overneemt en het platform vervangt, raakt per definitie de terugverdienmogelijkheid (CV-Online, C-762/19). En blijkt de databank onverhoopt níet beschermd, dan geldt juist volledige contractsvrijheid (Ryanair) — vandaar de tweetrapsclausule in het contract. Actiepunt: loop de TecDoc-licentie na op wat Brightmotive over de gecombineerde set mag claimen.</li>
+<li><strong>Auteursrecht (gemiddeld):</strong> sterk voor broncode en voor letterlijk overgenomen teksten, iconen en assets; zwak voor look &amp; feel en architectuur. Repareer wel het makerschap: auteursrecht van <strong>freelancers</strong> ligt bij henzelf tenzij schriftelijk overgedragen (art. 2 Aw; art. 7 Aw geldt alleen voor werknemers) — zonder overdrachtsakten mist Brightmotive straks vorderingsbevoegdheid op onderdelen.</li>
+<li><strong>Modeldepot op nieuwe UI (hoog voor de toekomst):</strong> een geregistreerd EU-model op schermontwerpen en iconensets geeft een registergebonden verbodsrecht tegen UI's die "geen andere algemene indruk" wekken — precies het wapen tegen "net andere icoontjes", zonder de zware werktoets van het auteursrecht. Let op: bestaande, al jaren openbare schermen zijn niet meer registreerbaar (nieuwheidseis); elk nieuw scherm/redesign wél, binnen de respijttermijn van 12 maanden. Kosten: € 350 + € 125 per extra model (EUIPO).</li>
+<li><strong>i-DEPOT en tijdstempels (bewijs, geen recht):</strong> per release een i-DEPOT (€ 37 per 5 jaar) met code-hash, UI-screenshots, algoritme-documentatie en datamodel, plus automatische eIDAS-tijdstempels in de CI/CD. Daarmee bewijs je later makerschap en dat jouw versie ouder is dan de kloon.</li>
+<li><strong>Slaafse nabootsing (laag als hoofdroute, nuttig als aanvulling):</strong> vergt "eigen gezicht" en verwarringsgevaar (All Round/Simstars, ECLI:NL:HR:2017:938); voor B2B-platform-UI is dat zelden haalbaar — het review-voorstel had dat goed. Maar de <strong>onrechtmatige-daad-route is hier sterker dan gemiddeld</strong> door bijkomende omstandigheden: klantrelatie, toegang onder NDA, en een bouwer die bewust profiteert van andermans wanprestatie. Als drukmiddel tegen de bouwer, naast de Wbb, zeker bruikbaar.</li>
+</ul>
+<h3 id="1-44-pijler-4-bewijs-vooraf-inrichten-essentieel-dit-beslist">4.4 Pijler 4 — Bewijs vooraf inrichten (essentieel; dit besliste het vorige incident)</h3>
+<p>Sinds 1 januari 2025 is het bewijsrecht vernieuwd: het inzagerecht staat nu in art. 194–195a Rv (voorheen 843a), bewijsbeslag is voor alle zaken gecodificeerd (art. 205–206 Rv), en er is een nieuw instrument: het <strong>deurwaarders-proces-verbaal van constateringen</strong> (art. 207 Rv), met rechterlijk verlof zelfs met dwingende bewijskracht. Al die instrumenten werken alleen als je concreet kunt maken <em>wat</em> is overgenomen en <em>waar</em> het zit. Daarom, vooraf:</p>
+<ol>
+<li><strong>Canary-records</strong> (verzonnen maar plausibele records) in de verrijkte data, <strong>uniek per klant</strong> — duikt jouw canary op in een kloon, dan is overname vrijwel onweerlegbaar én herleidbaar wie lekte (vgl. HvJ Apis/Lakorda, C-545/07: meegekopieerde kenmerken als bewijs van extractie). Houd een gedateerd, extern verankerd register bij (anders is het verwijt "achteraf geconstrueerd") en reken erop dat je canaries in een procedure moet onthullen — gebruik rouleerbare sets.</li>
+<li><strong>Logging en rate limiting</strong>: per-klant API-keys, audit trail van zoek-/export­gedrag, alerts op stelselmatig doorlopen van de catalogus, logs append-only met tijdstempels. Het AV-beding "onze opgeslagen versie geldt behoudens tegenbewijs" (art. 8.5, al aanwezig) is een geldige bewijsafspraak (art. 153 Rv) en maakt die logs extra waardevol.</li>
+<li><strong>Watermerken/fingerprints per klant</strong> in documentatie en API-responses.</li>
+<li><strong>Eigen ontwikkelgeschiedenis vastleggen</strong> (signed commits, releases, i-DEPOT) — weerlegt het klassieke verweer "wij hebben het zelf ontwikkeld".</li>
+</ol>
+<p>Het volledige stappenplan voor een volgend incident staat in deliverable 4. De belangrijkste les daaruit: <strong>eerst stil bewijs veiligstellen, dán pas sommeren</strong> — elke vroege boze e-mail is een kans voor de wederpartij om bewijs te wissen, terwijl het beslagverlof juist op verduisteringsvrees steunt.</p>
+<hr />
+<h2 id="1-5-de-grenzen-die-je-niet-mag-oprekken-onderzoeksvraag-7">5. De grenzen die je niet mag oprekken (onderzoeksvraag 7)</h2>
+<ol>
+<li><strong>Dwingend softwarerecht</strong> (alleen relevant voor zover de klant een kopie heeft, maar respecteer het altijd): observeren/bestuderen/testen tijdens rechtmatig gebruik, reservekopie, foutverbetering en interoperabiliteits-decompilatie (art. 45j slotzin, 45k, 45l, 45m Aw; art. 8 Richtlijn 2009/24: strijdige bedingen nietig).</li>
+<li><strong>Rechten van de rechtmatige databankgebruiker</strong>: opvragen/hergebruiken van niet-substantiële delen tijdens de licentie (art. 3 Databankenwet; art. 24a lid 3 Aw).</li>
+<li><strong>Data Act, hoofdstuk VI</strong> (sinds 12-9-2025, ook voor lopende contracten; toezichthouder: ACM, boetes tot AVG-niveau): geen enkele contractuele belemmering van een overstap naar een andere aanbieder <strong>of naar een eigen (on-premises) systeem</strong> — dus nooit een verbod op het bouwen van een eigen vervangend systeem <em>als zodanig</em>, alleen op het gebruik van Brightmotive-materialen en -geheimen daarbij. Kennisgevingstermijn max. 2 maanden, transitieperiode 30 dagen, retrieval ≥30 dagen, overstapkosten vanaf 12 januari 2027 nul. Wat je <strong>niet</strong> hoeft af te geven: de software, algoritmes en verrijkingslogica — "exporteerbare data" sluit IE- en bedrijfsgeheim-activa van de aanbieder én van derden (TecDoc) uit (art. 2 punt 38).</li>
+<li><strong>Data Act art. 13</strong>: eenzijdig opgelegde B2B-databedingen mogen niet "oneerlijk" zijn — raakt vooral art. 3.2 (het datagebruiksrecht van Brightmotive): houd dat doelgebonden en laat de klant altijd een kopie van zijn eigen data houden.</li>
+<li><strong>Mededingingsrecht</strong>: geen algeheel (post-contractueel) concurrentieverbod; wel doelgebonden knowhowbescherming (onbeperkt voor niet-openbare informatie).</li>
+<li><strong>Matiging van boetes</strong> (art. 6:94 BW) is niet weg te contracteren — vandaar het meeschaal-ontwerp.</li>
+</ol>
+<p><strong>Actiepunt buiten de directe vraag:</strong> vervang art. 6.4 door een volwaardige exit-regeling (checklist in deliverable 2, bijlage) en maak art. 3.2 Data Act-proof. Een namaakverbod dat naast een non-conforme exit-regeling staat, is voor een klant-advocaat een gemakkelijk aanvalspunt ("het hele artikel 3/6 ademt lock-in") — de geloofwaardigheid van het pakket als geheel telt.</p>
+<hr />
+<h2 id="1-6-restrisicos-en-aannames">6. Restrisico's en aannames</h2>
+<ul>
+<li><strong>Verificatievoorbehoud:</strong> de onderzoeksomgeving blokkeerde rechtstreekse toegang tot wetten.overheid.nl, rechtspraak.nl en EUR-Lex. Alle bronnen zijn geverifieerd via meervoudige, onafhankelijke secundaire bronnen (en de Data Act via de integrale authentieke Engelse verordeningstekst); de status per bron staat in deliverable 5. <strong>Laat vóór gebruik in een sommatie of processtuk de gemarkeerde punten éénmaal primair nalopen door de advocaat.</strong></li>
+<li><strong>SaaS en "rechtmatige verkrijger":</strong> of de dwingende softwaregebruikersrechten überhaupt gelden voor een klant met alleen browsertoegang is niet uitgeprocedeerd. De voorgestelde tekst is zo opgezet dat hij onder béide scenario's overeind blijft.</li>
+<li><strong>De grens tussen namaakverbod en Data Act-overstapbelemmering</strong> is nog door geen rechter of de ACM getrokken; de voorgestelde carve-out is tekst- en systeemgetrouwe uitleg, geen vaste lijn.</li>
+<li><strong>De kwalificatie van de verrijkte databank</strong> hangt af van de gedocumenteerde investering en van de TecDoc-licentie; beide vergen intern huiswerk (maatregelenlijst).</li>
+<li><strong>Boetebedragen</strong> zijn onderbouwde ontwerpkeuzes op basis van de gevonden rechtspraakbandbreedte, geen garanties: matiging blijft altijd mogelijk; het ontwerp minimaliseert de kans.</li>
+<li><strong>Buitenlandse klanten:</strong> dit advies is Nederlands recht met Nederlandse forumkeuze (art. 8.1/8.2 dekt dat). Voor UK-klanten geldt post-Brexit deels ander recht (vergelijkbare, niet identieke regels); niet verder onderzocht.</li>
+</ul>
+<h2 id="1-7-vervolgstappen-samengevat-detail-in-deliverables-24">7. Vervolgstappen (samengevat; detail in deliverables 2–4)</h2>
+<ol>
+<li>Art. 3 vervangen door de voorgestelde tekst; boete ook in de offerte benoemen (commercieel uitlegbaar via het incident).</li>
+<li>Art. 6.4 vervangen door een Data Act-conforme exit-regeling; art. 3.2 doelgebonden maken.</li>
+<li>Maatregelenlijst uitvoeren, te beginnen met het bedrijfsgeheimenregister, de NDA-logbewijzen en de canary-records (deliverable 3).</li>
+<li>Draaiboek klaarzetten met vaste advocaat/deurwaarder/forensisch IT'er (deliverable 4).</li>
+<li>Eenmalige primaire bronnencheck door de advocaat op de gemarkeerde punten (deliverable 5).</li>
+</ol></section><section class="chapter" id="h2"><header class="chapter-head"><div class="num">Hoofdstuk 2</div><h1>Tekstvoorstel artikel 3 + boete</h1><div class="sub">De concrete clausules met toelichting per lid</div></header><p><strong>Voor:</strong> Voorwaarden v3.10, ter vervanging van het opengelaten art. 3.1 (en herordening van artikel 3).
+<strong>Stijl:</strong> Fineprint — kort, "u"-vorm, één gedachte per lid, zoals de rest van v3.10.
+<strong>Ontwerpprincipe:</strong> elk lid is een zelfstandig verbod. Als één lid ooit (deels) sneuvelt, blijven de andere staan (art. 3:41 BW; het bestaande art. 8.7 ondersteunt dat). Daarom bewust niet alles in één volzin geperst zoals in v3.05.</p>
+<hr />
+<h2 id="2-artikel-3-intellectueel-eigendom-vertrouwelijkheid-en-data">Artikel 3 — Intellectueel eigendom, vertrouwelijkheid en data</h2>
+<blockquote>
+<p><strong>3.1</strong> Alle diensten, waaronder BrightCat, en alle bijbehorende software, databanken, documentatie en data zijn (het intellectuele) eigendom van Brightmotive en haar licentiegevers. U mag deze niet kopiëren of namaken. Onder namaken verstaan wij ook het (laten) maken van software die de schermopbouw, de functionele werking of de gegevensverwerking van de diensten geheel of op hoofdlijnen overneemt, ook als de vormgeving — zoals iconen, kleuren of teksten — is aangepast.</p>
+<p><strong>3.2</strong> Alles wat niet openbaar toegankelijk is zonder in te loggen — waaronder de opbouw en werking van de diensten achter de inlog, de documentatie, koppel- en API-specificaties, datastructuren en door Brightmotive verrijkte data — is vertrouwelijke informatie en een bedrijfsgeheim van Brightmotive. U houdt deze informatie geheim en gebruikt haar alleen voor het normale gebruik van de diensten en het koppelen van uw eigen systemen. Deze verplichting blijft ook na het einde van de overeenkomst gelden, zolang de informatie niet openbaar is.</p>
+<p><strong>3.3</strong> U gebruikt de diensten, documentatie en data van Brightmotive en de vertrouwelijke informatie van artikel 3.2 niet om — zelf of via anderen — een met de diensten concurrerend of deze vervangend product te (laten) ontwikkelen, te verbeteren, aan te bieden of te exploiteren. Voor de diensten, documentatie en data geldt dit tijdens de overeenkomst en tot één jaar daarna; voor de vertrouwelijke informatie van artikel 3.2 blijft dit gelden zolang zij niet openbaar is.</p>
+<p><strong>3.4</strong> U geeft derden — zoals softwareontwikkelaars of adviseurs — alleen toegang tot de diensten, documentatie, data of vertrouwelijke informatie na voorafgaande schriftelijke toestemming van Brightmotive en nadat die derde rechtstreeks tegenover Brightmotive geheimhouding heeft aanvaard. U staat ervoor in dat deze derden dit artikel naleven; hun overtredingen gelden als uw overtredingen.</p>
+<p><strong>3.5</strong> U mag gegevens uit de diensten alleen raadplegen en gebruiken binnen de normale werking van de diensten. Het geautomatiseerd of stelselmatig opvragen, kopiëren of hergebruiken van (delen van) de catalogus, data of datastructuren is niet toegestaan, ongeacht of deze wettelijk als databank beschermd zijn.</p>
+<p><strong>3.6</strong> Dit artikel beperkt niet de rechten die u op grond van dwingend recht toekomen, waaronder de artikelen 45j tot en met 45m Auteurswet, de rechten van de rechtmatige gebruiker van een databank en Verordening (EU) 2023/2854. Het belet u ook niet om — zonder gebruik van de diensten, documentatie, data of vertrouwelijke informatie van Brightmotive — zelfstandig of via derden een eigen of concurrerend systeem te (laten) ontwikkelen of af te nemen, of om met uw exporteerbare gegevens over te stappen (artikel 6.4). Ieder onderdeel van dit artikel geldt als een afzonderlijk beding.</p>
+<p><strong>3.7</strong> Schade door namaak is zelden precies te bewijzen. Daarom betaalt u ons bij overtreding van artikel 3.1 tot en met 3.5 per overtreding direct en zonder ingebrekestelling een boete van twee keer uw jaarvergoeding, met een minimum van € 25.000, plus € 1.000 per dag dat de overtreding voortduurt, samen tot ten hoogste vier keer uw jaarvergoeding. Uw jaarvergoeding is de vergoeding die u over de twaalf maanden vóór de overtreding aan Brightmotive verschuldigd was, of bij een kortere looptijd het naar twaalf maanden herrekende bedrag. De boete laat ons recht op staking van de overtreding en op schadevergoeding, voor zover onze schade hoger is dan de boete, onverlet.</p>
+<p><strong>3.8</strong> <em>(was 3.2 in v3.10 — datagebruiksrecht Brightmotive, tekst gelijk; zie wel de aanbeveling hieronder)</em></p>
+<p><strong>3.9</strong> <em>(was 3.3 in v3.10 — gebruiksrecht eigen organisatie(s), tekst ongewijzigd)</em></p>
+</blockquote>
+<hr />
+<h2 id="2-toelichting-per-lid-met-grondslag">Toelichting per lid (met grondslag)</h2>
+<table>
+<thead>
+<tr>
+<th>Lid</th>
+<th>Doel</th>
+<th>Waarom zo, juridisch</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>3.1</td>
+<td>Namaakverbod mét definitie</td>
+<td>Lost het uitleggeschil van de twee juristen definitief op: "namaken" is gedefinieerd en dekt expliciet nabouw "op hoofdlijnen" met andere vormgeving — exact het incident-scenario. Buiten de IE-beschermingsomvang geldt contractsvrijheid (HvJ Ryanair, C-30/14).</td>
+</tr>
+<tr>
+<td>3.2</td>
+<td>Kwalificatie als bedrijfsgeheim + geheimhouding</td>
+<td>Activeert de Wet bescherming bedrijfsgeheimen (definitie-eis "redelijke maatregelen": deze clausule ís zo'n maatregel) en werkt door tegen derden (art. 2 lid 3 Wbb). Tijds-onbeperkte duur voor niet-openbare informatie is mededingingsrechtelijk expliciet toegestaan (VBER 2022/720, art. 5 lid 3, slotzin).</td>
+</tr>
+<tr>
+<td>3.3</td>
+<td>Doelgebonden "competitive use"-verbod</td>
+<td>Verbiedt niet concurreren, maar concurreren mét onze middelen — daardoor prestatie-/knowhowbescherming buiten het kartelverbod (HvJ Pronuptia) en marktconform (vgl. Salesforce/AWS-voorwaarden). 1 jaar postcontractueel voor dienst/documentatie/data; onbeperkt alleen voor het geheime deel.</td>
+</tr>
+<tr>
+<td>3.4</td>
+<td>Derden-gat dichten</td>
+<td>De bouwer bleef bij het incident buiten schot. Nu: toegang alleen na toestemming + eigen geheimhouding rechtstreeks jegens Brightmotive (schept een eigen contractsband met de bouwer), en de klant is aansprakelijk voor de derde ("uw overtredingen" → ook de boete van 3.7 raakt de klant bij gedrag van zijn bouwer).</td>
+</tr>
+<tr>
+<td>3.5</td>
+<td>Datakant, tweetraps</td>
+<td>Werkt of de databank nu wettelijk beschermd is (databankenrecht) of niet (dan volledige contractsvrijheid — Ryanair). Alleen het dwingende minimum (normaal gebruik, niet-substantiële delen tijdens de licentie) blijft buiten bereik; dat dekt 3.6.</td>
+</tr>
+<tr>
+<td>3.6</td>
+<td>Carve-outs + deelbaarheid</td>
+<td>Voorkomt de nietigheden die het oude beding bedreigden (dwingend softwarerecht; Data Act-overstapbelemmering art. 23) en is de sterkste troef tegen herkwalificatie als concurrentiebeding: onafhankelijke ontwikkeling blijft uitdrukkelijk toegestaan. Deelbaarheid per beding versterkt art. 8.7.</td>
+</tr>
+<tr>
+<td>3.7</td>
+<td>Boete</td>
+<td>Ontwerp volgt de matigingsrechtspraak (HR Intrahof; HR Turan/Easystaff): alleen gekoppeld aan het namaak-cluster (geen eenheidsboete), schaalt mee met de jaarvergoeding (die al promillage van de klantomzet is), vast minimum als vloer, dagboete mét plafond, eigen strekking benoemd, cumulatie met hogere schade expliciet (anders vervangt de boete de schadevergoeding, art. 6:92 lid 2 BW), direct opeisbaar zonder ingebrekestelling (art. 6:93 BW is regelend recht).</td>
+</tr>
+</tbody>
+</table>
+<h3 id="2-praktische-invoeringsnotities">Praktische invoeringsnotities</h3>
+<ol>
+<li><strong>Noem de boete in de offerte</strong> ("Op de overeenkomst is artikel 3 van de voorwaarden van toepassing, waaronder een boete bij namaak") en lever de voorwaarden aantoonbaar aan vóór ondertekening (pdf bij offerte; acceptatie loggen). Dat sluit het "verrassend/verstopt beding"-verweer en het terhandstellingsrisico (art. 6:233/234 BW) voor kleinere klanten af; grote klanten (≥50 werknemers of gedeponeerde jaarrekening) kunnen zich daar sowieso niet op beroepen (art. 6:235 BW).</li>
+<li><strong>Sommeer bij een geconstateerde overtreding direct schriftelijk</strong> en laat dagboetes nooit stil oplopen — stil laten oplopen weegt bij matiging tegen je (Turan-les), ook al eist het beding geen ingebrekestelling.</li>
+<li><strong>Alternatief met vaste bedragen</strong> (alleen als de omzetkoppeling commercieel niet gewenst is): € 25.000 per overtreding + € 2.500 per dag, samen max. € 250.000 per kalenderjaar. Nadeel: te licht voor grote inkooporganisaties, matigingsgevoeliger voor kleine grossiers. Het meeschalende ontwerp verdient de voorkeur.</li>
+<li><strong>Versie-overgang:</strong> aanpassing van de voorwaarden loopt via art. 7.1/7.2 (aankondiging twee maanden; opzegrecht bij wezenlijke verzwaring). Overweeg bij grote klanten het nieuwe artikel 3 bij de eerstvolgende verlenging expliciet te laten aantekenen — het incident is het commerciële verhaal.</li>
+<li><strong>De NDA-clickwrap voor documentatie</strong> blijft naast dit artikel bestaan en wint aan kracht: scherp de tekst aan tot "Deze documentatie is een bedrijfsgeheim van Brightmotive Services bv. U krijgt uitsluitend toegang voor het gebruik van en koppelen met BrightCat door uw organisatie. Delen met derden of gebruik voor de ontwikkeling van andere software is verboden. Uw toegang en akkoord worden gelogd."</li>
+</ol>
+<hr />
+<h2 id="2-bijlage-aanbevolen-buiten-de-directe-opdracht-maar-nodig-o">Bijlage — Aanbevolen (buiten de directe opdracht, maar nodig om artikel 3 overeind te houden)</h2>
+<h3 id="2-a-vervang-art-64-door-een-data-act-conforme-exit-regeling">A. Vervang art. 6.4 door een Data Act-conforme exit-regeling</h3>
+<p>Het huidige art. 6.4 ("verleent de medewerking die Verordening (EU) 2023/2854 vereist; termijn twee maanden") voldoet niet: art. 25 Data Act eist dat de overstaprechten <strong>in het contract zelf duidelijk zijn uiteengezet</strong>. Minimuminhoud (checklist):</p>
+<ul>
+<li>kennisgevingstermijn geformuleerd als <strong>maximum</strong> van twee maanden, met de drie keuzes van de klant (andere aanbieder / eigen systemen / wissen);</li>
+<li><strong>transitieperiode van 30 kalenderdagen</strong> waarin de dienst doorloopt, met redelijke bijstand aan de klant en door de klant gemachtigde derden; bij technische onhaalbaarheid gemotiveerde melding binnen 14 werkdagen en maximaal 7 maanden; eenmalig verlengingsrecht van de klant;</li>
+<li><strong>uitputtende specificatie</strong> van de categorieën exporteerbare data (en digitale activa) én van de uitgezonderde categorieën — dít is de legitieme plek om verrijkingslogica, interne werking en TecDoc-data buiten de export te houden;</li>
+<li><strong>retrieval-periode van minimaal 30 dagen</strong> na de transitie, daarna wisgarantie;</li>
+<li>kosten: nu alleen werkelijke, gereduceerde overstapkosten; <strong>vanaf 12 januari 2027 kosteloos</strong>;</li>
+<li>een actueel <strong>online register</strong> met formaten/specificaties van de exporteerbare data (art. 26) en website-informatie over jurisdictie van de infrastructuur (art. 28), met verwijzing in het contract.</li>
+</ul>
+<p>Voorstel voor de Fineprint-stijl: een compact art. 6.4 dat naar een aparte annex "Overstapregeling" verwijst die deze punten uitwerkt (de annex-structuur bestaat al voor de verwerkersovereenkomst).</p>
+<h3 id="2-b-maak-art-38-voorheen-32-datagebruiksrecht-art-13-data-ac">B. Maak art. 3.8 (voorheen 3.2, datagebruiksrecht) art. 13 Data Act-proof</h3>
+<p>Het huidige beding is al doelgebonden en niet-herleidbaar geformuleerd — goed. Voeg één zin toe om de oneerlijkheidsvermoedens van art. 13 lid 5 Data Act (beperking van eigen datagebruik; onthouden van een kopie) af te dekken:</p>
+<blockquote>
+<p>"Dit beperkt niet uw recht om uw eigen gegevens te gebruiken en daarvan tijdens en na de overeenkomst een kopie te ontvangen."</p>
+</blockquote></section><section class="chapter" id="h3"><header class="chapter-head"><div class="num">Hoofdstuk 3</div><h1>Concept Voorwaarden v3.11</h1><div class="sub">De volledige voorwaarden met alle wijzigingen ingebouwd</div></header><p><strong>Basis:</strong> v3.10 (concept). <strong>Wijzigingen in vet</strong>, in de stijl van eerdere versies: het volledig nieuwe artikel 3 (namaakbescherming + boete, invulling van het opengelaten art. 3.1), de Data Act-conforme overstapregeling (6.4–6.6) en een versterkte salvatorische clausule (8.7). Alle overige bepalingen zijn ongewijzigd overgenomen uit v3.10. Onderbouwing: zie deliverables 1, 2 en 5 in deze map.</p>
+<p><strong>Nog in te vullen vóór publicatie:</strong> de website-URL in art. 6.6 (het online register met dataformaten/specificaties en de infrastructuur-informatie moet dan ook echt op de website staan — zie maatregelenlijst) en een besluit of de overstapregeling compact in de voorwaarden blijft (zoals hieronder) of naar een aparte annex "Overstapregeling" verhuist met een verwijzing in 6.4.</p>
+<hr />
+<h2 id="3-voorwaarden">Voorwaarden</h2>
+<p><em>Versie 3.11 (concept)</em></p>
+<p>De onderstaande voorwaarden zijn van toepassing op de diensten, waaronder de Software-as-a-Service dienst BrightCat, van Brightmotive Services bv, hierna: Brightmotive, ingeschreven in de Kamer van Koophandel onder nummer 71910956.</p>
+<h3 id="3-artikel-1-gebruiksregels">Artikel 1 — Gebruiksregels</h3>
+<p>1.1 Het is verboden om de diensten van Brightmotive te gebruiken voor handelingen die in strijd zijn met de Nederlandse of andere toepasselijke wet- en regelgeving.</p>
+<p>1.2 Indien u toegang heeft ontvangen tot één van de diensten of systemen van Brightmotive via een gebruikersnaam en wachtwoord dan dient u het wachtwoord strikt geheim te houden. Brightmotive mag er vanuit gaan dat alles dat gebeurt vanaf uw account na aanmelding met uw gebruikersnaam en wachtwoord, onder uw leiding en toezicht gebeurt. U bent dus aansprakelijk voor al deze handelingen.</p>
+<p>1.3 Misbruik of mogelijk misbruik van uw account of afgenomen diensten dient direct schriftelijk bij Brightmotive gemeld te worden.</p>
+<p>1.4 Persoonsgegevens die Brightmotive namens u verwerkt bij het leveren van de diensten, verwerkt zij als verwerker conform de verwerkersovereenkomst die als annex bij de overeenkomst wordt gesloten. Voor persoonsgegevens die zij voor eigen doeleinden verwerkt, zoals contact-, contract- en factuurgegevens en beveiligingslogging, is Brightmotive zelf verwerkingsverantwoordelijke.</p>
+<p>1.5 Indien naar het oordeel van Brightmotive hinder, schade of een ander gevaar ontstaat voor het functioneren van de dienstverlening van Brightmotive en/of derden, in het bijzonder door overmatig verzenden van e-mail of andere gegevens, lekken van (persoons)gegevens of activiteiten van virussen, Trojans en vergelijkbare software, is Brightmotive gerechtigd zonder nadere aankondiging of ingebrekestelling alle maatregelen te nemen die zij redelijkerwijs nodig acht om dit gevaar af te wenden dan wel te voorkomen. De kosten hiervan komen voor uw rekening.</p>
+<p>1.6 Indien Brightmotive constateert dat u de voorwaarden overtreedt, of een klacht hierover ontvangt, mag Brightmotive zonder nadere aankondiging of ingebrekestelling ingrijpen om de overtreding te beëindigen. De kosten hiervan komen voor uw rekening.</p>
+<p>1.7 Brightmotive kan alle schade als gevolg van uw overtreding van één of meerdere voorwaarden op u verhalen. U vrijwaart Brightmotive voor alle aanspraken van derden die betrekking hebben op schade als gevolg van uw overtreding van één of meerdere voorwaarden.</p>
+<h3 id="3-artikel-2-beschikbaarheid-en-onderhoud">Artikel 2 — Beschikbaarheid en onderhoud</h3>
+<p>2.1 Brightmotive zal zich inspannen om een optimale beschikbaarheid en een snelle responstijd van de systemen te realiseren alsmede dat de systemen zoveel mogelijk vrij van fouten, gebreken en virussen zijn. Specifieke afspraken kunnen worden vastgelegd in een aparte Service Level Agreement.</p>
+<p>2.2 Voor het gebruik van de diensten en de beschikbaarheid en responsetijd van de systemen is Brightmotive afhankelijk van webservices en/of data die u of derden beschikbaar dienen te stellen en/of webservices en/of data van leveranciers of andere externe partijen, bijvoorbeeld webservices of data van ERP systemen, TecDoc, Teccom, TecRMI, RDW, HaynesPro, RDC, A2SP, VWE, etc. Iedere aansprakelijkheid van Brightmotive als gevolg van het niet-beschikbaar zijn van deze webservices en/of data is uitgesloten, tenzij dit het gevolg is van een aan Brightmotive toerekenbare tekortkoming; in dat geval geldt artikel 5. U vrijwaart Brightmotive voor onrechtmatig gebruik van deze webservices en/of data door u of uw gebruikers.</p>
+<p>2.3 Zo vaak als Brightmotive nodig acht, worden verbeteringen en andere aanpassingen in de functionaliteit van diensten en systemen doorgevoerd. Brightmotive heeft steeds het recht om de functionaliteit van de systemen te wijzigen. Bij het doorvoeren van onderhoud en aanpassingen wordt de beschikbaarheid van de systemen zo min mogelijk beperkt.</p>
+<h3 id="3-artikel-3-intellectueel-eigendom-vertrouwelijkheid-en-data">Artikel 3 — Intellectueel eigendom, vertrouwelijkheid en data</h3>
+<p><strong>3.1 Alle diensten, waaronder BrightCat, en alle bijbehorende software, databanken, documentatie en data zijn (het intellectuele) eigendom van Brightmotive en haar licentiegevers. U mag deze niet kopiëren of namaken. Onder namaken verstaan wij ook het (laten) maken van software die de schermopbouw, de functionele werking of de gegevensverwerking van de diensten geheel of op hoofdlijnen overneemt, ook als de vormgeving — zoals iconen, kleuren of teksten — is aangepast.</strong></p>
+<p><strong>3.2 Alles wat niet openbaar toegankelijk is zonder in te loggen — waaronder de opbouw en werking van de diensten achter de inlog, de documentatie, koppel- en API-specificaties, datastructuren en door Brightmotive verrijkte data — is vertrouwelijke informatie en een bedrijfsgeheim van Brightmotive. U houdt deze informatie geheim en gebruikt haar alleen voor het normale gebruik van de diensten en het koppelen van uw eigen systemen. Deze verplichting blijft ook na het einde van de overeenkomst gelden, zolang de informatie niet openbaar is.</strong></p>
+<p><strong>3.3 U gebruikt de diensten, documentatie en data van Brightmotive en de vertrouwelijke informatie van artikel 3.2 niet om — zelf of via anderen — een met de diensten concurrerend of deze vervangend product te (laten) ontwikkelen, te verbeteren, aan te bieden of te exploiteren. Voor de diensten, documentatie en data geldt dit tijdens de overeenkomst en tot één jaar daarna; voor de vertrouwelijke informatie van artikel 3.2 blijft dit gelden zolang zij niet openbaar is.</strong></p>
+<p><strong>3.4 U geeft derden — zoals softwareontwikkelaars of adviseurs — alleen toegang tot de diensten, documentatie, data of vertrouwelijke informatie na voorafgaande schriftelijke toestemming van Brightmotive en nadat die derde rechtstreeks tegenover Brightmotive geheimhouding heeft aanvaard. U staat ervoor in dat deze derden dit artikel naleven; hun overtredingen gelden als uw overtredingen.</strong></p>
+<p><strong>3.5 U mag gegevens uit de diensten alleen raadplegen en gebruiken binnen de normale werking van de diensten. Het geautomatiseerd of stelselmatig opvragen, kopiëren of hergebruiken van (delen van) de catalogus, data of datastructuren is niet toegestaan, ongeacht of deze wettelijk als databank beschermd zijn.</strong></p>
+<p><strong>3.6 Dit artikel beperkt niet de rechten die u op grond van dwingend recht toekomen, waaronder de artikelen 45j tot en met 45m Auteurswet, de rechten van de rechtmatige gebruiker van een databank en Verordening (EU) 2023/2854. Het belet u ook niet om — zonder gebruik van de diensten, documentatie, data of vertrouwelijke informatie van Brightmotive — zelfstandig of via derden een eigen of concurrerend systeem te (laten) ontwikkelen of af te nemen, of om met uw exporteerbare gegevens over te stappen (artikel 6.4). Ieder onderdeel van dit artikel geldt als een afzonderlijk beding.</strong></p>
+<p><strong>3.7 Schade door namaak is zelden precies te bewijzen. Daarom betaalt u ons bij overtreding van artikel 3.1 tot en met 3.5 per overtreding direct en zonder ingebrekestelling een boete van twee keer uw jaarvergoeding, met een minimum van € 25.000, plus € 1.000 per dag dat de overtreding voortduurt, samen tot ten hoogste vier keer uw jaarvergoeding. Uw jaarvergoeding is de vergoeding die u over de twaalf maanden vóór de overtreding aan Brightmotive verschuldigd was, of bij een kortere looptijd het naar twaalf maanden herrekende bedrag. De boete laat ons recht op staking van de overtreding en op schadevergoeding, voor zover onze schade hoger is dan de boete, onverlet.</strong></p>
+<p><strong>3.8</strong> Brightmotive staat niet in voor de juistheid en volledigheid van de data; voor schade hierdoor geldt artikel 5. Brightmotive heeft het recht om data die door of namens u wordt ingevoerd of beschikbaar gesteld, of die door uw gebruik van de diensten ontstaat, te gebruiken voor de uitvoering van de overeenkomst en, in niet tot u of uw klanten herleidbare vorm, voor de verbetering en ontwikkeling van haar dienstverlening; u staat ervoor in dat u daartoe gerechtigd bent. Voor zover Brightmotive daarbij persoonsgegevens verwerkt, gebeurt dit conform de verwerkersovereenkomst. <strong>Dit beperkt niet uw recht om uw eigen gegevens te gebruiken en daarvan tijdens en na de overeenkomst een kopie te ontvangen.</strong></p>
+<p><strong>3.9</strong> U mag de diensten en systemen alleen gebruiken voor het doel dat met u is overeengekomen en alleen voor uw eigen organisatie(s) aan wie het gebruiksrecht is verleend. Voor zover nodig verstrekt Brightmotive aan u een niet-exclusief en niet-overdraagbaar gebruiksrecht op de diensten en systemen. U mag de diensten en systemen niet wijzigen, kopiëren, verkopen, bezwaren, verhuren of op andere wijze aan derden in gebruik geven, dan wel op andere wijze gebruiken als gevolg waarvan de intellectuele eigendomsrechten van Brightmotive worden aangetast of haar belangen worden geschaad.</p>
+<h3 id="3-artikel-4-vergoeding-voor-de-dienst">Artikel 4 — Vergoeding voor de dienst</h3>
+<p>4.1 Voor het gebruik van de diensten bent u een vergoeding verschuldigd. Als de dienst een vaste maandelijkse vergoeding heeft, dient deze steeds per kwartaal vooraf te worden voldaan. Als de dienst een dynamische gebruiksvergoeding heeft, wordt deze per maand achteraf gefactureerd. De betalingstermijn is steeds 14 dagen na de factuurdatum.</p>
+<p>4.2 De vergoeding voor het gebruik van BrightCat kan gebaseerd zijn op de totale omzet over het meest recente volledige kalenderjaar van uw organisatie(s) (artikel 4.3) en de gebruiksvergoedingentabel of gebruiksvergoeding promillage die aan u is verstrekt. U verstrekt Brightmotive jaarlijks, binnen zes maanden na afloop van het kalenderjaar en daarnaast steeds op eerste verzoek, een overzicht van de omzet van dat kalenderjaar per organisatie. Brightmotive heeft het recht om aan de hand van die omzet de gebruiksvergoeding, voor het jaar opvolgend aan dat kalenderjaar waar de omzet betrekking op heeft, aan te passen.</p>
+<p>4.3 Uw organisatie(s) zijn de organisaties waaraan in of krachtens de overeenkomst het gebruiksrecht is verleend. De omzet geldt als maatstaf voor de omvang van uw organisatie(s): het gaat om de totale netto-omzet (artikel 2 lid 5 van Richtlijn 2013/34/EU) exclusief btw volgens de jaarrekening. Wordt omzet van uw organisatie(s) door een ander gecontracteerd of gefactureerd, dan telt deze toch mee; omzet uit onderlinge leveringen tussen uw organisatie(s) telt niet mee. Gaat een andere organisatie van de diensten of daaruit afkomstige gegevens gebruikmaken, bijvoorbeeld na een overname (aandelen, onderneming of activa), fusie of vergelijkbare transactie, of neemt de omzet van uw organisatie(s) door zo'n transactie toe, dan meldt u dit binnen 30 dagen schriftelijk aan Brightmotive; dit geldt niet voor afnemers die de diensten uitsluitend gebruiken om bij uw organisatie(s) te bestellen. De meest recente jaaromzet van die organisatie of van de verworven onderneming telt vanaf dat moment naar rato van de resterende kalendermaanden mee, zonder dat dit als toestemming voor dat gebruik geldt; vanaf het eerstvolgende kalenderjaar telt de volledige jaaromzet.</p>
+<p>4.4 Op eerste verzoek van Brightmotive verstrekt u een verklaring van uw accountant dat de door u verstrekte omzetgegevens juist zijn. Daarnaast heeft Brightmotive steeds het recht uw administratie te (laten) onderzoeken om de juistheid van de omzetgegevens te controleren. U zal op eerste verzoek volledige medewerking aan een dergelijk onderzoek verlenen. Dit kan steekproefsgewijs gebeuren.</p>
+<p>4.5 Blijkt de opgegeven omzet onjuist, dan mag Brightmotive de vergoeding met terugwerkende kracht corrigeren. Is de opgegeven omzet meer dan 10% te laag of een uitbreiding (artikel 4.3) niet of niet tijdig gemeld, dan geldt naast de correctie een opslag van 25% over het nagefactureerde bedrag. Blijft de opgave uit of verleent u geen medewerking als bedoeld in artikel 4.4, dan mag Brightmotive de omzet inschatten en daarop factureren totdat u alsnog een opgave verstrekt of medewerking verleent.</p>
+<p>4.6 Brightmotive heeft het recht de door u verschuldigde vergoeding na verloop van elk kalenderjaar te indexeren.</p>
+<p>4.7 Indien u niet aan uw verplichtingen voldoet, heeft Brightmotive het recht haar dienstverlening op te schorten, dit ontslaat u niet van uw verplichting tot betaling van de overeengekomen vergoedingen.</p>
+<h3 id="3-artikel-5-aansprakelijkheid">Artikel 5 — Aansprakelijkheid</h3>
+<p>5.1 Behoudens in geval van opzet of bewuste roekeloosheid van Brightmotive of haar bedrijfsleiding is de aansprakelijkheid van Brightmotive beperkt tot het bedrag dat u aan Brightmotive verschuldigd was over de drie maanden voorafgaand aan het moment van de schade toebrengende gebeurtenis. Een samenhangende reeks gebeurtenissen geldt als één gebeurtenis. De totale aansprakelijkheid van Brightmotive bedraagt per kalenderjaar ten hoogste het hiervoor bedoelde bedrag.</p>
+<p>5.2 Brightmotive is uitdrukkelijk niet aansprakelijk voor indirecte schade, gevolgschade, gederfde omzet en/of winst, gemiste besparingen, verlies of verminking van data en schade door bedrijfsstagnatie.</p>
+<p>5.3 Voorwaarde voor het ontstaan van enig recht op schadevergoeding is dat u de schade uiterlijk binnen twee maanden na ontdekking of nadat u de schade had kunnen ontdekken, schriftelijk bij Brightmotive meldt. Aansprakelijkheid ontstaat bovendien slechts indien u Brightmotive schriftelijk in gebreke stelt en daarbij een redelijke termijn biedt om de tekortkoming te herstellen, en Brightmotive ook na die termijn tekort blijft schieten.</p>
+<p>5.4 In geval van overmacht is Brightmotive nimmer gehouden tot vergoeding van de daardoor bij u ontstane schade. Van overmacht is onder meer sprake bij storingen of uitvallen van het internet of de telecommunicatie-infrastructuur, stroomstoringen, buitenlandse of binnenlandse onlusten, pandemieën, virussen, hacks en andere onrechtmatige inbreuken, mobilisatie, oorlog, stremming in het vervoer, staking, gebrek aan personele capaciteit, brand en overstroming.</p>
+<p>5.5 U vrijwaart Brightmotive voor aanspraken van derden, waaronder uw afnemers, die verband houden met uw gebruik van de diensten.</p>
+<h3 id="3-artikel-6-duur-opzegging-en-overstappen">Artikel 6 — Duur, opzegging en overstappen</h3>
+<p>6.1 De overeenkomst gaat in zodra deze door beide partijen is ondertekend, of op de overeengekomen startdatum, en heeft een looptijd van twee jaar.</p>
+<p>6.2 Na deze periode wordt de overeenkomst stilzwijgend verlengd met steeds een periode die gelijk is aan de duur van de eerste looptijd. Partijen kunnen steeds tegen het einde van iedere periode de overeenkomst schriftelijk opzeggen met een opzegtermijn van drie maanden.</p>
+<p>6.3 In geval van faillissement van Brightmotive kan iedere partij deze overeenkomst opzeggen. De houdstermaatschappij van Brightmotive kan u een voorstel doen voor voortgezette dienstverlening vanuit een andere maatschappij in het concern.</p>
+<p><strong>6.4 Wilt u overstappen naar een andere aanbieder of naar uw eigen systemen, of wilt u dat wij uw exporteerbare gegevens wissen, dan kondigt u dit schriftelijk aan. U hoeft daarbij geen langere termijn aan te houden dan twee maanden. Een overstap geldt niet als opzegging van de overeenkomst; u kunt beide combineren.</strong></p>
+<p><strong>6.5 Na de aankondigingstermijn geldt een overgangsperiode van 30 kalenderdagen. Daarin zetten wij de dienstverlening voort en geven wij redelijke ondersteuning aan u en aan door u gemachtigde derden, met aandacht voor de continuïteit van uw bedrijfsvoering en de beveiliging van de gegevens. Is 30 dagen technisch niet haalbaar, dan melden wij dat gemotiveerd binnen 14 werkdagen na uw aankondiging en geldt een alternatieve overgangsperiode van ten hoogste zeven maanden. U mag de overgangsperiode eenmaal verlengen met een periode die u daarvoor passend acht.</strong></p>
+<p><strong>6.6 Uw exporteerbare gegevens zijn de gegevens die u heeft ingevoerd en de gegevens die door uw gebruik van de diensten zijn ontstaan, met bijbehorende metadata. Daaronder vallen niet de software, algoritmes, verrijkingslogica en interne werkingsgegevens van Brightmotive en evenmin data van haar licentiegevers, voor zover deze door intellectuele eigendomsrechten of als bedrijfsgeheim beschermd zijn. Wij stellen uw exporteerbare gegevens op verzoek beschikbaar in een gestructureerd, gangbaar en machineleesbaar formaat; een actueel overzicht van de categorieën, formaten en specificaties en informatie over de locatie van onze ICT-infrastructuur staat op onze website. Na de overgangsperiode kunt u de exporteerbare gegevens nog ten minste 30 kalenderdagen ophalen; daarna wissen wij ze op uw verzoek en bevestigen wij dit schriftelijk. Tot 12 januari 2027 brengen wij voor een overstap ten hoogste onze werkelijke kosten in rekening; daarna is de overstap kosteloos.</strong></p>
+<h3 id="3-artikel-7-wijzigingen-voorwaarden">Artikel 7 — Wijzigingen voorwaarden</h3>
+<p>7.1 Brightmotive mag deze voorwaarden, gebruiksregels, de vergoeding en de betalingstermijn aanpassen. Aanpassingen worden ten minste twee maanden vóór inwerkingtreding per e-mail aangekondigd. Het toepassen van een regeling die al in de overeenkomst of deze voorwaarden is voorzien, geldt niet als aanpassing.</p>
+<p>7.2 Beperkt een aanpassing uw rechten wezenlijk of verzwaart zij uw verplichtingen wezenlijk, dan kunt u de overeenkomst binnen een maand na de aankondiging schriftelijk opzeggen tegen de datum van inwerkingtreding. Besluit Brightmotive binnen twee weken na uw opzegging de aanpassing niet op u toe te passen, dan vervalt uw opzegging en wordt de overeenkomst ongewijzigd voortgezet. Gebruik van de dienst na de datum van inwerkingtreding geldt als acceptatie van de aangepaste voorwaarden.</p>
+<p>7.3 Afwijkingen van deze voorwaarden zijn alleen bindend indien deze door Brightmotive schriftelijk zijn aanvaard.</p>
+<h3 id="3-artikel-8-overige-bepalingen">Artikel 8 — Overige bepalingen</h3>
+<p>8.1 Op alle overeenkomsten en diensten van Brightmotive is Nederlands recht van toepassing. De toepasselijkheid van het Weens Koopverdrag is uitgesloten.</p>
+<p>8.2 Alle geschillen tussen Brightmotive en u zullen in eerste aanleg bij uitsluiting worden voorgelegd aan de bevoegde Nederlandse rechter in het arrondissement waarin Brightmotive gevestigd is.</p>
+<p>8.3 Eventuele overeengekomen termijnen zijn geen fatale termijnen, tenzij anders overeengekomen en met uitzondering van betalingstermijnen.</p>
+<p>8.4 Indien een bepaling in deze voorwaarden eist dat een mededeling "schriftelijk" moet worden verricht, is tevens voldaan indien de mededeling per e-mail wordt verricht.</p>
+<p>8.5 De versie van communicatie of informatie zoals opgeslagen door Brightmotive wordt geacht juist te zijn, behoudens tegenbewijs.</p>
+<p>8.6 Brightmotive is gerechtigd haar rechten en verplichtingen uit overeenkomsten met u over te dragen aan een derde. U geeft hiervoor nu alvast uw onvoorwaardelijke en onherroepelijke toestemming.</p>
+<p>8.7 Indien een bepaling in deze voorwaarden nietig blijkt te zijn of wordt vernietigd, tast dit niet de geldigheid van de overige voorwaarden aan. <strong>Een verbod dat verder blijkt te gaan dan wettelijk is toegestaan, geldt als beperkt tot wat wettelijk maximaal is toegestaan.</strong> Partijen zullen in dit geval ter vervanging (een) nieuwe bepaling(en) vaststellen, waarmee zoveel als rechtens mogelijk is aan de bedoeling van de oorspronkelijke bepaling gestalte wordt gegeven.</p>
+<hr />
+<h2 id="3-overzicht-van-de-wijzigingen-tov-v310">Overzicht van de wijzigingen t.o.v. v3.10</h2>
+<table>
+<thead>
+<tr>
+<th>Waar</th>
+<th>Wat</th>
+<th>Waarom (kort)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Art. 3 (titel + 3.1–3.7 nieuw; oud 3.2/3.3 → 3.8/3.9)</td>
+<td>Gelaagde namaakbescherming: namaakverbod met definitie, bedrijfsgeheim-kwalificatie, doelgebonden concurrentieverbod (looptijd + 1 jaar; geheime informatie onbeperkt), derdenregeling, data-extractieverbod, carve-outs voor dwingend recht en eigen ontwikkeling, meeschalende boete</td>
+<td>Invulling van het opengelaten art. 3.1; procedure-bestendig ontwerp langs SAS/Ryanair, Wbb, VBER en de matigingsrechtspraak — zie deliverables 1 en 2</td>
+</tr>
+<tr>
+<td>Art. 3.8, slotzin</td>
+<td>Klant behoudt recht op eigen gegevens en een kopie</td>
+<td>Art. 13 Data Act (oneerlijke B2B-databedingen)</td>
+</tr>
+<tr>
+<td>Art. 6 (titel + 6.4–6.6 nieuw)</td>
+<td>Volwaardige overstapregeling: aankondiging max. 2 maanden, overgangsperiode 30 dagen (verlengbaar), definitie exporteerbare gegevens met IE-/bedrijfsgeheim-uitzondering, register op website, retrieval ≥ 30 dagen, wisbevestiging, kosten nul vanaf 12-1-2027</td>
+<td>Art. 23–30 Data Act; het oude 6.4 voldeed niet aan art. 25 (rechten moeten in het contract zelf staan) én de regeling beschermt art. 3 tegen het verwijt van overstapbelemmering</td>
+</tr>
+<tr>
+<td>Art. 8.7</td>
+<td>Afbouwregel toegevoegd</td>
+<td>Versterkt partiële nietigheid (art. 3:41 BW); let op: bij mededingingsrechtelijke nietigheid werkt conversie niet (BP/Benschop) — vandaar dat art. 3 zelf al is opgeknipt</td>
+</tr>
+</tbody>
+</table></section><section class="chapter" id="h4"><header class="chapter-head"><div class="num">Hoofdstuk 4</div><h1>Maatregelen buiten het contract</h1><div class="sub">Wat er feitelijk moet gebeuren, geprioriteerd met kosten</div></header><p>Doel: (a) algoritmes, datastructuren, documentatie en verrijkte data laten kwalificeren als <strong>bedrijfsgeheim</strong> (het vereiste van "redelijke maatregelen" uit art. 1 Wbb wordt door rechters serieus getoetst en is de meest voorkomende afwijzingsgrond), en (b) namaak bij een volgend incident <strong>bewijsbaar</strong> maken. Let op: de maatregelentoets kijkt naar het moment van de inbreuk — wat je nu regelt, beschermt de toekomst, niet met terugwerkende kracht.</p>
+<h2 id="4-prioriteit-1-deze-maand-onmisbaar">Prioriteit 1 — Deze maand (onmisbaar)</h2>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Maatregel</th>
+<th>Waarom / grondslag</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><strong>Bedrijfsgeheimenregister</strong> aanleggen: per categorie (broncode, algoritmes/matching- en verrijkingslogica, datamodellen, koppelspecificaties, prijsmodellen, documentatie) een concrete omschrijving, vindplaats, waarde-onderbouwing, wie toegang heeft en welke maatregelen gelden. Leg vast dat <strong>Brightmotive Services bv</strong> de houder is (concern-check).</td>
+<td>Rechters wijzen claims af bij vage afbakening (Hof Den Haag 2025, Corrosion) of onvoldoende onderbouwde handelswaarde (Rb. Midden-NL 2024, GraydonCreditsafe). De Wbb beschermt alleen de houder.</td>
+</tr>
+<tr>
+<td>2</td>
+<td><strong>Bewijs van de NDA-clickwrap veiligstellen</strong>: logs van wie wanneer akkoord klikte en welke documentatie is bezocht, forensisch gekopieerd, gehasht en van een tijdstempel voorzien. Daarna structureel bewaren.</td>
+<td>De clickwrap is de kern-"redelijke maatregel" én het anker onder art. 2 lid 2 Wbb (gebruik in strijd met geheimhoudingsplicht). Zonder log bestaat de maatregel juridisch niet.</td>
+</tr>
+<tr>
+<td>3</td>
+<td><strong>Canary-records</strong> (verzonnen maar plausibele onderdelen/kruisverwijzingen) in de verrijkte catalogusdata, <strong>uniek per klant-tenant</strong>, plus een globale set. Gedateerd register bijhouden, extern verankerd (i-DEPOT of hash + gekwalificeerde tijdstempel), sets rouleerbaar houden.</td>
+<td>Canary in de kloon = vrijwel onweerlegbaar bewijs van overname én herleidbaar wie lekte (vgl. HvJ Apis/Lakorda, C-545/07). Verankering vooraf pareert het verweer "achteraf geconstrueerd"; reken erop dat canaries in een procedure onthuld moeten worden.</td>
+</tr>
+<tr>
+<td>4</td>
+<td><strong>Documentatietoegang op persoonlijke accounts</strong> (geen gedeelde logins), met logging per gebruiker; toegangsniveaus scheiden (publiek koppel-overzicht vs. NDA-diepte-documentatie).</td>
+<td>Compartimentering + logging is het patroon dat in de rechtspraak wint (Rb. Den Haag 2019, Future Crops).</td>
+</tr>
+<tr>
+<td>5</td>
+<td><strong>Markering</strong>: documentatie, exports, API-specificaties en offertes voorzien van "Vertrouwelijk — bedrijfsgeheim van Brightmotive Services bv"; clickwrap-tekst aanscherpen (zie deliverable 2, invoeringsnotitie 5).</td>
+<td>Markering alleen is onvoldoende (Rb. Midden-NL 2018, Wärtsilä), maar bouwt de "wist of had moeten weten"-wetenschap van derden op (art. 2 lid 3 Wbb).</td>
+</tr>
+<tr>
+<td>6</td>
+<td><strong>IE-overdracht (ex-)freelancers repareren</strong>: inventariseer alle externe bijdragers aan BrightCat en laat alsnog overdrachtsakten tekenen; standaard IE-overdracht + geheimhouding in alle nieuwe inhuurcontracten.</td>
+<td>Auteursrecht van freelancers ligt bij henzelf tenzij bij akte overgedragen (art. 2 Aw; art. 7 Aw geldt alleen voor werknemers). Zonder overdracht mist Brightmotive vorderingsbevoegdheid — een gegarandeerd verweer van een kloner.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="4-prioriteit-2-komend-kwartaal">Prioriteit 2 — Komend kwartaal</h2>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Maatregel</th>
+<th>Waarom / grondslag</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>7</td>
+<td><strong>Logging &amp; anti-extractie op de dienst</strong>: per-klant API-keys/tenant-ID's, volledige audit trail van zoek-/blader-/exportgedrag, rate limiting met alerts op afwijkende patronen (sequentieel doorlopen catalogus, nachtelijke bulk), logs append-only met hash-keten en betrouwbare tijdstempels. AVG-kant regelen (grondslag, bewaartermijn, vermelding).</td>
+<td>Eigen logs zijn vrij bewijs (art. 152 Rv); art. 8.5 AV ("onze opgeslagen versie geldt behoudens tegenbewijs") is een geldige bewijsafspraak (art. 153 Rv) die deze logs extra gewicht geeft.</td>
+</tr>
+<tr>
+<td>8</td>
+<td><strong>Watermerken/fingerprints per klant</strong> in gegenereerde documentatie/PDF's en (onzichtbaar) in API-responses (veldvolgorde, sortering, afrondingsvariaties per tenant).</td>
+<td>Herleidt een lek naar de bron; staande praktijk (e-book-watermarking).</td>
+</tr>
+<tr>
+<td>9</td>
+<td><strong>i-DEPOT-routine</strong> (BOIP, € 37 per depot per 5 jaar): per release of kwartaal een depot met code-hash, UI-screenshots van kernschermen, algoritme-/architectuurdocumentatie, datamodel en canary-register. Start met een <strong>nulmeting van de huidige stand</strong>. Automatiseer daarnaast <strong>eIDAS-gekwalificeerde tijdstempels</strong> op release-hashes in de CI/CD + ondertekende Git-tags.</td>
+<td>Bewijst makerschap en prioriteit (jouw versie is ouder dan de kloon); gekwalificeerde tijdstempels genieten een wettelijk vermoeden van juistheid (eIDAS-verordening, art. 41). Een i-DEPOT geeft géén IE-recht — het is bewijs.</td>
+</tr>
+<tr>
+<td>10</td>
+<td><strong>EU-modeldepot op nieuwe UI</strong>: registreer bij elke redesign de kernschermen en iconensets als EU-model (EUIPO; € 350 eerste model + € 125 per extra; meervoudige aanvraag). Agendeer de <strong>respijttermijn van 12 maanden</strong> per release — al langer openbare schermen zijn niet meer registreerbaar.</td>
+<td>Registergebonden verbodsrecht tegen UI's die "geen andere algemene indruk" wekken — het directe wapen tegen "net andere icoontjes", zonder auteursrechtelijke werktoets-discussie.</td>
+</tr>
+<tr>
+<td>11</td>
+<td><strong>Merk "BrightCat"</strong> registreren: Uniemerk klassen 9/35/42 (ca. € 1.050 aan taksen); eerst beschikbaarheidscheck. VK apart indien relevant.</td>
+<td>Tegen naams-/domeinmisbruik en handhaving op platforms; ontbrak tot nu toe.</td>
+</tr>
+<tr>
+<td>12</td>
+<td><strong>Databankinvestering documenteren</strong>: uren, licentiekosten en tooling voor het <strong>verkrijgen, controleren en presenteren</strong> van de catalogus- en verrijkingsdata administratief bijhouden (in die termen). TecDoc-licentie nalopen: wat mag Brightmotive claimen over de gecombineerde/verrijkte set?</td>
+<td>Het eigen databankrecht op de verrijkte data staat of valt met bewijs van deze investering (HvJ British Horseracing: creëren telt niet, verkrijgen/controleren/presenteren wel).</td>
+</tr>
+</tbody>
+</table>
+<h2 id="4-prioriteit-3-doorlopend-sterk-aanbevolen">Prioriteit 3 — Doorlopend / sterk aanbevolen</h2>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Maatregel</th>
+<th>Waarom</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>13</td>
+<td>Geheimhoudingsbeleid op schrift (classificatie, wie mag wat delen) + korte jaarlijkse training, <strong>aantoonbaar</strong> (deelnamelog).</td>
+<td>Consequente toepassing is beslissend; één ongeclausuleerde verstrekking kan fataal zijn (Wärtsilä). Onderzoek ook eenmalig of documentatie in het verleden ooit zonder NDA is verstrekt.</td>
+</tr>
+<tr>
+<td>14</td>
+<td>Geheimhoudingsbedingen in alle arbeidscontracten controleren; broncode in besloten repositories met 2FA en least-privilege; offboarding-checklist (toegangen intrekken).</td>
+<td>Basis-hygiëne die rechters meewegen.</td>
+</tr>
+<tr>
+<td>15</td>
+<td>NDA-flow uitbreiden naar demo's van admin-functionaliteit, onboarding-sessies en leveranciersgesprekken; wederkerige geheimhouding met koppelpartners nalopen.</td>
+<td>Dicht de informele lekkanalen.</td>
+</tr>
+<tr>
+<td>16</td>
+<td>Jaarlijkse review van register + maatregelen, vastgelegd.</td>
+<td>Toont dat maatregelen "gezien de omstandigheden" worden onderhouden (art. 1 Wbb).</td>
+</tr>
+<tr>
+<td>17</td>
+<td>Vaste relaties en sjablonen klaarzetten: IE-advocaat, deurwaarder met IT-forensische ervaring, forensisch IT-bureau; concept-verlofverzoek bewijsbeslag, sommatie met onthoudingsverklaring, interne litigation-hold-instructie.</td>
+<td>Bij een incident telt snelheid; zie deliverable 4.</td>
+</tr>
+<tr>
+<td>18</td>
+<td>Nice-to-have: DLP-/exfiltratiemonitoring, pentests met rapportage, clean-desk/bezoekersbeleid, auditrechten bij klanten met maatwerkkoppelingen.</td>
+<td>Verdieping als 1–17 staan.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Kosten-indicatie jaar 1 (taksen):</strong> merk ± € 1.050, zes EU-modellen ± € 975, i-DEPOT-routine ± € 150–300, tijdstempels verwaarloosbaar → totaal ca. € 2.200–3.500, exclusief advies- en bouwuren.</p>
+<p><strong>Clickwrap voor eindgebruikers (garages):</strong> het vermoeden uit de handover klopt — op termijn verdient een gebruikers-clickwrap (ook voor klanten-van-klanten) aanbeveling, vooral om scraping door eindgebruikers contractueel te dekken en de vertrouwelijkheidsketen rond te maken. Dit kan los van de AV-herziening en hoeft die niet op te houden.</p></section><section class="chapter" id="h5"><header class="chapter-head"><div class="num">Hoofdstuk 5</div><h1>Draaiboek volgend incident</h1><div class="sub">Eerste 30 dagen, stap voor stap</div></header><p><strong>Gouden regel: eerst stil bewijs veiligstellen, dán pas contact.</strong> Elke vroege sommatie of boze e-mail is een kans voor de wederpartij om repositories, e-mails en data te wissen — terwijl het verlof voor bewijsbeslag juist steunt op de vrees voor verduistering. De fout uit het vorige incident (weinig kunnen uitrichten) begint meestal hier.</p>
+<p><strong>Procesrechtelijk kader (sinds 1 januari 2025):</strong> inzagerecht art. 194–195a Rv (voorheen 843a); voorlopige bewijsverrichtingen art. 196–204 Rv (combineerbaar in één verzoekschrift); bewijsbeslag gecodificeerd in art. 205–206 Rv (IE-bewijsbeslag art. 1019b–1019d Rv blijft daarnaast bestaan); nieuw: deurwaarders-proces-verbaal van constateringen, art. 207 Rv. Bewijsbeslag geeft <strong>geen</strong> inzage — dat is een aparte stap.</p>
+<hr />
+<h2 id="5-fase-0-dag-03-stil-veiligstellen-géén-contact-met-de-weder">Fase 0 — Dag 0–3: stil veiligstellen (géén contact met de wederpartij)</h2>
+<table>
+<thead>
+<tr>
+<th>Stap</th>
+<th>Wat</th>
+<th>Wie</th>
+<th>Doel / valkuil</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0.1</td>
+<td><strong>Interne litigation hold</strong>: niets wijzigen aan relevante logs en systemen; kring van ingewijden klein houden.</td>
+<td>Directie + CTO</td>
+<td>Integriteit van het eigen bewijs; loslippigheid richting de markt voorkomen.</td>
+</tr>
+<tr>
+<td>0.2</td>
+<td><strong>Forensische kopie</strong> van eigen logs en tenant-data van de verdachte klant: toegangslogs, exportgedrag, documentatie-kliks, NDA-akkoorden. Hashen, tijdstempelen, chain of custody vastleggen.</td>
+<td>Forensisch IT'er + CTO</td>
+<td>Dit is het bewijs dat de klant toegang had tot wát — de basis onder contract- én Wbb-claims.</td>
+</tr>
+<tr>
+<td>0.3</td>
+<td><strong>Deurwaarders-pv van de kloon</strong>: laat de deurwaarder het publiek waarneembare deel van de kloon-site/app vastleggen (kan zonder verlof; overweeg verlof ex art. 207 Rv voor dwingende bewijskracht en voor niet-openbare delen).</td>
+<td>Deurwaarder</td>
+<td>Momentopname vóórdat de wederpartij kan aanpassen.</td>
+</tr>
+<tr>
+<td>0.4</td>
+<td><strong>Canary- en fingerprint-check</strong>: zoek de eigen canary-records, watermerken en fingerprints in de kloon en laat de deurwaarder de <strong>vindplaatsen</strong> in het pv constateren.</td>
+<td>Eigen team + deurwaarder</td>
+<td>Canaries in de kloon = vrijwel onweerlegbaar overnamebewijs, herleidbaar naar de lekkende klant.</td>
+</tr>
+<tr>
+<td>0.5</td>
+<td><strong>Alleen rechtmatige toegang</strong>: publieke pagina's of een regulier account binnen de normale voorwaarden. <strong>Nooit</strong>: andermans inloggegevens, beveiliging omzeilen, "even in de kloon prikken".</td>
+<td>Iedereen</td>
+<td>Computervredebreuk is strafbaar en levert tegenclaims op. (Civielrechtelijk wordt onrechtmatig verkregen bewijs meestal wél toegelaten — HR 2014 — maar het risico is het nooit waard.)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="5-fase-1-dag-310-analyse-en-beslag">Fase 1 — Dag 3–10: analyse en beslag</h2>
+<table>
+<thead>
+<tr>
+<th>Stap</th>
+<th>Wat</th>
+<th>Wie</th>
+<th>Doel / valkuil</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.1</td>
+<td><strong>Advocaat inschakelen; grondslagen ordenen</strong>: contract/boete (art. 3 AV), bedrijfsgeheimen (Wbb), databankrecht op verrijkte data, auteursrecht op code/teksten/assets, onrechtmatige daad (tegen de bouwer). Routekeuze bepaalt ook het proceskostenregime (art. 1019h Rv snijdt aan twee kanten: verlies je op de IE-grondslag, dan betaal jij de volledige kosten van de wederpartij).</td>
+<td>Advocaat</td>
+<td>Niet alles op de IE-kaart zetten: nagebouwde functionaliteit is auteursrechtelijk zwak (SAS-leer); contract + boete + Wbb zijn hier meestal sterker.</td>
+</tr>
+<tr>
+<td>1.2</td>
+<td><strong>Verlofverzoek conservatoir bewijsbeslag</strong> bij de voorzieningenrechter (IE-grondslag: art. 1019b–1019d Rv; overig: art. 205–206 Rv). Bepaald en gericht omschrijven: servers, repositories, e-mail tussen klant en bouwer, databasedumps. Bewaarder + forensische kopie-modaliteiten vragen. Wordt ex parte behandeld; tegen toewijzing staat voor de wederpartij geen hoger beroep open.</td>
+<td>Advocaat; uitvoering deurwaarder + onafhankelijk forensisch IT'er</td>
+<td>Valkuilen: te breed formuleren (fishing expedition → afwijzing), en denken dat beslag leesrecht geeft — inzage is stap 2.2.</td>
+</tr>
+<tr>
+<td>1.3</td>
+<td>Overweeg in hetzelfde verzoekschrift <strong>voorlopige bewijsverrichtingen</strong> (art. 196 Rv): voorlopig getuigenverhoor van de bouwer, pv van constateringen.</td>
+<td>Advocaat</td>
+<td>Alles in één keer; verrassingseffect behouden.</td>
+</tr>
+<tr>
+<td>1.4</td>
+<td>Beslag laten leggen.</td>
+<td>Deurwaarder + IT'er + bewaarder</td>
+<td>Daarna niet stilzitten: termijnen voor de eis in de hoofdzaak bewaken.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="5-fase-2-dag-1020-sommatie-en-inzage-pas-ná-het-beslag">Fase 2 — Dag 10–20: sommatie en inzage (pas ná het beslag)</h2>
+<table>
+<thead>
+<tr>
+<th>Stap</th>
+<th>Wat</th>
+<th>Wie</th>
+<th>Doel / valkuil</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2.1</td>
+<td><strong>Sommatie aan klant én bouwer</strong>: staken en gestaakt houden; onthoudingsverklaring met boete per overtreding/per dag; opgave van afnemers en omzet; bewaarplicht; beroep op art. 3 AV, de NDA en de Wbb; termijn 5–7 dagen.</td>
+<td>Advocaat</td>
+<td>De brief aan de bouwer <strong>fixeert diens wetenschap</strong> (art. 2 lid 3 Wbb): alles wat hij daarna nog doet (doorontwikkelen, opleveren, hosten) is evident onrechtmatig. Contractuele dagboetes vanaf nu niet stil laten oplopen — direct aanzeggen.</td>
+</tr>
+<tr>
+<td>2.2</td>
+<td><strong>Inzageverzoek</strong> (art. 194/195 Rv; bij IE via art. 1019a Rv) op het beslagen materiaal: benoem bepaalde gegevens (de bestanden met jouw canaries, de communicatie over "voorbeelddata", de repository-historie) en stel een vertrouwelijkheidsregime voor (alleen advocaat + deskundige).</td>
+<td>Advocaat</td>
+<td>Van "beslagen" naar "bruikbaar" bewijs. Kan parallel aan schikkingsgesprekken lopen.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="5-fase-3-dag-2030-routekeuze">Fase 3 — Dag 20–30: routekeuze</h2>
+<table>
+<thead>
+<tr>
+<th>Route</th>
+<th>Wanneer</th>
+<th>Kern</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Ex parte verbod</strong> (art. 1019e Rv, alleen IE-grondslagen — niet voor bedrijfsgeheimen)</td>
+<td>Evidente 1-op-1-kopie (canaries!, overgenomen code/data) + echte superspoed (kloon wordt actief verkocht)</td>
+<td>Verbod zonder dat de wederpartij wordt gehoord; strenge toets, volledige en eerlijke voorlichting van de rechter vereist.</td>
+</tr>
+<tr>
+<td><strong>Kort geding</strong></td>
+<td>Standaardroute bij lopende exploitatie</td>
+<td>Verbod + dwangsom, gebod tot staken, opgave afnemers, eventueel voorschot op verbeurde boetes (terughoudende toets bij geldvorderingen); proceskosten ex art. 1019h bij IE-grondslag, art. 1019ie bij Wbb (discretionair; kwade trouw helpt).</td>
+</tr>
+<tr>
+<td><strong>Bodemprocedure</strong></td>
+<td>Voor het geld en de afwikkeling</td>
+<td>Verbeurde boetes (het contract maakt schadebewijs overbodig), schadevergoeding/winstafdracht (art. 27a Aw, rekening en verantwoording), verklaring voor recht, vernietiging van de kloon-codebase (art. 6 Wbb). Bij voorafgaand kort geding op IE-grondslag: termijn eis in hoofdzaak bewaken.</td>
+</tr>
+<tr>
+<td><strong>Schikking / vaststellingsovereenkomst</strong></td>
+<td>Vaak rationeel richting een (ex-)klant</td>
+<td>Onderhandel vanuit veiliggesteld bewijs; leg staking, controle-mechanisme en een nieuw boetebeding vast.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="5-veelgemaakte-fouten-samengevat">Veelgemaakte fouten (samengevat)</h2>
+<ol>
+<li>Eerst sommeren, dan pas aan bewijs denken — bewijs verdampt.</li>
+<li>Zelf "inbreken" in de kloon — strafbaar risico, nooit nodig.</li>
+<li>Alles op het auteursrecht zetten terwijl de functionaliteit-nabouw daar juist vrij is — contract/boete, Wbb en databankrecht zijn de dragende grondslagen.</li>
+<li>Denken dat bewijsbeslag inzage geeft — inzage is een aparte, latere stap.</li>
+<li>Canaries geheim willen houden voor de rechter — geheim bewijs telt niet; gebruik rouleerbare sets en een vertrouwelijkheidsregime.</li>
+<li>Dagboetes stil laten oplopen — weegt bij matiging tegen je.</li>
+<li>De bouwer vergeten als tweede gedaagde — jegens hem gelden Wbb, databankrecht, auteursrecht en onrechtmatige daad (profiteren van wanprestatie), plus via art. 3.4 AV de aansprakelijkheid van de klant voor zijn gedrag.</li>
+<li>Het 1019h-kostenrisico onderschatten bij een wankele IE-grondslag.</li>
+</ol>
+<h2 id="5-vooraf-klaarzetten-eenmalig-zie-ook-maatregelenlijst-17">Vooraf klaarzetten (eenmalig, zie ook maatregelenlijst #17)</h2>
+<ul>
+<li>Vaste IE-/procesadvocaat, deurwaarder met IT-forensische ervaring, forensisch IT-bureau, bewaarder.</li>
+<li>Sjablonen: litigation-hold-instructie, verlofverzoek bewijsbeslag, verzoek pv van constateringen, sommatie met onthoudingsverklaring.</li>
+<li>Contactenlijst + beslisboom (wie belt wie op dag 0) in het bedrijfsgeheimenregister.</li>
+</ul></section><section class="chapter" id="h6"><header class="chapter-head"><div class="num">Hoofdstuk 6</div><h1>Bronnen en verificatie</h1><div class="sub">Status per bron, correcties op de handover, eindchecklist</div></header><h2 id="6-verificatiemethode-en-één-belangrijk-voorbehoud">Verificatiemethode en één belangrijk voorbehoud</h2>
+<p>De opdracht eiste verificatie van alle rechtspraak aan de bron. De onderzoeksomgeving bleek echter <strong>rechtstreekse toegang tot de primaire bronnen te blokkeren</strong> (uitgaand verkeer naar wetten.overheid.nl, uitspraken.rechtspraak.nl, data.rechtspraak.nl, eur-lex.europa.eu en curia.europa.eu werd door de netwerkproxy geweigerd; meermaals getest in alle zeven sporen). Daarom is als volgt geverifieerd:</p>
+<ul>
+<li><strong>Data Act (Verordening 2023/2854):</strong> integraal geverifieerd op de <strong>authentieke Engelse verordeningstekst</strong> (Publicatiebureau-corpus, CELEX 32023R2854) — de sterkste verificatie in dit onderzoek; alle EU-taalversies zijn gelijkelijk authentiek. Alleen de letterlijke Nederlandse bewoordingen zijn via secundaire bronnen gecorroboreerd.</li>
+<li><strong>Alle overige wetteksten en uitspraken:</strong> geverifieerd via <strong>meerdere onafhankelijke, convergerende secundaire bronnen</strong> (zoeksnippets van rechtspraak.nl/EUR-Lex zelf, Boek9/IEPT, IE-Forum, Cassatieblog, NJ-vindplaatsen, kamerstukken, ACM-publicaties, gerenommeerde kantooranalyses). ECLI's, data, partijen en kernoverwegingen zijn consistent over die bronnen bevestigd.</li>
+</ul>
+<p><strong>Consequentie:</strong> de kans op materiële afwijking is klein (kernnormen worden overal gelijkluidend geciteerd), maar <strong>vóór gebruik in een sommatie of processtuk moet een advocaat de hieronder gemarkeerde punten éénmaal op de primaire bron naslaan.</strong> Niets in dit onderzoek berust op ongeverifieerde trainingskennis zonder dat dit expliciet is gemarkeerd.</p>
+<h2 id="6-correcties-op-de-handover-het-eerdere-advies">Correcties op de handover / het eerdere advies</h2>
+<ol>
+<li><strong>Onjuist ECLI in de handover:</strong> Lundiform/Mexx = HR 5 april 2013, <strong>ECLI:NL:HR:2013:BY8101</strong> (niet BZ3749; dat is HR 14 juni 2013, Koersplan/Aegon). Dit ECLI stond ook in het eerdere AV-reviewmateriaal.</li>
+<li><strong>Nuance op het eerdere advies over de VBER:</strong> "postcontractueel max. 1 jaar onder voorwaarden" is onvolledig — art. 5 lid 3 VBER eist óók beperking tot de fysieke "ruimten en terreinen" van de afnemer, wat voor SaaS onvervulbaar is. Een postcontractueel exploitatieverbod is dus nooit groepsvrijgesteld; alleen het gebruiksverbod van <strong>niet-openbare knowhow</strong> mag (dan wel onbeperkt in tijd). De voorgestelde tekst is daarop gebouwd.</li>
+<li><strong>Nuance op "deels nietig wegens dwingende gebruikersrechten":</strong> die rechten gelden voor de "rechtmatige verkrijger/gebruiker van een exemplaar/kopie". Bij pure SaaS (alleen browsertoegang) is naar heersende leer géén sprake van zo'n verkrijger, zodat de nietigheid waarschijnlijk niet eens speelt — maar dit is niet uitgeprocedeerd; de carve-out in art. 3.6 vangt beide scenario's af.</li>
+<li><strong>Bevestigd uit het eerdere advies:</strong> SAS Institute, Top System, Ryanair/PR Aviation, All Round/Simstars en de inschatting dat slaafse nabootsing voor B2B-platform-UI zelden haalbaar is, kloppen allemaal (ECLI's geverifieerd zoals hieronder).</li>
+<li><strong>Nieuw t.o.v. beide eerdere adviezen:</strong> het bewijsrecht is per 1-1-2025 herzien (843a Rv vervangen door art. 194 e.v. Rv; bewijsbeslag gecodificeerd; nieuw art. 207 Rv), en de Data Act stelt sinds 12-9-2025 eisen die het huidige art. 6.4 niet haalt.</li>
+</ol>
+<h2 id="6-kernbronnen-per-onderwerp-met-verificatiestatus">Kernbronnen per onderwerp (met verificatiestatus)</h2>
+<p>Legenda: ✅ = meervoudig geverifieerd via convergerende bronnen (of, bij de Data Act, integrale authentieke tekst); ⚠️ = kern bevestigd, detail (r.o.-nummer, dictum of exact bedrag) primair nalopen; ❌ = niet geverifieerd, niet op steunen.</p>
+<h3 id="6-eu-rechtspraak-softwareiedata">EU-rechtspraak (software/IE/data)</h3>
+<table>
+<thead>
+<tr>
+<th>Bron</th>
+<th>Kern</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>HvJ EU 2-5-2012, C-406/10, ECLI:EU:C:2012:259 (SAS Institute)</td>
+<td>Functionaliteit, programmeertaal, bestandsformaten niet beschermd; verbod op observeren/bestuderen/testen tijdens rechtmatig gebruik nietig</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>HvJ EU 22-12-2010, C-393/09, ECLI:EU:C:2010:816 (BSA)</td>
+<td>GUI geen computerprogramma; mogelijk wel "gewoon" werk</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>HvJ EU 6-10-2021, C-13/20, ECLI:EU:C:2021:811 (Top System)</td>
+<td>Decompilatie voor foutverbetering niet volledig uitsluitbaar; modaliteiten wel regelbaar</td>
+<td>✅ (r.o. 66-67 ⚠️)</td>
+</tr>
+<tr>
+<td>HvJ EU 15-1-2015, C-30/14, ECLI:EU:C:2015:10 (Ryanair/PR Aviation)</td>
+<td>Onbeschermde databank → volledige contractsvrijheid; HR-vervolg ECLI:NL:HR:2016:390</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>HvJ EU 9-11-2004, C-203/02 (British Horseracing)</td>
+<td>Investering in creëren telt niet mee voor databankrecht</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>HvJ EU 3-6-2021, C-762/19, ECLI:EU:C:2021:434 (CV-Online/Melons)</td>
+<td>Verbodsrecht bij afbreuk aan terugverdienmogelijkheid investering</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>HvJ EU 19-12-2013, C-202/12, ECLI:EU:C:2013:850 (Innoweb/Gaspedaal)</td>
+<td>Dedicated metazoekmachine = hergebruik</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>HvJ EU 5-3-2009, C-545/07 (Apis/Lakorda)</td>
+<td>Meegekopieerde kenmerken (vgl. canaries) als bewijs van extractie</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>HvJ EU 17-10-2024, C-159/23, ECLI:EU:C:2024:887 (Sony/Datel)</td>
+<td>Runtime-variabelen buiten softwarebescherming</td>
+<td>⚠️</td>
+</tr>
+<tr>
+<td>HvJ Remia (42/84) en Pronuptia (161/84)</td>
+<td>Nevenrestrictie-leer: knowhowbescherming buiten kartelverbod</td>
+<td>✅ (r.o.-nrs ⚠️)</td>
+</tr>
+<tr>
+<td>Infopaq C-5/08; Cofemel C-683/17</td>
+<td>Werkbegrip: eigen intellectuele schepping</td>
+<td>✅</td>
+</tr>
+</tbody>
+</table>
+<h3 id="6-nederlandse-rechtspraak">Nederlandse rechtspraak</h3>
+<table>
+<thead>
+<tr>
+<th>Bron</th>
+<th>Kern</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>HR 5-4-2013, ECLI:NL:HR:2013:BY8101 (Lundiform/Mexx)</td>
+<td>Uitleg commerciële contracten; taalkundige betekenis geen automatisme</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>HR 20-2-2004, ECLI:NL:HR:2004:AO1427 (DSM/Fox)</td>
+<td>Glijdende schaal subjectieve/objectieve uitleg</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>HR 13-3-1981, ECLI:NL:HR:1981:AG4158 (Haviltex)</td>
+<td>Uitlegmaatstaf</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>HR 19-1-2018, ECLI:NL:HR:2018:56 (Diplomatic Card/Forax)</td>
+<td>Functionele specs/nabouw functionaliteit auteursrechtelijk vrij</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>HR 19-5-2017, ECLI:NL:HR:2017:938 (All Round/Simstars)</td>
+<td>Slaafse nabootsing: eigen gezicht + nodeloze verwarring</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>HR 27-4-2007, ECLI:NL:HR:2007:AZ6638 (Intrahof/Bart Smit)</td>
+<td>Matigingsmaatstaf boetes: "buitensporig en daarom onaanvaardbaar"</td>
+<td>✅ (r.o. 5.3 ⚠️)</td>
+</tr>
+<tr>
+<td>HR 16-2-2018, ECLI:NL:HR:2018:207 (Turan/Easystaff)</td>
+<td>Forse matiging eenheidsboete B2B in stand</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>HR 13-7-2012, ECLI:NL:HR:2012:BW4986</td>
+<td>Hoedanigheid partijen = gezichtspunt bij matiging</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>HR 20-12-2013, ECLI:NL:HR:2013:2123 (BP/Benschop)</td>
+<td>Geen conversie van met art. 6 Mw strijdig beding</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>HR 21-12-2012, ECLI:NL:HR:2012:BX0345 (ANVR/IATA)</td>
+<td>Zware stelplicht bij beroep op mededingingsrecht</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>HR 13-9-2013, ECLI:NL:HR:2013:BZ9958 (Molenbeek Invest)</td>
+<td>Bewijsbeslag buiten IE-zaken (per 2025 gecodificeerd)</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>HR 18-4-2014, ECLI:NL:HR:2014:942</td>
+<td>Onrechtmatig verkregen bewijs civiel in beginsel toelaatbaar</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>HR 1-5-2020, ECLI:NL:HR:2020:830 (Heraeus/Biomet)</td>
+<td>Art. 1019ie Rv proceskosten discretionair</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>HR 14-4-2000, ECLI:NL:HR:2000:AA5519 (HBS/Danestyle)</td>
+<td>Verhouding schadevergoeding/winstafdracht</td>
+<td>⚠️</td>
+</tr>
+<tr>
+<td>Hof Den Bosch 9-7-2013, ECLI:NL:GHSHE:2013:2993 (Betsoft)</td>
+<td>Look &amp; feel afgewezen; wapperverbod bij te brede claim</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>Vzr. Rb. Overijssel 4-6-2020, ECLI:NL:RBOVE:2020:1932 (Vendic)</td>
+<td>Webshopvormgeving: onvoldoende eigen karakter</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>Rb. Midden-NL 31-7-2019, ECLI:NL:RBMNE:2019:3649</td>
+<td>Letterlijk overgenomen teksten wél inbreuk</td>
+<td>⚠️</td>
+</tr>
+<tr>
+<td>Rb. Midden-NL 8-8-2018, ECLI:NL:RBMNE:2018:3715 (Wärtsilä)</td>
+<td>Inconsequente geheimhouding fataal voor Wbb-claim</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>Rb. Den Haag 20-3-2019, ECLI:NL:RBDHA:2019:2729 (Future Crops)</td>
+<td>NDA + communicatie + compartimentering + controle = voldoende maatregelen</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>Rb. Noord-Holland 12-12-2022, ECLI:NL:RBNHO:2022:10719 (Locus/HAI)</td>
+<td>(Semi)publiek reconstrueerbaar = geen geheim</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>Rb. Midden-NL 30-10-2024, ECLI:NL:RBMNE:2024:7789</td>
+<td>Handelswaarde substantiëren</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>Hof Den Haag 8-4-2025, ECLI:NL:GHDHA:2025:498 (Corrosion)</td>
+<td>Geheimen precies afbakenen; alleen de houder vordert</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>Hof Arnhem-Leeuwarden 2025, ECLI:NL:GHARL:2025:7218</td>
+<td>Samenstel/ordening kan geheim zijn</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>Rb. Amsterdam 11-6-2026, ECLI:NL:RBAMS:2026:5976 (TMU)</td>
+<td>Database als geheim; staken + opgave omzet/winst</td>
+<td>⚠️</td>
+</tr>
+<tr>
+<td>Hof Arnhem-Leeuwarden 26-4-2016, ECLI:NL:GHARL:2016:3399</td>
+<td>B2B-geheimhoudingsboete: matiging verworpen</td>
+<td>⚠️ (toegewezen bedrag onzeker)</td>
+</tr>
+<tr>
+<td>Hof Arnhem-Leeuwarden 2024, ECLI:NL:GHARL:2024:2397</td>
+<td>Boetes fors gematigd; dagboetes geschrapt</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>Rb. Midden-NL 17-6-2026, ECLI:NL:RBMNE:2026:3733</td>
+<td>€ 2 mln NDA-boetes integraal afgewezen (beding te ruim/ongekoppeld)</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>Rb. Midden-NL 19-7-2023, ECLI:NL:RBMNE:2023:2822</td>
+<td>Boetestructuur bevestigd; <strong>dictum onzeker</strong></td>
+<td>⚠️</td>
+</tr>
+<tr>
+<td>HR 27-6-1986 (Decca, NJ 1987/191); HR 23-10-1987 (KNVB/NOS, NJ 1988/310)</td>
+<td>Prestatiebescherming: hoge lat (pre-ECLI)</td>
+<td>✅ via NJ-vindplaatsen</td>
+</tr>
+<tr>
+<td>"Siemens-licentiezaak 2016"</td>
+<td>Illustratief; <strong>geen ECLI gevonden</strong></td>
+<td>❌ niet gebruiken</td>
+</tr>
+</tbody>
+</table>
+<h3 id="6-wet--en-regelgeving">Wet- en regelgeving</h3>
+<table>
+<thead>
+<tr>
+<th>Bron</th>
+<th>Kern</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Art. 45i–45n Auteurswet</td>
+<td>Dwingend: 45j slotzin (laden/foutverbetering), 45k (reservekopie), 45l (observeren/bestuderen/testen), 45m (decompilatie); gekoppeld aan "exemplaar"</td>
+<td>✅ (45k/45m leden 2-3 ⚠️)</td>
+</tr>
+<tr>
+<td>Richtlijn 2009/24/EG art. 5, 6, 8</td>
+<td>Art. 8 tweede alinea: strijdige bedingen nietig</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>Databankenwet art. 1, 2, 3; art. 24a Aw</td>
+<td>Sui generis recht; dwingende gebruikersrechten (sanctie nietig/vernietigbaar: onuitgemaakt)</td>
+<td>✅/⚠️</td>
+</tr>
+<tr>
+<td>Wet bescherming bedrijfsgeheimen art. 1, 2, 3, 5–9</td>
+<td>Definitie, onrechtmatigheid, derdenwerking, maatregelen</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>Art. 1019–1019ie Rv</td>
+<td>IE-handhaving; Wbb-titel 15A; 1019h/1019ie kosten</td>
+<td>✅ (actuele tekst 1019a ⚠️)</td>
+</tr>
+<tr>
+<td><strong>Art. 194–207 Rv (nieuw bewijsrecht per 1-1-2025</strong>, wet 35498<strong>)</strong></td>
+<td>Inzage 194–195a; voorlopige verrichtingen 196–204; bewijsbeslag 205–206; pv van constateringen 207</td>
+<td>✅ hoofdlijn; <strong>exacte ledenindeling primair nalopen</strong></td>
+</tr>
+<tr>
+<td>Art. 6:91–94 BW (boete), 6:233/235/247/248 BW (AV), 3:40–3:42 BW (nietigheid)</td>
+<td>Ontwerpkader boete en AV</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>Art. 6 en 7 Mededingingswet; art. 101 VWEU</td>
+<td>Kartelverbod, bagatel, nietigheid van rechtswege</td>
+<td>✅ (drempels art. 7 ⚠️)</td>
+</tr>
+<tr>
+<td>VBER (EU) 2022/720 art. 1(1)(f), 3, 5</td>
+<td>Niet-concurrentiebedingen; art. 5 lid 3 slotzin: knowhow-verbod onbeperkt</td>
+<td>✅ (2x onafhankelijk; letterlijke NL-tekst ⚠️)</td>
+</tr>
+<tr>
+<td><strong>Data Act (EU) 2023/2854</strong> art. 1, 2, 13, 23–31, 40, 50</td>
+<td>Overstap, exporteerbare data, oneerlijke bedingen</td>
+<td>✅ <strong>integrale authentieke EN-tekst gelezen</strong> (NL-bewoordingen ⚠️)</td>
+</tr>
+<tr>
+<td>Uitvoeringswet dataverordening (Stb. 2025, 372; i.w. 21-11-2025; ACM bevoegd)</td>
+<td>NL-handhaving Data Act</td>
+<td>✅ via officiële vindplaatsen (boetemaximum ⚠️)</td>
+</tr>
+<tr>
+<td>eIDAS-verordening 910/2014 art. 41</td>
+<td>Wettelijk vermoeden gekwalificeerde tijdstempels</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>Richtlijn 2016/943 (bedrijfsgeheimen), overw. 14/16</td>
+<td>Samenstel-leer; reverse engineering contractueel beperkbaar</td>
+<td>✅</td>
+</tr>
+</tbody>
+</table>
+<h3 id="6-niet-geverifieerd-expliciet-conform-opdracht">Niet geverifieerd (expliciet, conform opdracht)</h3>
+<ul>
+<li>Art. 138ab Sr (computervredebreuk), art. 29b Aw (rechtenbeheersinformatie), art. 1019i Rv (termijn eis in hoofdzaak), art. 4 Aw (makerschapsvermoeden), art. 6:247 lid 2 BW (internationale B2B buiten AV-afdeling), art. 3:310d BW (verjaring Wbb-vorderingen), schade-artikel Databankenwet, UK-recht (CDPA/VABEO), exacte BOIP/EUIPO-tarieven per datum van indiening, indicatietarieven IE 2026. Deze punten dragen het advies niet zelfstandig; waar ze genoemd worden is dat gemarkeerd.</li>
+</ul>
+<h2 id="6-prioriteitenlijstje-voor-de-primaire-eindcheck-door-de-adv">Prioriteitenlijstje voor de primaire eindcheck door de advocaat</h2>
+<ol>
+<li>Art. 194–207 Rv: exacte artikel- en ledenindeling nieuw bewijsrecht (dragend voor deliverable 4).</li>
+<li>Art. 5 VBER letterlijke NL-tekst (dragend voor de duurkeuzes in art. 3.3).</li>
+<li>NL-taalversie Data Act art. 2 punt 38, 23, 25 (dragend voor art. 3.6 en de 6.4-aanbeveling) + boetemaximum Uitvoeringswet (Stb. 2025, 372).</li>
+<li>R.o. 5.3 Intrahof/Bart Smit en het dictum van ECLI:NL:RBMNE:2023:2822 (alleen als die zaak wordt aangehaald).</li>
+<li>Sanctie op strijd met art. 3 lid 2 Databankenwet (nietigheid vs. vernietigbaarheid) — alleen relevant als de databank-route wordt geprocedeerd.</li>
+</ol></section>
+</body></html>
