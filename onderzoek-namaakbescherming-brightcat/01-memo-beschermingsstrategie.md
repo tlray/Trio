@@ -2,7 +2,7 @@
 
 **Aan:** Ray (Brightmotive Services bv)
 **Datum:** 18 augustus 2026
-**Status:** Onafhankelijk onderzoek, uitgevoerd in zeven parallelle sporen met bronverificatie. Zie `05-bronnen-en-verificatie.md` voor de verificatiestatus per bron en één belangrijk voorbehoud over de verificatiemethode.
+**Status:** Onafhankelijk onderzoek, uitgevoerd in zeven parallelle sporen met bronverificatie; op 19-8-2026 aangevuld met een volledige primaire verificatiepas tegen wetten.overheid.nl, rechtspraak.nl, EUR-Lex en curia. Zie `05-bronnen-en-verificatie.md` voor de status per bron.
 
 ---
 
@@ -88,7 +88,7 @@ De valkuil is het maatregelenvereiste: de rechtspraak wijst claims vooral af weg
 
 ### 4.4 Pijler 4 — Bewijs vooraf inrichten (essentieel; dit besliste het vorige incident)
 
-Sinds 1 januari 2025 is het bewijsrecht vernieuwd: het inzagerecht staat nu in art. 194–195a Rv (voorheen 843a), bewijsbeslag is voor alle zaken gecodificeerd (art. 205–206 Rv), en er is een nieuw instrument: het **deurwaarders-proces-verbaal van constateringen** (art. 207 Rv), met rechterlijk verlof zelfs met dwingende bewijskracht. Al die instrumenten werken alleen als je concreet kunt maken *wat* is overgenomen en *waar* het zit. Daarom, vooraf:
+Sinds 1 januari 2025 is het bewijsrecht vernieuwd: het inzagerecht staat nu in art. 194–195a Rv (voorheen 843a, dat is vervallen), bewijsbeslag is voor alle zaken gecodificeerd (art. 205–206 Rv), en er is een nieuw instrument: het **deurwaarders-proces-verbaal van constateringen** (art. 207 Rv; de dwingende bewijskracht volgt uit art. 157 lid 1 Rv — het verlof brengt de waarneming op een niet-openbare plaats binnen de ambtsbevoegdheid van de deurwaarder). Al die instrumenten werken alleen als je concreet kunt maken *wat* is overgenomen en *waar* het zit. Daarom, vooraf:
 
 1. **Canary-records** (verzonnen maar plausibele records) in de verrijkte data, **uniek per klant** — duikt jouw canary op in een kloon, dan is overname vrijwel onweerlegbaar én herleidbaar wie lekte (vgl. HvJ Apis/Lakorda, C-545/07: meegekopieerde kenmerken als bewijs van extractie). Houd een gedateerd, extern verankerd register bij (anders is het verwijt "achteraf geconstrueerd") en reken erop dat je canaries in een procedure moet onthullen — gebruik rouleerbare sets.
 2. **Logging en rate limiting**: per-klant API-keys, audit trail van zoek-/export­gedrag, alerts op stelselmatig doorlopen van de catalogus, logs append-only met tijdstempels. Het AV-beding "onze opgeslagen versie geldt behoudens tegenbewijs" (art. 8.5, al aanwezig) is een geldige bewijsafspraak (art. 153 Rv) en maakt die logs extra waardevol.
@@ -103,7 +103,7 @@ Het volledige stappenplan voor een volgend incident staat in deliverable 4. De b
 
 1. **Dwingend softwarerecht** (alleen relevant voor zover de klant een kopie heeft, maar respecteer het altijd): observeren/bestuderen/testen tijdens rechtmatig gebruik, reservekopie, foutverbetering en interoperabiliteits-decompilatie (art. 45j slotzin, 45k, 45l, 45m Aw; art. 8 Richtlijn 2009/24: strijdige bedingen nietig).
 2. **Rechten van de rechtmatige databankgebruiker**: opvragen/hergebruiken van niet-substantiële delen tijdens de licentie (art. 3 Databankenwet; art. 24a lid 3 Aw).
-3. **Data Act, hoofdstuk VI** (sinds 12-9-2025, ook voor lopende contracten; toezichthouder: ACM, boetes tot AVG-niveau): geen enkele contractuele belemmering van een overstap naar een andere aanbieder **of naar een eigen (on-premises) systeem** — dus nooit een verbod op het bouwen van een eigen vervangend systeem *als zodanig*, alleen op het gebruik van Brightmotive-materialen en -geheimen daarbij. Kennisgevingstermijn max. 2 maanden, transitieperiode 30 dagen, retrieval ≥30 dagen, overstapkosten vanaf 12 januari 2027 nul. Wat je **niet** hoeft af te geven: de software, algoritmes en verrijkingslogica — "exporteerbare data" sluit IE- en bedrijfsgeheim-activa van de aanbieder én van derden (TecDoc) uit (art. 2 punt 38).
+3. **Data Act, hoofdstuk VI** (sinds 12-9-2025, ook voor lopende contracten; toezichthouder: ACM, met boetes tot de zesde categorie van art. 23 Sr of — als dat meer is — 10% van de EU-jaaromzet, art. 8 lid 1 Uitvoeringswet dataverordening): geen enkele contractuele belemmering van een overstap naar een andere aanbieder **of naar een eigen (on-premises) systeem** — dus nooit een verbod op het bouwen van een eigen vervangend systeem *als zodanig*, alleen op het gebruik van Brightmotive-materialen en -geheimen daarbij. Kennisgevingstermijn max. 2 maanden, transitieperiode 30 dagen, retrieval ≥30 dagen, overstapkosten vanaf 12 januari 2027 nul. Wat je **niet** hoeft af te geven: de software, algoritmes en verrijkingslogica — "exporteerbare data" sluit IE- en bedrijfsgeheim-activa van de aanbieder én van derden (TecDoc) uit (art. 2 punt 38).
 4. **Data Act art. 13**: eenzijdig opgelegde B2B-databedingen mogen niet "oneerlijk" zijn — raakt vooral art. 3.2 (het datagebruiksrecht van Brightmotive): houd dat doelgebonden en laat de klant altijd een kopie van zijn eigen data houden.
 5. **Mededingingsrecht**: geen algeheel (post-contractueel) concurrentieverbod; wel doelgebonden knowhowbescherming (onbeperkt voor niet-openbare informatie).
 6. **Matiging van boetes** (art. 6:94 BW) is niet weg te contracteren — vandaar het meeschaal-ontwerp.
@@ -114,7 +114,7 @@ Het volledige stappenplan voor een volgend incident staat in deliverable 4. De b
 
 ## 6. Restrisico's en aannames
 
-- **Verificatievoorbehoud:** de onderzoeksomgeving blokkeerde rechtstreekse toegang tot wetten.overheid.nl, rechtspraak.nl en EUR-Lex. Alle bronnen zijn geverifieerd via meervoudige, onafhankelijke secundaire bronnen (en de Data Act via de integrale authentieke Engelse verordeningstekst); de status per bron staat in deliverable 5. **Laat vóór gebruik in een sommatie of processtuk de gemarkeerde punten éénmaal primair nalopen door de advocaat.**
+- **Verificatiestatus:** op 19 augustus 2026 is, na openstelling van de netwerktoegang, een volledige **primaire verificatiepas** uitgevoerd: alle wetteksten (geldende versies op wetten.overheid.nl en EUR-Lex, Nederlandse taalversies) en alle aangehaalde uitspraken (volledige teksten via rechtspraak.nl open data en curia/EUR-Lex) zijn tegen de bron gelegd. Uitkomst: de conclusies houden stand; de gevonden correcties (o.a. het ACM-boetemaximum en twee feitenrechtspraak-details) zijn in dit memo en in deliverable 5 verwerkt. Wat níet primair is geverifieerd staat expliciet in deliverable 5 (o.a. actuele deposit-tarieven en UK-recht).
 - **SaaS en "rechtmatige verkrijger":** of de dwingende softwaregebruikersrechten überhaupt gelden voor een klant met alleen browsertoegang is niet uitgeprocedeerd. De voorgestelde tekst is zo opgezet dat hij onder béide scenario's overeind blijft.
 - **De grens tussen namaakverbod en Data Act-overstapbelemmering** is nog door geen rechter of de ACM getrokken; de voorgestelde carve-out is tekst- en systeemgetrouwe uitleg, geen vaste lijn.
 - **De kwalificatie van de verrijkte databank** hangt af van de gedocumenteerde investering en van de TecDoc-licentie; beide vergen intern huiswerk (maatregelenlijst).
@@ -127,4 +127,4 @@ Het volledige stappenplan voor een volgend incident staat in deliverable 4. De b
 2. Art. 6.4 vervangen door een Data Act-conforme exit-regeling; art. 3.2 doelgebonden maken.
 3. Maatregelenlijst uitvoeren, te beginnen met het bedrijfsgeheimenregister, de NDA-logbewijzen en de canary-records (deliverable 3).
 4. Draaiboek klaarzetten met vaste advocaat/deurwaarder/forensisch IT'er (deliverable 4).
-5. Eenmalige primaire bronnencheck door de advocaat op de gemarkeerde punten (deliverable 5).
+5. ~~Eenmalige primaire bronnencheck~~ — uitgevoerd op 19-8-2026 (zie deliverable 5). Wat voor de advocaat rest is de gebruikelijke eindtoets op het concept vóór invoering, niet meer de bronnencontrole.
