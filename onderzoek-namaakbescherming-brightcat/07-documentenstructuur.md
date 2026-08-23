@@ -48,6 +48,8 @@ Bewust géén kortingsmechanisme in de AV (zet klanten op ideeën). Bij een inci
 
 Nooit een herrekening naar de normale prijs stapelen bóven de restant-vergoeding: samen meer claimen dan de volledige contractwaarde maakt de regeling onevenredig en aantastbaar.
 
+**Ingangsdatum-discipline:** op het tekenblad is de ingangsdatum altijd een kalenderdatum, nooit gekoppeld aan go-live, oplevering of acceptatie — de voorwaarden (4.1, 6.1) rekenen vanaf die datum.
+
 ## Volgorde van uitwerking
 
 1. **Gebruikersvoorwaarden v2.0** — dekt vanaf dag één alle rollen, incl. toekomstige leveranciers-medewerkers; neem de v1.02-punten mee (reikwijdte dienst zelf, namaakverbod op hoofdlijnen, scraping-verbod, "zolang geheim").
