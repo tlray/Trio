@@ -37,6 +37,8 @@ Getekende overeenkomst/order → annexen → dienstmodule (voor die dienst; art.
 - **Voertuiggebonden orderhistorie (kenteken/VIN)**: zodra deze feature wordt gebouwd is Brightmotive voor dat gebruik zelf verwerkingsverantwoordelijke (art. 1.4). Dan regelen: belangenafweging op schrift, aanvulling privacyverklaring, carve-out in de verwerkersovereenkomst. Art. 3.8 staat het gebruik al toe (rem zit op herleidbaar delen, niet op intern gebruik); output toont nooit dat of wat een specifiek voertuig eerder bestelde.
 - **Bestellingen behouden na vertrek van een klant**: niet de ruwe klantrecords bewaren, maar tijdens het contract een afgeleide laag opbouwen (voertuig ↔ onderdeel ↔ datum, losgeknipt van de klantidentiteit) op grond van art. 3.8. Die laag is verrijking van Brightmotive, valt in 6.5 buiten de exporteerbare gegevens en overleeft elk vertrek en wisverzoek; de ruwe orderdata van de vertrokken klant kan dan gewoon gewist worden. Vereist wél de verwerkersovereenkomst-carve-out en het AVG-huiswerk hierboven (kenteken/VIN blijft een persoonsgegeven). Bewust niets hierover in de AV.
 
+- **Team-update opstellen** over de wijzigingen van v3.04 (actief) naar v3.11, vóór of bij publicatie. Basis: de vet-gemarkeerde concepten v3.05–v3.11 in voorwaarden-versies/ en de statusregels per versiebestand.
+
 ## Tekenblad-bouwsteen: meerjarige looptijd met prijsvoordeel
 
 Bewust géén kortingsmechanisme in de AV (zet klanten op ideeën). Bij een incidentele deal met langere looptijd (bijv. 3 i.p.v. 2 jaar) op het tekenblad, twee varianten:
