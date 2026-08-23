@@ -1,8 +1,6 @@
-# Voorwaarden v3.11
+# Voorwaarden
 
-*Status in Notion: Draft — concept, opgesteld op basis van het namaakbescherming-onderzoek van 18 augustus 2026 (primair geverifieerd op 19-8-2026). De **vet** gemarkeerde passages zijn de wijzigingen ten opzichte van v3.10: het volledig nieuwe artikel 3 (invulling van het opengelaten art. 3.1; oud 3.2/3.3 zijn 3.8/3.9 geworden), de Data Act-conforme overstapregeling in 6.4–6.6 en de afbouwregel in 8.7.*
-
-*Nog in te vullen vóór publicatie: de website-URL in artikel 6.6 (het register met dataformaten moet dan ook echt online staan).*
+*Versie 3.11 (concept)*
 
 De onderstaande voorwaarden zijn van toepassing op de diensten, waaronder de Software-as-a-Service dienst BrightCat, van Brightmotive Services bv, hierna: Brightmotive, ingeschreven in de Kamer van Koophandel onder nummer 71910956.
 
@@ -56,19 +54,21 @@ De onderstaande voorwaarden zijn van toepassing op de diensten, waaronder de Sof
 
 ### Artikel 4 — Vergoeding voor de dienst
 
-4.1 Voor het gebruik van de diensten bent u een vergoeding verschuldigd. Als de dienst een vaste maandelijkse vergoeding heeft, dient deze steeds per kwartaal vooraf te worden voldaan. Als de dienst een dynamische gebruiksvergoeding heeft, wordt deze per maand achteraf gefactureerd. De betalingstermijn is steeds 14 dagen na de factuurdatum.
+4.1 Voor het gebruik van de diensten bent u een vergoeding verschuldigd. Als de dienst een vaste maandelijkse vergoeding heeft, dient deze steeds per kwartaal vooraf te worden voldaan. Als de dienst een dynamische gebruiksvergoeding heeft, wordt deze per maand achteraf gefactureerd. De betalingstermijn is steeds 14 dagen na de factuurdatum. **Betaalt u niet binnen deze termijn, dan bent u zonder ingebrekestelling de wettelijke handelsrente verschuldigd, plus buitengerechtelijke incassokosten van 15% van het openstaande bedrag met een minimum van € 250.**
 
 4.2 De vergoeding voor het gebruik van BrightCat kan gebaseerd zijn op de totale omzet over het meest recente volledige kalenderjaar van uw organisatie(s) (artikel 4.3) en de gebruiksvergoedingentabel of gebruiksvergoeding promillage die aan u is verstrekt. U verstrekt Brightmotive jaarlijks, binnen zes maanden na afloop van het kalenderjaar en daarnaast steeds op eerste verzoek, een overzicht van de omzet van dat kalenderjaar per organisatie. Brightmotive heeft het recht om aan de hand van die omzet de gebruiksvergoeding, voor het jaar opvolgend aan dat kalenderjaar waar de omzet betrekking op heeft, aan te passen.
 
-4.3 Uw organisatie(s) zijn de organisaties waaraan in of krachtens de overeenkomst het gebruiksrecht is verleend. De omzet geldt als maatstaf voor de omvang van uw organisatie(s): het gaat om de totale netto-omzet (artikel 2 lid 5 van Richtlijn 2013/34/EU) exclusief btw volgens de jaarrekening. Wordt omzet van uw organisatie(s) door een ander gecontracteerd of gefactureerd, dan telt deze toch mee; omzet uit onderlinge leveringen tussen uw organisatie(s) telt niet mee. Gaat een andere organisatie van de diensten of daaruit afkomstige gegevens gebruikmaken, bijvoorbeeld na een overname (aandelen, onderneming of activa), fusie of vergelijkbare transactie, of neemt de omzet van uw organisatie(s) door zo'n transactie toe, dan meldt u dit binnen 30 dagen schriftelijk aan Brightmotive; dit geldt niet voor afnemers die de diensten uitsluitend gebruiken om bij uw organisatie(s) te bestellen. De meest recente jaaromzet van die organisatie of van de verworven onderneming telt vanaf dat moment naar rato van de resterende kalendermaanden mee, zonder dat dit als toestemming voor dat gebruik geldt; vanaf het eerstvolgende kalenderjaar telt de volledige jaaromzet.
+4.3 Uw organisatie(s) zijn de organisaties waaraan in of krachtens de overeenkomst het gebruiksrecht is verleend. De omzet geldt als maatstaf voor de omvang van uw organisatie(s): het gaat om de totale netto-omzet (artikel 2 lid 5 van Richtlijn 2013/34/EU) exclusief btw volgens de jaarrekening. Wordt omzet van uw organisatie(s) door een ander gecontracteerd of gefactureerd, dan telt deze toch mee; omzet uit onderlinge leveringen tussen uw organisatie(s) telt niet mee.
 
-4.4 Op eerste verzoek van Brightmotive verstrekt u een verklaring van uw accountant dat de door u verstrekte omzetgegevens juist zijn. Daarnaast heeft Brightmotive steeds het recht uw administratie te (laten) onderzoeken om de juistheid van de omzetgegevens te controleren. U zal op eerste verzoek volledige medewerking aan een dergelijk onderzoek verlenen. Dit kan steekproefsgewijs gebeuren.
+4.4 Gaat een andere organisatie van de diensten of daaruit afkomstige gegevens gebruikmaken, bijvoorbeeld na een overname (aandelen, onderneming of activa), fusie of vergelijkbare transactie, of neemt de omzet van uw organisatie(s) door zo'n transactie toe, dan meldt u dit binnen 30 dagen schriftelijk aan Brightmotive; dit geldt niet voor afnemers die de diensten uitsluitend gebruiken om bij uw organisatie(s) te bestellen. De meest recente jaaromzet van die organisatie of van de verworven onderneming telt vanaf dat moment naar rato van de resterende kalendermaanden mee, zonder dat dit als toestemming voor dat gebruik geldt; vanaf het eerstvolgende kalenderjaar telt de volledige jaaromzet.
 
-4.5 Blijkt de opgegeven omzet onjuist, dan mag Brightmotive de vergoeding met terugwerkende kracht corrigeren. Is de opgegeven omzet meer dan 10% te laag of een uitbreiding (artikel 4.3) niet of niet tijdig gemeld, dan geldt naast de correctie een opslag van 25% over het nagefactureerde bedrag. Blijft de opgave uit of verleent u geen medewerking als bedoeld in artikel 4.4, dan mag Brightmotive de omzet inschatten en daarop factureren totdat u alsnog een opgave verstrekt of medewerking verleent.
+4.5 Op eerste verzoek van Brightmotive verstrekt u een verklaring van uw accountant dat de door u verstrekte omzetgegevens juist zijn. Daarnaast heeft Brightmotive steeds het recht uw administratie te (laten) onderzoeken om de juistheid van de omzetgegevens te controleren. U zal op eerste verzoek volledige medewerking aan een dergelijk onderzoek verlenen. Dit kan steekproefsgewijs gebeuren.
 
-4.6 Brightmotive heeft het recht de door u verschuldigde vergoeding na verloop van elk kalenderjaar te indexeren.
+4.6 Blijkt de opgegeven omzet onjuist, dan mag Brightmotive de vergoeding met terugwerkende kracht corrigeren. Is de opgegeven omzet meer dan 10% te laag of een uitbreiding (artikel 4.4) niet of niet tijdig gemeld, dan geldt naast de correctie een opslag van 25% over het nagefactureerde bedrag. Blijft de opgave uit of verleent u geen medewerking als bedoeld in artikel 4.5, dan mag Brightmotive de omzet inschatten en daarop factureren totdat u alsnog een opgave verstrekt of medewerking verleent.
 
 4.7 Indien u niet aan uw verplichtingen voldoet, heeft Brightmotive het recht haar dienstverlening op te schorten, dit ontslaat u niet van uw verplichting tot betaling van de overeengekomen vergoedingen.
+
+4.8 Brightmotive heeft het recht de door u verschuldigde vergoeding na verloop van elk kalenderjaar te indexeren.
 
 ### Artikel 5 — Aansprakelijkheid
 
