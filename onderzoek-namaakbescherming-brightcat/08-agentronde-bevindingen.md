@@ -89,13 +89,13 @@ Acht parallelle reviews (Opus 5): vijf brillen (klant-jurist, rechter, Data Act/
 3. [BESLOTEN 23-8: doorgevoerd] Overmacht-afwikkeling: opschorting, doorlopende betaling voor het geleverde, wederzijdse uitweg na 60 dagen zonder restitutie.
 4. [BESLOTEN 23-8: doorgevoerd] Artikel 5: doorbelaste afnemersclaims expliciet in de 5.2-uitsluiting; ontdekkingsmoment bij derdenclaims; absolute vervaltermijn van 12 maanden; derdenbeding (medewerkers/bestuurders/hulppersonen) en gelding voor alle grondslagen en annexen.
 5. [BESLOTEN 23-8: doorgevoerd] 1.2 verbreden naar alle toegangsmiddelen (API-sleutels, SSO, tokens, koppelingen) met toerekeningszin; toerekening van gebruikers in 1.8; persoonsgebonden accounts (ook Wbb-maatregel).
-6. Handhaving artikel 3: nalevingsverklaring op verzoek, onderzoek door onafhankelijke deskundige bij concrete aanwijzingen, vergoeding van werkelijke onderzoeks- en rechtsbijstandskosten (contractuele vorderingen krijgen géén volledige proceskostenvergoeding ex art. 1019h Rv).
-7. Bewijsvermoeden bij het "zelfstandig ontwikkeld"-verweer (toegang gehad + op hoofdlijnen gelijk → vermoeden; te weerleggen met gedateerde ontwikkeldocumentatie).
+6. [BESLOTEN 23-8: doorgevoerd als 3.10] Handhaving artikel 3: nalevingsverklaring op verzoek, onderzoek door onafhankelijke deskundige bij concrete aanwijzingen, vergoeding van werkelijke onderzoeks- en rechtsbijstandskosten (contractuele vorderingen krijgen géén volledige proceskostenvergoeding ex art. 1019h Rv).
+7. [BESLOTEN 23-8: doorgevoerd als 3.11] Bewijsvermoeden bij het "zelfstandig ontwikkeld"-verweer (toegang gehad + op hoofdlijnen gelijk → vermoeden; te weerleggen met gedateerde ontwikkeldocumentatie).
 8. Vervallen — opgegaan in A3 (het woord "daarvoor" in de slotzin van het nieuwe 3.6 lost de door de rechter-bril gesignaleerde dubbelzinnigheid op).
-9. 8.4: ontvangstregeling e-mail (laatst opgegeven adres; geldt als ontvangen op de dag van verzending behoudens foutmelding; contactgegevens actueel houden).
-10. 8.6: spiegelverbod (klant draagt niet over zonder toestemming) + meld- en beëindigingsrecht bij overname van de klant door een concurrent-cataloguspartij.
-11. 6.3 opschonen (dode letter over de houdstermaatschappij concretiseren of schrappen; geen beëindigingsvergoeding bij faillissement Brightmotive).
-12. Stijl: "wij/ons" vs. "Brightmotive/zij" gelijktrekken; kleine taalfixes (responstijd/responsetijd, "gebruiksvergoedingspromillage", "ervan uitgaan").
+9. [BESLOTEN 23-8: doorgevoerd] 8.4: ontvangstregeling e-mail (laatst opgegeven adres; geldt als ontvangen op de dag van verzending behoudens foutmelding; contactgegevens actueel houden).
+10. [BESLOTEN 23-8: doorgevoerd] 8.6: spiegelverbod (klant draagt niet over zonder toestemming) + meld- en beëindigingsrecht bij overname van de klant door een concurrent-cataloguspartij.
+11. [BESLOTEN 23-8: afgewezen — 6.3 blijft ongewijzigd] 6.3 opschonen (dode letter over de houdstermaatschappij concretiseren of schrappen; geen beëindigingsvergoeding bij faillissement Brightmotive).
+12. [BESLOTEN 23-8: doorgevoerd] Stijl: "wij/ons" vs. "Brightmotive/zij" gelijktrekken; kleine taalfixes (responstijd/responsetijd, "gebruiksvergoedingspromillage", "ervan uitgaan").
 
 ---
 
