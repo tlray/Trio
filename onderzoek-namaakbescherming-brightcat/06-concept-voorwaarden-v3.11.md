@@ -1,6 +1,6 @@
 # Concept — Voorwaarden v3.11
 
-**Basis:** v3.10 (concept). **Wijzigingen in vet**, in de stijl van eerdere versies: het volledig nieuwe artikel 3 (namaakbescherming + boete, invulling van het opengelaten art. 3.1), de compacte Data Act-overstapregeling (6.4–6.5), een versterkte salvatorische clausule (8.7), een rente- en incassokostenzin in 4.1 en een verduidelijkingszin over eigen gegevens in 3.1. In 5.4 is "gebrek aan personele capaciteit" uit de overmachtsopsomming geschrapt. Daarnaast is artikel 4 herschikt: de overname-/uitbreidingsregeling is afgesplitst naar een eigen lid 4.4 en de indexering is verplaatst naar 4.8 (tekst ongewijzigd, interne verwijzingen aangepast). Alle overige bepalingen zijn ongewijzigd overgenomen uit v3.10. Onderbouwing: zie deliverables 1, 2 en 5 in deze map.
+**Basis:** v3.10 (concept). **Wijzigingen in vet**, in de stijl van eerdere versies: het volledig nieuwe artikel 3 (namaakbescherming + boete, invulling van het opengelaten art. 3.1), de compacte Data Act-overstapregeling (6.4–6.5), een versterkte salvatorische clausule (8.7), een rente- en incassokostenzin in 4.1 en een verduidelijkingszin over eigen gegevens in 3.1. In 5.4 is "gebrek aan personele capaciteit" uit de overmachtsopsomming geschrapt en in de openingszin is de aanduiding "Software-as-a-Service dienst" vervallen. Daarnaast is artikel 4 herschikt: de overname-/uitbreidingsregeling is afgesplitst naar een eigen lid 4.4 en de indexering is verplaatst naar 4.8 (tekst ongewijzigd, interne verwijzingen aangepast). Alle overige bepalingen zijn ongewijzigd overgenomen uit v3.10. Onderbouwing: zie deliverables 1, 2 en 5 in deze map.
 
 **Nog te doen buiten deze tekst:** het online overzicht van exportformaten (Data Act art. 26) en de infrastructuur-informatie (art. 28) op de website publiceren — zie maatregelenlijst; daarna kan de verwijzing ernaar in een volgende versie terug in art. 6.5.
 
@@ -10,7 +10,7 @@
 
 *Versie 3.11 (concept)*
 
-De onderstaande voorwaarden zijn van toepassing op de diensten, waaronder de Software-as-a-Service dienst BrightCat, van Brightmotive Services bv, hierna: Brightmotive, ingeschreven in de Kamer van Koophandel onder nummer 71910956.
+De onderstaande voorwaarden zijn van toepassing op de diensten, waaronder BrightCat, van Brightmotive Services bv, hierna: Brightmotive, ingeschreven in de Kamer van Koophandel onder nummer 71910956.
 
 ### Artikel 1 — Gebruiksregels
 

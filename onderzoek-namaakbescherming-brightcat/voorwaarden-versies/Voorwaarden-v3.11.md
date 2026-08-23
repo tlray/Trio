@@ -1,8 +1,8 @@
 # Voorwaarden v3.11
 
-*Status in Notion: Draft — concept, opgesteld op basis van het namaakbescherming-onderzoek van 18 augustus 2026 (primair geverifieerd op 19-8-2026). De **vet** gemarkeerde passages zijn de wijzigingen ten opzichte van v3.10: het volledig nieuwe artikel 3 (invulling van het opengelaten art. 3.1; oud 3.2/3.3 zijn 3.8/3.9 geworden), de compacte Data Act-overstapregeling (6.4–6.5), de afbouwregel in 8.7, de rente- en incassokostenzin in 4.1 en de verduidelijkingszin over eigen gegevens in 3.1. In 5.4 is "gebrek aan personele capaciteit" uit de overmachtsopsomming geschrapt. Artikel 4 is herschikt: overname/uitbreiding afgesplitst naar 4.4, indexering verplaatst naar 4.8 (tekst ongewijzigd).*
+*Status in Notion: Draft — concept, opgesteld op basis van het namaakbescherming-onderzoek van 18 augustus 2026 (primair geverifieerd op 19-8-2026). De **vet** gemarkeerde passages zijn de wijzigingen ten opzichte van v3.10: het volledig nieuwe artikel 3 (invulling van het opengelaten art. 3.1; oud 3.2/3.3 zijn 3.8/3.9 geworden), de compacte Data Act-overstapregeling (6.4–6.5), de afbouwregel in 8.7, de rente- en incassokostenzin in 4.1 en de verduidelijkingszin over eigen gegevens in 3.1. In 5.4 is "gebrek aan personele capaciteit" uit de overmachtsopsomming geschrapt en in de openingszin is de aanduiding "Software-as-a-Service dienst" vervallen. Artikel 4 is herschikt: overname/uitbreiding afgesplitst naar 4.4, indexering verplaatst naar 4.8 (tekst ongewijzigd).*
 
-De onderstaande voorwaarden zijn van toepassing op de diensten, waaronder de Software-as-a-Service dienst BrightCat, van Brightmotive Services bv, hierna: Brightmotive, ingeschreven in de Kamer van Koophandel onder nummer 71910956.
+De onderstaande voorwaarden zijn van toepassing op de diensten, waaronder BrightCat, van Brightmotive Services bv, hierna: Brightmotive, ingeschreven in de Kamer van Koophandel onder nummer 71910956.
 
 ### Artikel 1 — Gebruiksregels
 
