@@ -30,9 +30,8 @@ Acht parallelle reviews (Opus 5): vijf brillen (klant-jurist, rechter, Data Act/
 > 6.6 Brightmotive kan de overeenkomst geheel of gedeeltelijk met onmiddellijke ingang schriftelijk beëindigen, zonder ingebrekestelling en zonder tot schadevergoeding gehouden te zijn, indien u een opeisbaar bedrag niet betaalt binnen 14 dagen na aanmaning, indien u artikel 3 overtreedt, of indien u surseance van betaling of faillissement aanvraagt of daarin komt te verkeren, uw onderneming staakt of overdraagt, of op een aanmerkelijk deel van uw vermogen beslag wordt gelegd. Alles wat u aan Brightmotive verschuldigd bent is dan direct opeisbaar, geleverde diensten worden niet ongedaan gemaakt en de vergoeding over het restant van de lopende periode blijft u als beëindigingsvergoeding verschuldigd.
 
 **A6. Data-afwikkeling bij een einde zónder overstap + slotzin 3.8 (×2) — hoog.** 6.5 hangt volledig aan de overgangsperiode van 6.4; bij een gewone opzegging is er geen ophaal- of wisregime. En de slotzin van 3.8 geeft een onbegrensd kopie-recht "tijdens en na de overeenkomst" dat elk venster doorkruist.
-*Fix — nieuw 6.7:*
-> 6.7 Eindigt de overeenkomst zonder overstap, dan kunt u uw exporteerbare gegevens tot 30 kalenderdagen na de einddatum ophalen; artikel 6.5 is van overeenkomstige toepassing. Daarna wissen wij ze.
-*Fix — slotzin 3.8:* "Dit beperkt niet uw recht om uw eigen gegevens te gebruiken en daarvan een kopie te ontvangen zoals geregeld in de artikelen 6.4 tot en met 6.7."
+*Fix — geen nieuw lid; vervang de slotzin van 6.5 door:* "U kunt ze ophalen tot 30 kalenderdagen na het einde van de overgangsperiode of, eindigt de overeenkomst zonder overstap, tot 30 kalenderdagen na de einddatum; daarna wissen wij ze op uw verzoek."
+*Fix — slotzin 3.8:* "Dit beperkt niet uw recht om uw eigen gegevens te gebruiken en daarvan tijdens en na de overeenkomst een kopie te ontvangen; daarvoor geldt artikel 6.5."
 
 **A7. Herstel duurzin 3.3 (rechter) — hoog, gratis.** De vandaag ingekorte zin kan zo worden gelezen dat óók het onbeperkte geheimhoudingsdeel na één jaar stopt — de kern van de bescherming.
 *Fix:* "Voor de diensten, documentatie en data geldt dit tijdens de overeenkomst en tot één jaar daarna. Voor de vertrouwelijke informatie van artikel 3.2 blijft dit zonder tijdsbeperking gelden, zolang zij niet openbaar is."
