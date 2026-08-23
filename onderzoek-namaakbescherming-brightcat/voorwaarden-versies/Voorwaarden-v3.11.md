@@ -32,6 +32,8 @@ De onderstaande voorwaarden zijn van toepassing op de diensten, waaronder Bright
 
 2.3 Zo vaak als Brightmotive nodig acht, worden verbeteringen en andere aanpassingen in de functionaliteit van diensten en systemen doorgevoerd. Brightmotive heeft steeds het recht om de functionaliteit van de systemen te wijzigen. Bij het doorvoeren van onderhoud en aanpassingen wordt de beschikbaarheid van de systemen zo min mogelijk beperkt.
 
+**2.4 Brightmotive mag onderdelen van de diensten wijzigen of beëindigen, bijvoorbeeld als een leverancier van data of webservices stopt of zijn voorwaarden of prijzen wijzigt, en mag in dat geval de vergoeding voor het betrokken onderdeel evenredig aan die kostenwijziging aanpassen. Beëindiging of aanpassing meldt Brightmotive ten minste twee maanden van tevoren; bij beëindiging vervalt het deel van de vergoeding dat aantoonbaar op dat onderdeel ziet, en bij een aanpassing kunt u het onderdeel in plaats daarvan tegen die datum opzeggen. Dit is een al voorziene regeling (artikel 7.1) en geeft u geen recht op schadevergoeding of op beëindiging van de rest van de overeenkomst.**
+
 ### Artikel 3 — Intellectueel eigendom, vertrouwelijkheid en data
 
 **3.1 Alle diensten, waaronder BrightCat, en alle bijbehorende software, databanken, documentatie en data zijn (het intellectuele) eigendom van Brightmotive en haar licentiegevers. U mag deze niet kopiëren of namaken. Onder namaken verstaan wij ook het (laten) maken van software die de schermopbouw, de functionele werking of de gegevensverwerking van de diensten geheel of op hoofdlijnen overneemt, ook als de vormgeving (zoals iconen, kleuren of teksten) is aangepast.**
