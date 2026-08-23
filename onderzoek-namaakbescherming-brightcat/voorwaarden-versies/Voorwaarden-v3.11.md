@@ -1,8 +1,8 @@
 # Voorwaarden v3.11
 
-*Status in Notion: Draft — concept, opgesteld op basis van het namaakbescherming-onderzoek van 18 augustus 2026. De **vet** gemarkeerde passages zijn de wijzigingen ten opzichte van v3.10: het volledig nieuwe artikel 3 (invulling van het opengelaten art. 3.1; oud 3.2/3.3 zijn 3.8/3.9 geworden), de Data Act-conforme overstapregeling in 6.4–6.6 en de afbouwregel in 8.7.*
+*Status in Notion: Draft — concept, opgesteld op basis van het namaakbescherming-onderzoek van 18 augustus 2026 (primair geverifieerd op 19-8-2026). De **vet** gemarkeerde passages zijn de wijzigingen ten opzichte van v3.10: het volledig nieuwe artikel 3 (invulling van het opengelaten art. 3.1; oud 3.2/3.3 zijn 3.8/3.9 geworden), de Data Act-conforme overstapregeling in 6.4–6.6 en de afbouwregel in 8.7.*
 
-*Nog in te vullen vóór publicatie: de website-URL in artikel 6.6 (het register met dataformaten moet dan ook echt online staan) en de eindcheck door de advocaat op de vijf punten uit "Bronnen en verificatie".*
+*Nog in te vullen vóór publicatie: de website-URL in artikel 6.6 (het register met dataformaten moet dan ook echt online staan).*
 
 De onderstaande voorwaarden zijn van toepassing op de diensten, waaronder de Software-as-a-Service dienst BrightCat, van Brightmotive Services bv, hierna: Brightmotive, ingeschreven in de Kamer van Koophandel onder nummer 71910956.
 
@@ -38,7 +38,7 @@ De onderstaande voorwaarden zijn van toepassing op de diensten, waaronder de Sof
 
 **3.3 U gebruikt de diensten, documentatie en data van Brightmotive en de vertrouwelijke informatie van artikel 3.2 niet om — zelf of via anderen — een met de diensten concurrerend of deze vervangend product te (laten) ontwikkelen, te verbeteren, aan te bieden of te exploiteren. Voor de diensten, documentatie en data geldt dit tijdens de overeenkomst en tot één jaar daarna; voor de vertrouwelijke informatie van artikel 3.2 blijft dit gelden zolang zij niet openbaar is.**
 
-**3.4 U geeft derden — zoals softwareontwikkelaars of adviseurs — alleen toegang tot de diensten, documentatie, data of vertrouwelijke informatie na voorafgaande schriftelijke toestemming van Brightmotive en nadat die derde rechtstreeks tegenover Brightmotive geheimhouding heeft aanvaard. U staat ervoor in dat deze derden dit artikel naleven; hun overtredingen gelden als uw overtredingen.**
+**3.4 U geeft derden — zoals softwareontwikkelaars of adviseurs — alleen toegang tot de diensten, documentatie, data of vertrouwelijke informatie na voorafgaande schriftelijke toestemming van Brightmotive, nadat die derde geheimhouding en gebruiksbeperkingen rechtstreeks tegenover Brightmotive heeft aanvaard — zoals via de voorwaarden van ons documentatieportaal — en alleen voor werkzaamheden ten behoeve van uw eigen gebruik van de diensten. Toegang om een concurrerend of vervangend product te (laten) ontwikkelen valt daar nooit onder. U staat ervoor in dat deze derden dit artikel naleven; hun overtredingen gelden als uw overtredingen.**
 
 **3.5 U mag gegevens uit de diensten alleen raadplegen en gebruiken binnen de normale werking van de diensten. Het geautomatiseerd of stelselmatig opvragen, kopiëren of hergebruiken van (delen van) de catalogus, data of datastructuren is niet toegestaan, ongeacht of deze wettelijk als databank beschermd zijn.**
 
