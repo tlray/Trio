@@ -1,6 +1,6 @@
 # Concept — Voorwaarden v3.11
 
-**Basis:** v3.10 (concept). **Wijzigingen in vet**, in de stijl van eerdere versies: het volledig nieuwe artikel 3 (namaakbescherming + boete, invulling van het opengelaten art. 3.1), de compacte Data Act-overstapregeling (6.4–6.5), een versterkte salvatorische clausule (8.7) en een rente- en incassokostenzin in 4.1. Daarnaast is artikel 4 herschikt: de overname-/uitbreidingsregeling is afgesplitst naar een eigen lid 4.4 en de indexering is verplaatst naar 4.8 (tekst ongewijzigd, interne verwijzingen aangepast). Alle overige bepalingen zijn ongewijzigd overgenomen uit v3.10. Onderbouwing: zie deliverables 1, 2 en 5 in deze map.
+**Basis:** v3.10 (concept). **Wijzigingen in vet**, in de stijl van eerdere versies: het volledig nieuwe artikel 3 (namaakbescherming + boete, invulling van het opengelaten art. 3.1), de compacte Data Act-overstapregeling (6.4–6.5), een versterkte salvatorische clausule (8.7), een rente- en incassokostenzin in 4.1 en een verduidelijkingszin over eigen gegevens in 3.1. In 5.4 is "gebrek aan personele capaciteit" uit de overmachtsopsomming geschrapt. Daarnaast is artikel 4 herschikt: de overname-/uitbreidingsregeling is afgesplitst naar een eigen lid 4.4 en de indexering is verplaatst naar 4.8 (tekst ongewijzigd, interne verwijzingen aangepast). Alle overige bepalingen zijn ongewijzigd overgenomen uit v3.10. Onderbouwing: zie deliverables 1, 2 en 5 in deze map.
 
 **Nog te doen buiten deze tekst:** het online overzicht van exportformaten (Data Act art. 26) en de infrastructuur-informatie (art. 28) op de website publiceren — zie maatregelenlijst; daarna kan de verwijzing ernaar in een volgende versie terug in art. 6.5.
 
@@ -42,7 +42,7 @@ De onderstaande voorwaarden zijn van toepassing op de diensten, waaronder de Sof
 
 ### Artikel 3 — Intellectueel eigendom, vertrouwelijkheid en data
 
-**3.1 Alle diensten, waaronder BrightCat, en alle bijbehorende software, databanken, documentatie en data zijn (het intellectuele) eigendom van Brightmotive en haar licentiegevers. U mag deze niet kopiëren of namaken. Onder namaken verstaan wij ook het (laten) maken van software die de schermopbouw, de functionele werking of de gegevensverwerking van de diensten geheel of op hoofdlijnen overneemt, ook als de vormgeving (zoals iconen, kleuren of teksten) is aangepast.**
+**3.1 Alle diensten, waaronder BrightCat, en alle bijbehorende software, databanken, documentatie en data zijn (het intellectuele) eigendom van Brightmotive en haar licentiegevers. U mag deze niet kopiëren of namaken. Onder namaken verstaan wij ook het (laten) maken van software die de schermopbouw, de functionele werking of de gegevensverwerking van de diensten geheel of op hoofdlijnen overneemt, ook als de vormgeving (zoals iconen, kleuren of teksten) is aangepast. Uw eigen gegevens (artikelen 3.8 en 6.5) vallen hier niet onder.**
 
 **3.2 Alles wat niet openbaar toegankelijk is zonder in te loggen, waaronder de opbouw en werking van de diensten achter de inlog, de documentatie, koppel- en API-specificaties, datastructuren en door Brightmotive verrijkte data, is vertrouwelijke informatie en een bedrijfsgeheim van Brightmotive. U houdt deze informatie geheim en gebruikt haar alleen voor het normale gebruik van de diensten en het koppelen van uw eigen systemen. Deze verplichting blijft ook na het einde van de overeenkomst gelden, zolang de informatie niet openbaar is.**
 
@@ -86,7 +86,7 @@ De onderstaande voorwaarden zijn van toepassing op de diensten, waaronder de Sof
 
 5.3 Voorwaarde voor het ontstaan van enig recht op schadevergoeding is dat u de schade uiterlijk binnen twee maanden na ontdekking of nadat u de schade had kunnen ontdekken, schriftelijk bij Brightmotive meldt. Aansprakelijkheid ontstaat bovendien slechts indien u Brightmotive schriftelijk in gebreke stelt en daarbij een redelijke termijn biedt om de tekortkoming te herstellen, en Brightmotive ook na die termijn tekort blijft schieten.
 
-5.4 In geval van overmacht is Brightmotive nimmer gehouden tot vergoeding van de daardoor bij u ontstane schade. Van overmacht is onder meer sprake bij storingen of uitvallen van het internet of de telecommunicatie-infrastructuur, stroomstoringen, buitenlandse of binnenlandse onlusten, pandemieën, virussen, hacks en andere onrechtmatige inbreuken, mobilisatie, oorlog, stremming in het vervoer, staking, gebrek aan personele capaciteit, brand en overstroming.
+5.4 In geval van overmacht is Brightmotive nimmer gehouden tot vergoeding van de daardoor bij u ontstane schade. Van overmacht is onder meer sprake bij storingen of uitvallen van het internet of de telecommunicatie-infrastructuur, stroomstoringen, buitenlandse of binnenlandse onlusten, pandemieën, virussen, hacks en andere onrechtmatige inbreuken, mobilisatie, oorlog, stremming in het vervoer, staking, brand en overstroming.
 
 5.5 U vrijwaart Brightmotive voor aanspraken van derden, waaronder uw afnemers, die verband houden met uw gebruik van de diensten.
 
