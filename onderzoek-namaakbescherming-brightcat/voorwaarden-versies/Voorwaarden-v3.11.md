@@ -22,6 +22,8 @@ De onderstaande voorwaarden zijn van toepassing op de diensten, waaronder de Sof
 
 1.7 Brightmotive kan alle schade als gevolg van uw overtreding van één of meerdere voorwaarden op u verhalen. U vrijwaart Brightmotive voor alle aanspraken van derden die betrekking hebben op schade als gevolg van uw overtreding van één of meerdere voorwaarden.
 
+**1.8 Brightmotive kan voor de toegang tot of het gebruik van (onderdelen van) de diensten, systemen of documentatie aanvullende gebruiksvoorwaarden hanteren, waarmee gebruikers vooraf akkoord gaan. U zorgt ervoor dat uw gebruikers die voorwaarden aanvaarden en naleven. Bij strijd met deze voorwaarden gaan deze voorwaarden voor.**
+
 ### Artikel 2 — Beschikbaarheid en onderhoud
 
 2.1 Brightmotive zal zich inspannen om een optimale beschikbaarheid en een snelle responstijd van de systemen te realiseren alsmede dat de systemen zoveel mogelijk vrij van fouten, gebreken en virussen zijn. Specifieke afspraken kunnen worden vastgelegd in een aparte Service Level Agreement.
@@ -38,7 +40,7 @@ De onderstaande voorwaarden zijn van toepassing op de diensten, waaronder de Sof
 
 **3.3 U gebruikt de diensten, documentatie en data van Brightmotive en de vertrouwelijke informatie van artikel 3.2 niet om — zelf of via anderen — een met de diensten concurrerend of deze vervangend product te (laten) ontwikkelen, te verbeteren, aan te bieden of te exploiteren. Voor de diensten, documentatie en data geldt dit tijdens de overeenkomst en tot één jaar daarna; voor de vertrouwelijke informatie van artikel 3.2 blijft dit gelden zolang zij niet openbaar is.**
 
-**3.4 U geeft derden — zoals softwareontwikkelaars of adviseurs — alleen toegang tot de diensten, documentatie, data of vertrouwelijke informatie na voorafgaande schriftelijke toestemming van Brightmotive, nadat die derde geheimhouding en gebruiksbeperkingen rechtstreeks tegenover Brightmotive heeft aanvaard — zoals via de voorwaarden van ons documentatieportaal — en alleen voor werkzaamheden ten behoeve van uw eigen gebruik van de diensten. Toegang om een concurrerend of vervangend product te (laten) ontwikkelen valt daar nooit onder. U staat ervoor in dat deze derden dit artikel naleven; hun overtredingen gelden als uw overtredingen.**
+**3.4 U geeft derden — zoals softwareontwikkelaars of adviseurs — alleen toegang tot de diensten, documentatie, data of vertrouwelijke informatie na voorafgaande schriftelijke toestemming van Brightmotive, nadat die derde geheimhouding en gebruiksbeperkingen rechtstreeks tegenover Brightmotive heeft aanvaard — via de voorwaarden die Brightmotive daarvoor hanteert — en alleen voor werkzaamheden ten behoeve van uw eigen gebruik van de diensten. Toegang om een concurrerend of vervangend product te (laten) ontwikkelen valt daar nooit onder. U staat ervoor in dat deze derden dit artikel naleven; hun overtredingen gelden als uw overtredingen.**
 
 **3.5 U mag gegevens uit de diensten alleen raadplegen en gebruiken binnen de normale werking van de diensten. Het geautomatiseerd of stelselmatig opvragen, kopiëren of hergebruiken van (delen van) de catalogus, data of datastructuren is niet toegestaan, ongeacht of deze wettelijk als databank beschermd zijn.**
 
@@ -122,6 +124,7 @@ De onderstaande voorwaarden zijn van toepassing op de diensten, waaronder de Sof
 
 | Waar | Wat | Waarom (kort) |
 |---|---|---|
+| Art. 1.8 (nieuw) | Haakbepaling: Brightmotive kan aanvullende gebruiksvoorwaarden (clickwraps) hanteren; klant zorgt voor aanvaarding en naleving door zijn gebruikers; rangorde geregeld | Maakt de toekomstige gebruikers-clickwrap (ook garages) en wijziging/hernoeming van de documentatievoorwaarden mogelijk zónder AV-aanpassing — jo. art. 7.1 geldt toepassing van een al voorziene regeling niet als aanpassing |
 | Art. 3 (titel + 3.1–3.7 nieuw; oud 3.2/3.3 → 3.8/3.9) | Gelaagde namaakbescherming: namaakverbod met definitie, bedrijfsgeheim-kwalificatie, doelgebonden concurrentieverbod (looptijd + 1 jaar; geheime informatie onbeperkt), derdenregeling, data-extractieverbod, carve-outs voor dwingend recht en eigen ontwikkeling, meeschalende boete | Invulling van het opengelaten art. 3.1; procedure-bestendig ontwerp langs SAS/Ryanair, Wbb, VBER en de matigingsrechtspraak — zie deliverables 1 en 2 |
 | Art. 3.8, slotzin | Klant behoudt recht op eigen gegevens en een kopie | Art. 13 Data Act (oneerlijke B2B-databedingen) |
 | Art. 6 (titel + 6.4–6.6 nieuw) | Volwaardige overstapregeling: aankondiging max. 2 maanden, overgangsperiode 30 dagen (verlengbaar), definitie exporteerbare gegevens met IE-/bedrijfsgeheim-uitzondering, register op website, retrieval ≥ 30 dagen, wisbevestiging, kosten nul vanaf 12-1-2027 | Art. 23–30 Data Act; het oude 6.4 voldeed niet aan art. 25 (rechten moeten in het contract zelf staan) én de regeling beschermt art. 3 tegen het verwijt van overstapbelemmering |

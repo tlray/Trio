@@ -14,7 +14,7 @@
 >
 > **3.3** U gebruikt de diensten, documentatie en data van Brightmotive en de vertrouwelijke informatie van artikel 3.2 niet om — zelf of via anderen — een met de diensten concurrerend of deze vervangend product te (laten) ontwikkelen, te verbeteren, aan te bieden of te exploiteren. Voor de diensten, documentatie en data geldt dit tijdens de overeenkomst en tot één jaar daarna; voor de vertrouwelijke informatie van artikel 3.2 blijft dit gelden zolang zij niet openbaar is.
 >
-> **3.4** U geeft derden — zoals softwareontwikkelaars of adviseurs — alleen toegang tot de diensten, documentatie, data of vertrouwelijke informatie na voorafgaande schriftelijke toestemming van Brightmotive, nadat die derde geheimhouding en gebruiksbeperkingen rechtstreeks tegenover Brightmotive heeft aanvaard — zoals via de voorwaarden van ons documentatieportaal — en alleen voor werkzaamheden ten behoeve van uw eigen gebruik van de diensten. Toegang om een concurrerend of vervangend product te (laten) ontwikkelen valt daar nooit onder. U staat ervoor in dat deze derden dit artikel naleven; hun overtredingen gelden als uw overtredingen.
+> **3.4** U geeft derden — zoals softwareontwikkelaars of adviseurs — alleen toegang tot de diensten, documentatie, data of vertrouwelijke informatie na voorafgaande schriftelijke toestemming van Brightmotive, nadat die derde geheimhouding en gebruiksbeperkingen rechtstreeks tegenover Brightmotive heeft aanvaard — via de voorwaarden die Brightmotive daarvoor hanteert — en alleen voor werkzaamheden ten behoeve van uw eigen gebruik van de diensten. Toegang om een concurrerend of vervangend product te (laten) ontwikkelen valt daar nooit onder. U staat ervoor in dat deze derden dit artikel naleven; hun overtredingen gelden als uw overtredingen.
 >
 > **3.5** U mag gegevens uit de diensten alleen raadplegen en gebruiken binnen de normale werking van de diensten. Het geautomatiseerd of stelselmatig opvragen, kopiëren of hergebruiken van (delen van) de catalogus, data of datastructuren is niet toegestaan, ongeacht of deze wettelijk als databank beschermd zijn.
 >
@@ -70,3 +70,11 @@ Voorstel voor de Fineprint-stijl: een compact art. 6.4 dat naar een aparte annex
 Het huidige beding is al doelgebonden en niet-herleidbaar geformuleerd — goed. Voeg één zin toe om de oneerlijkheidsvermoedens van art. 13 lid 5 Data Act (beperking van eigen datagebruik; onthouden van een kopie) af te dekken:
 
 > "Dit beperkt niet uw recht om uw eigen gegevens te gebruiken en daarvan tijdens en na de overeenkomst een kopie te ontvangen."
+
+### C. Haakbepaling art. 1.8 (toekomstvast voor clickwraps)
+
+Om de geplande gebruikers-clickwrap (ook voor garages, klanten van klanten) en toekomstige wijziging of hernoeming van de documentatievoorwaarden mogelijk te maken zónder AV-aanpassing, is in v3.11 een haakbepaling opgenomen als nieuw lid 1.8:
+
+> **1.8** Brightmotive kan voor de toegang tot of het gebruik van (onderdelen van) de diensten, systemen of documentatie aanvullende gebruiksvoorwaarden hanteren, waarmee gebruikers vooraf akkoord gaan. U zorgt ervoor dat uw gebruikers die voorwaarden aanvaarden en naleven. Bij strijd met deze voorwaarden gaan deze voorwaarden voor.
+
+Werking: (i) invoering van de clickwrap is daarmee een "al in de voorwaarden voorziene regeling" en geldt dus niet als aanpassing in de zin van art. 7.1 (geen opzegdiscussie via 7.2); (ii) de klant wordt verantwoordelijk voor acceptatie en naleving door zíjn gebruikers; (iii) de rangorde-zin voorkomt tegenspraak tussen documentensets. In lijn hiermee verwijst art. 3.4 functioneel ("via de voorwaarden die Brightmotive daarvoor hanteert") in plaats van naar een documentnaam of versienummer — hernoemen of vervangen van de Terms vergt dan geen AV-wijziging. Grens: echt zware nieuwe verplichtingen voor de klánt zelf blijven onder art. 7.2 vallen (dwingende redelijkheid), en een clickwrap bindt een eindgebruiker pas vanaf acceptatie — tot die tijd dekken Wbb en databankenrecht.
