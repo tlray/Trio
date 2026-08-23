@@ -1,6 +1,6 @@
-# Voorwaarden
+# Voorwaarden v3.11
 
-*Versie 3.11 (concept)*
+*Status in Notion: Draft — concept, opgesteld op basis van het namaakbescherming-onderzoek van 18 augustus 2026 (primair geverifieerd op 19-8-2026). De **vet** gemarkeerde passages zijn de wijzigingen ten opzichte van v3.10: het volledig nieuwe artikel 3 (invulling van het opengelaten art. 3.1; oud 3.2/3.3 zijn 3.8/3.9 geworden), de compacte Data Act-overstapregeling (6.4–6.5), de afbouwregel in 8.7 en de rente- en incassokostenzin in 4.1. Artikel 4 is herschikt: overname/uitbreiding afgesplitst naar 4.4, indexering verplaatst naar 4.8 (tekst ongewijzigd).*
 
 De onderstaande voorwaarden zijn van toepassing op de diensten, waaronder de Software-as-a-Service dienst BrightCat, van Brightmotive Services bv, hierna: Brightmotive, ingeschreven in de Kamer van Koophandel onder nummer 71910956.
 
