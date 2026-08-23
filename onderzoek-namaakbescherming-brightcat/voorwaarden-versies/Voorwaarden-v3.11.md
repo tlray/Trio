@@ -24,6 +24,8 @@ De onderstaande voorwaarden zijn van toepassing op de diensten, waaronder de Sof
 
 **1.8 Brightmotive kan voor de toegang tot of het gebruik van (onderdelen van) de diensten, systemen of documentatie aanvullende gebruiksvoorwaarden hanteren, waarmee gebruikers vooraf akkoord gaan. U zorgt ervoor dat uw gebruikers die voorwaarden aanvaarden en naleven. Bij strijd met deze voorwaarden gaan deze voorwaarden voor.**
 
+**1.9 Voor specifieke diensten kunnen aanvullende dienstvoorwaarden gelden, waaronder voorwaarden die licentiegevers van Brightmotive stellen; deze worden uiterlijk bij de bestelling verstrekt. Voor die dienst gaan zij vóór deze voorwaarden.**
+
 ### Artikel 2 — Beschikbaarheid en onderhoud
 
 2.1 Brightmotive zal zich inspannen om een optimale beschikbaarheid en een snelle responstijd van de systemen te realiseren alsmede dat de systemen zoveel mogelijk vrij van fouten, gebreken en virussen zijn. Specifieke afspraken kunnen worden vastgelegd in een aparte Service Level Agreement.
@@ -125,6 +127,7 @@ De onderstaande voorwaarden zijn van toepassing op de diensten, waaronder de Sof
 | Waar | Wat | Waarom (kort) |
 |---|---|---|
 | Art. 1.8 (nieuw) | Haakbepaling: Brightmotive kan aanvullende gebruiksvoorwaarden (clickwraps) hanteren; klant zorgt voor aanvaarding en naleving door zijn gebruikers; rangorde geregeld | Maakt de toekomstige gebruikers-clickwrap (ook garages) en wijziging/hernoeming van de documentatievoorwaarden mogelijk zónder AV-aanpassing — jo. art. 7.1 geldt toepassing van een al voorziene regeling niet als aanpassing |
+| Art. 1.9 (nieuw) | Haakbepaling dienstmodules: aanvullende dienstvoorwaarden (o.a. flow-down van licentiegevers zoals HaynesPro) mogelijk, verstrekt uiterlijk bij bestelling; rangorde per dienst | Maakt het paraplumodel mogelijk: uitbreidingsdiensten via een dunne module + orderregel, zonder aparte overeenkomsten of AV-wijziging (jo. art. 7.1) |
 | Art. 3 (titel + 3.1–3.7 nieuw; oud 3.2/3.3 → 3.8/3.9) | Gelaagde namaakbescherming: namaakverbod met definitie, bedrijfsgeheim-kwalificatie, doelgebonden concurrentieverbod (looptijd + 1 jaar; geheime informatie onbeperkt), derdenregeling, data-extractieverbod, carve-outs voor dwingend recht en eigen ontwikkeling, meeschalende boete | Invulling van het opengelaten art. 3.1; procedure-bestendig ontwerp langs SAS/Ryanair, Wbb, VBER en de matigingsrechtspraak — zie deliverables 1 en 2 |
 | Art. 3.8, slotzin | Klant behoudt recht op eigen gegevens en een kopie | Art. 13 Data Act (oneerlijke B2B-databedingen) |
 | Art. 6 (titel + 6.4–6.6 nieuw) | Volwaardige overstapregeling: aankondiging max. 2 maanden, overgangsperiode 30 dagen (verlengbaar), definitie exporteerbare gegevens met IE-/bedrijfsgeheim-uitzondering, register op website, retrieval ≥ 30 dagen, wisbevestiging, kosten nul vanaf 12-1-2027 | Art. 23–30 Data Act; het oude 6.4 voldeed niet aan art. 25 (rechten moeten in het contract zelf staan) én de regeling beschermt art. 3 tegen het verwijt van overstapbelemmering |
