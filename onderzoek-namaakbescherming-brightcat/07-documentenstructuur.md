@@ -32,6 +32,10 @@ Getekende overeenkomst/order → annexen → dienstmodule (voor die dienst; art.
 - **Bestaande aparte overeenkomsten** voor uitbreidingsdiensten lopen door en worden bij de eerstvolgende verlenging omgezet naar order + dienstmodule. Geen big bang.
 - **Bestaande developer-akkoorden** (Documentation Terms of Use v1.01) blijven geldig tot de gebruikersvoorwaarden v2.0 ze vervangen (uitrol naar bestaande accounts kan via art. 13.2 van v1.01).
 
+## Agendapunten
+
+- **Voertuiggebonden orderhistorie (kenteken/VIN)**: zodra deze feature wordt gebouwd is Brightmotive voor dat gebruik zelf verwerkingsverantwoordelijke (art. 1.4). Dan regelen: belangenafweging op schrift, aanvulling privacyverklaring, carve-out in de verwerkersovereenkomst. Art. 3.8 staat het gebruik al toe (rem zit op herleidbaar delen, niet op intern gebruik); output toont nooit dat of wat een specifiek voertuig eerder bestelde.
+
 ## Volgorde van uitwerking
 
 1. **Gebruikersvoorwaarden v2.0** — dekt vanaf dag één alle rollen, incl. toekomstige leveranciers-medewerkers; neem de v1.02-punten mee (reikwijdte dienst zelf, namaakverbod op hoofdlijnen, scraping-verbod, "zolang geheim").
