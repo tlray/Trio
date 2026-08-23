@@ -8,7 +8,7 @@ De onderstaande voorwaarden zijn van toepassing op de diensten, waaronder Bright
 
 1.1 Het is verboden om de diensten van Brightmotive te gebruiken voor handelingen die in strijd zijn met de Nederlandse of andere toepasselijke wet- en regelgeving.
 
-1.2 Indien u toegang heeft ontvangen tot één van de diensten of systemen van Brightmotive via een gebruikersnaam en wachtwoord dan dient u het wachtwoord strikt geheim te houden. Brightmotive mag er vanuit gaan dat alles dat gebeurt vanaf uw account na aanmelding met uw gebruikersnaam en wachtwoord, onder uw leiding en toezicht gebeurt. U bent dus aansprakelijk voor al deze handelingen.
+1.2 **Toegang tot de diensten of systemen van Brightmotive verloopt via toegangsmiddelen zoals gebruikersnamen en wachtwoorden, API-sleutels, tokens of koppelingen. U houdt uw toegangsmiddelen strikt geheim en beveiligt ze afdoende; accounts zijn persoonsgebonden en inloggegevens deelt u niet. Alles wat met uw toegangsmiddelen gebeurt, geldt als door u en onder uw leiding en toezicht verricht, ook als het door een gebruiker, een derde of een geautomatiseerd systeem gebeurt; u bent daarvoor aansprakelijk en daarbij begane overtredingen gelden als uw overtredingen.**
 
 1.3 Misbruik of mogelijk misbruik van uw account of afgenomen diensten dient direct schriftelijk bij Brightmotive gemeld te worden.
 
@@ -20,7 +20,7 @@ De onderstaande voorwaarden zijn van toepassing op de diensten, waaronder Bright
 
 1.7 Brightmotive kan alle schade als gevolg van uw overtreding van één of meerdere voorwaarden op u verhalen. U vrijwaart Brightmotive voor alle aanspraken van derden die betrekking hebben op schade als gevolg van uw overtreding van één of meerdere voorwaarden.
 
-**1.8 Brightmotive kan voor de toegang tot of het gebruik van (onderdelen van) de diensten, systemen of documentatie aanvullende gebruiksvoorwaarden hanteren, waarmee gebruikers vooraf akkoord gaan. U zorgt ervoor dat uw gebruikers die voorwaarden aanvaarden en naleven. Bij strijd tussen die gebruiksvoorwaarden en deze voorwaarden gaan deze voorwaarden voor.**
+**1.8 Brightmotive kan voor de toegang tot of het gebruik van (onderdelen van) de diensten, systemen of documentatie aanvullende gebruiksvoorwaarden hanteren, waarmee gebruikers vooraf akkoord gaan. U zorgt ervoor dat uw gebruikers die voorwaarden aanvaarden en naleven. Handelen en nalaten van uw gebruikers geldt als uw handelen en nalaten. Bij strijd tussen die gebruiksvoorwaarden en deze voorwaarden gaan deze voorwaarden voor.**
 
 **1.9 Voor specifieke diensten kunnen aanvullende dienstvoorwaarden gelden, waaronder voorwaarden die licentiegevers van Brightmotive stellen; deze worden uiterlijk bij de bestelling verstrekt. Voor die dienst gaan zij vóór deze voorwaarden, voor zover zij daar uitdrukkelijk van afwijken.**
 
@@ -76,13 +76,15 @@ De onderstaande voorwaarden zijn van toepassing op de diensten, waaronder Bright
 
 5.1 **Behoudens in geval van opzet of bewuste roekeloosheid van de bedrijfsleiding van Brightmotive is de aansprakelijkheid van Brightmotive beperkt tot het bedrag dat u aan Brightmotive verschuldigd was over de drie maanden voorafgaand aan de schade toebrengende gebeurtenis, met een minimum van € 5.000. Een samenhangende reeks gebeurtenissen geldt als één gebeurtenis. De totale aansprakelijkheid van Brightmotive bedraagt per kalenderjaar ten hoogste het bedrag dat volgens de eerste zin geldt voor de eerste gebeurtenis in dat kalenderjaar.**
 
-5.2 Brightmotive is uitdrukkelijk niet aansprakelijk voor indirecte schade, gevolgschade, gederfde omzet en/of winst, gemiste besparingen, verlies of verminking van data en schade door bedrijfsstagnatie.
+5.2 Brightmotive is uitdrukkelijk niet aansprakelijk voor indirecte schade, gevolgschade, gederfde omzet en/of winst, gemiste besparingen, verlies of verminking van data en schade door bedrijfsstagnatie, **alsmede voor aanspraken van uw afnemers of andere derden die u aan Brightmotive doorbelast**.
 
-5.3 Voorwaarde voor het ontstaan van enig recht op schadevergoeding is dat u de schade uiterlijk binnen twee maanden na ontdekking of nadat u de schade had kunnen ontdekken, schriftelijk bij Brightmotive meldt. Aansprakelijkheid ontstaat bovendien slechts indien u Brightmotive schriftelijk in gebreke stelt en daarbij een redelijke termijn biedt om de tekortkoming te herstellen, en Brightmotive ook na die termijn tekort blijft schieten.
+5.3 Voorwaarde voor het ontstaan van enig recht op schadevergoeding is dat u de schade uiterlijk binnen twee maanden na ontdekking of nadat u de schade had kunnen ontdekken, schriftelijk bij Brightmotive meldt. Aansprakelijkheid ontstaat bovendien slechts indien u Brightmotive schriftelijk in gebreke stelt en daarbij een redelijke termijn biedt om de tekortkoming te herstellen, en Brightmotive ook na die termijn tekort blijft schieten. **Voor schade die bestaat uit aanspraken van derden geldt als moment van ontdekking het moment waarop u de onderliggende gebeurtenis heeft ontdekt of had kunnen ontdekken. Ieder recht op schadevergoeding vervalt in ieder geval twaalf maanden na de schade toebrengende gebeurtenis.**
 
-5.4 In geval van overmacht is Brightmotive nimmer gehouden tot vergoeding van de daardoor bij u ontstane schade. Van overmacht is onder meer sprake bij storingen of uitvallen van het internet of de telecommunicatie-infrastructuur, stroomstoringen, buitenlandse of binnenlandse onlusten, pandemieën, virussen, hacks en andere onrechtmatige inbreuken **die plaatsvinden ondanks de beveiligingsmaatregelen van Brightmotive**, mobilisatie, oorlog, stremming in het vervoer, staking, brand en overstroming.
+5.4 In geval van overmacht is Brightmotive nimmer gehouden tot vergoeding van de daardoor bij u ontstane schade. Van overmacht is onder meer sprake bij storingen of uitvallen van het internet of de telecommunicatie-infrastructuur, stroomstoringen, buitenlandse of binnenlandse onlusten, pandemieën, virussen, hacks en andere onrechtmatige inbreuken **die plaatsvinden ondanks de beveiligingsmaatregelen van Brightmotive**, mobilisatie, oorlog, stremming in het vervoer, staking, brand en overstroming. **Tijdens overmacht worden de verplichtingen van Brightmotive opgeschort; uw betalingsverplichting voor de al geleverde diensten blijft bestaan. Duurt de overmacht langer dan 60 dagen, dan mag ieder van partijen de overeenkomst schriftelijk beëindigen, zonder schadevergoeding en zonder terugbetaling van al betaalde bedragen.**
 
 5.5 U vrijwaart Brightmotive voor aanspraken van derden, waaronder uw afnemers, die verband houden met uw gebruik van de diensten.
+
+**5.6 De beperkingen en uitsluitingen in dit artikel gelden voor iedere grondslag van aansprakelijkheid, ook buiten overeenkomst, en ook voor de verwerkersovereenkomst en aanvullende dienst- en gebruiksvoorwaarden, voor zover dwingend recht dit toelaat. Zij gelden mede ten behoeve van de medewerkers en bestuurders van Brightmotive en de door haar ingeschakelde derden, die zich er rechtstreeks op kunnen beroepen.**
 
 ### Artikel 6 — Duur, opzegging en overstappen
 
