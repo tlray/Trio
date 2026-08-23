@@ -36,6 +36,15 @@ Getekende overeenkomst/order → annexen → dienstmodule (voor die dienst; art.
 
 - **Voertuiggebonden orderhistorie (kenteken/VIN)**: zodra deze feature wordt gebouwd is Brightmotive voor dat gebruik zelf verwerkingsverantwoordelijke (art. 1.4). Dan regelen: belangenafweging op schrift, aanvulling privacyverklaring, carve-out in de verwerkersovereenkomst. Art. 3.8 staat het gebruik al toe (rem zit op herleidbaar delen, niet op intern gebruik); output toont nooit dat of wat een specifiek voertuig eerder bestelde.
 
+## Tekenblad-bouwsteen: meerjarige looptijd met prijsvoordeel
+
+Bewust géén kortingsmechanisme in de AV (zet klanten op ideeën). Bij een incidentele deal met langere looptijd (bijv. 3 i.p.v. 2 jaar) op het tekenblad, twee varianten:
+
+1. **Standaard**: alleen de afgesproken (lagere) prijs bij de langere looptijd vermelden, verder niets — de beëindigingsvergoeding van art. 6.4 beschermt de volledige contractwaarde al bij vroegtijdig vertrek via een overstap.
+2. **Bij fors voordeel**: aflopend tarief (bijv. maand 1–12 hoger, daarna lager) met gelijk totaal. Het voordeel valt in latere maanden; wie vroeg vertrekt heeft het nooit genoten, dus er valt niets terug te vorderen en geen einde-clausule nodig.
+
+Nooit een herrekening naar de normale prijs stapelen bóven de restant-vergoeding: samen meer claimen dan de volledige contractwaarde maakt de regeling onevenredig en aantastbaar.
+
 ## Volgorde van uitwerking
 
 1. **Gebruikersvoorwaarden v2.0** — dekt vanaf dag één alle rollen, incl. toekomstige leveranciers-medewerkers; neem de v1.02-punten mee (reikwijdte dienst zelf, namaakverbod op hoofdlijnen, scraping-verbod, "zolang geheim").
