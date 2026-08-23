@@ -57,3 +57,4 @@
 - Vaste IE-/procesadvocaat, deurwaarder met IT-forensische ervaring, forensisch IT-bureau, bewaarder.
 - Sjablonen: litigation-hold-instructie, verlofverzoek bewijsbeslag, verzoek pv van constateringen, sommatie met onthoudingsverklaring.
 - Contactenlijst + beslisboom (wie belt wie op dag 0) in het bedrijfsgeheimenregister.
+- Werkinstructie overstap-aankondigingen (art. 6.4 AV): bij elke aankondiging beslissen of Brightmotive zelf de overeenkomst opzegt tegen het einde van de lopende periode (art. 6.2 geeft dat recht aan beide partijen) en het exportpakket klaarzetten. Dit staat bewust niet in de voorwaarden zelf.

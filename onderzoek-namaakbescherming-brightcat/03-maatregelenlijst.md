@@ -33,7 +33,8 @@ Doel: (a) algoritmes, datastructuren, documentatie en verrijkte data laten kwali
 | 15 | NDA-flow uitbreiden naar demo's van admin-functionaliteit, onboarding-sessies en leveranciersgesprekken; wederkerige geheimhouding met koppelpartners nalopen. | Dicht de informele lekkanalen. |
 | 16 | Jaarlijkse review van register + maatregelen, vastgelegd. | Toont dat maatregelen "gezien de omstandigheden" worden onderhouden (art. 1 Wbb). |
 | 17 | Vaste relaties en sjablonen klaarzetten: IE-advocaat, deurwaarder met IT-forensische ervaring, forensisch IT-bureau; concept-verlofverzoek bewijsbeslag, sommatie met onthoudingsverklaring, interne litigation-hold-instructie. | Bij een incident telt snelheid; zie deliverable 4. |
-| 18 | Nice-to-have: DLP-/exfiltratiemonitoring, pentests met rapportage, clean-desk/bezoekersbeleid, auditrechten bij klanten met maatwerkkoppelingen. | Verdieping als 1–17 staan. |
+| 18 | **Data Act-website-acties**: online overzicht van exportformaten en -categorieën publiceren (art. 26) en informatie over de locatie van de ICT-infrastructuur (art. 28); daarna de verwijzing ernaar terugzetten in art. 6.5 van de voorwaarden. | Wettelijke plicht los van het contract; nu bewust niet in de AV genoemd omdat de pagina nog niet bestaat. |
+| 19 | Nice-to-have: DLP-/exfiltratiemonitoring, pentests met rapportage, clean-desk/bezoekersbeleid, auditrechten bij klanten met maatwerkkoppelingen. | Verdieping als 1–17 staan. |
 
 **Kosten-indicatie jaar 1 (taksen):** merk ± € 1.050, zes EU-modellen ± € 975, i-DEPOT-routine ± € 150–300, tijdstempels verwaarloosbaar → totaal ca. € 2.200–3.500, exclusief advies- en bouwuren.
 
