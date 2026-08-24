@@ -29,7 +29,11 @@ Belangrijke les uit de rondes zelf: elke uitbreidingsronde introduceerde ook nie
 2. **Wanbetalings-deel van 4.1 naar 4.7** (wens Ray, kan zonder hernummering): rente, incassokosten, opschortings-/verrekeningsverbod en bezwaartermijn horen bij 4.7 (dat al over niet-nakoming en opschorting gaat) — direct boven de indexering, ver van de omzetregels. 4.1 houdt alleen: wat je betaalt, wanneer, en de kwartaal/pro-rata-regel.
 3. **6.4 blijft één lid maar wordt ingedikt** (zie hieronder); eventueel splitsen in procedure (6.4) en vergoeding kan pas bij v3.12 (hernummering).
 
-## Data Act: niet negeren — dit is het dragende argument
+## Data Act — BESLUIT 24-8
+
+**Ray kiest voor deze versie en deze klant: de overstapregeling (6.4/6.5) gaat uit de AV — bewuste risico-acceptatie.** De contractbijlage (route C, neutrale titel) wordt later in alle rust uitgewerkt; tot die tijd bevatten de AV géén verwijzing naar een bijlage, zodat de offerte compleet is. Twee dingen blijven wél geregeld: een **generieke beëindigingsvergoeding** (die geen extra opzegmogelijkheid mag scheppen — het lid regelt alleen gevolgen, geen bevoegdheid) en het **behoud van intellectueel eigendom/verrijkte data** (dat zit al in 3.1/3.2/3.5; de wettelijke definitie van exporteerbare data sluit IE en bedrijfsgeheimen zelf al uit). De oude 6.4/6.5-teksten blijven beschikbaar in de git-historie en in document 09 als basis voor de bijlage. Restrisico aanvaard: doorlopende non-conformiteit met art. 25 Data Act bij nieuwe contracten (toezichtsrisico klein maar groeiend; professionele klant kan het gat zien); advocaat toetst dit bij de eindcheck.
+
+## Data Act: de oorspronkelijke afweging (historie)
 
 - Het is een **verordening**: zij geldt rechtstreeks sinds 12 september 2025, wat de AV ook zeggen. Schrappen uit de AV schaft niets af.
 - Art. 25 Data Act schrijft voor dat de kernonderdelen (aankondigingstermijn, overgangsperiode, wisregeling, exportregeling, einde na voltooiing) **in het contract** staan. Ontbreken ze, dan ben je non-conform én vult de wet het contract in op de voor Brightmotive slechtste lezing.
