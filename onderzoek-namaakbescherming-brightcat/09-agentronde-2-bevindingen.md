@@ -100,6 +100,7 @@ Zes parallelle Opus-reviews over de zwaar herziene tekst: consistentie-controleu
 3. Duurdifferentiatie in 3.3 (bedrijfsgeheim zolang geheim / overige vertrouwelijke informatie vijf jaar) — verfijning van de VBER-verankering.
 4. AVG-regres en de vervaltermijn van 5.3 in verwerkersovereenkomst-context.
 5. De geparkeerde C1-restanten (overstapkosten-zin, bestemmingsaanbieder-carve-out, website-vermelding art. 28 na maatregel 18).
+6. Vereenvoudigd 3.7 (24-8): de slotclausule "de kosten van artikel 3.10 tellen niet mee voor het boetemaximum" is op verzoek van Ray geschrapt — toetsen of de 6:92-verrekeningsdiscussie (kosten als schade verrekend met de boete) voldoende wordt ondervangen door de zelfstandige aard van de 3.10-kostenverplichting.
 
 ---
 
