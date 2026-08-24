@@ -20,7 +20,7 @@ De onderstaande voorwaarden zijn van toepassing op de diensten, waaronder Bright
 
 1.7 Brightmotive kan alle schade als gevolg van uw overtreding van één of meerdere voorwaarden op u verhalen. U vrijwaart Brightmotive voor alle aanspraken van derden die betrekking hebben op schade als gevolg van uw overtreding van één of meerdere voorwaarden.
 
-**1.8 Brightmotive kan voor de toegang tot of het gebruik van (onderdelen van) de diensten, systemen of documentatie aanvullende gebruiksvoorwaarden hanteren, waarmee gebruikers vooraf akkoord gaan. U zorgt ervoor dat uw gebruikers die voorwaarden aanvaarden en naleven. Voor toerekening geldt artikel 1.2. Bij strijd tussen die gebruiksvoorwaarden en deze voorwaarden gaan deze voorwaarden voor.**
+**1.8 Voor de toegang tot of het gebruik van (onderdelen van) de diensten, systemen of documentatie kunnen aanvullende gebruiksregels of gebruiksvoorwaarden gelden, die bij de toegang of het gebruik worden aanvaard. Bij strijd met deze voorwaarden gaan deze voorwaarden voor.**
 
 **1.9 Voor specifieke diensten kunnen aanvullende dienstvoorwaarden gelden, waaronder voorwaarden die licentiegevers van Brightmotive stellen; deze worden uiterlijk bij de bestelling verstrekt. Voor die dienst gaan zij vóór deze voorwaarden, voor zover zij daar uitdrukkelijk van afwijken.**
 
